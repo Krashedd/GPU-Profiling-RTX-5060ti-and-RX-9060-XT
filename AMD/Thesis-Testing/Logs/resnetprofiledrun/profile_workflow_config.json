@@ -1,0 +1,11 @@
+{
+  "mode": "official_profiled",
+  "workflow": "two_pass_single_command",
+  "primary_profile_metrics_source": "pytorch_operator_pass",
+  "operator_profiler": "torch.profiler",
+  "kernel_profiler": "rocprofv3 runtime trace with ROCTx training-window filtering",
+  "reason_for_two_passes": "PyTorch operator profiling and rocprofv3 kernel tracing are executed separately to avoid profiler interference.",
+  "both_passes_use_identical_fixed_workload": true,
+  "training_range_name": "RESNET50_TRAINING",
+  "timestamp": "2026-06-15T01:38:27.980251+08:00"
+}

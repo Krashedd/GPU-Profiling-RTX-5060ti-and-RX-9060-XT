@@ -1,0 +1,45 @@
+# Python environments and caches
+.venv/
+venv/
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.cache/
+
+# Full datasets and dataset binaries
+**/*.arrow
+**/*.parquet
+**/*.record
+**/*.tfrecord
+**/*.zip
+**/*.tar
+**/*.tar.gz
+**/*.7z
+
+# Model weights and checkpoints
+**/weights/
+**/checkpoints/
+**/best_model/
+**/*.pt
+**/*.pth
+**/*.ckpt
+**/*.onnx
+**/*.safetensors
+
+# Raw profiling artifacts
+**/rocprofv3_raw/
+**/rocprofv3_output/
+**/rocprofv3_timeline_raw/
+**/rocprof_output/
+**/pytorch_trace.json
+**/chrome_trace*.json
+**/*_trace.csv
+**/*.pftrace
+**/*.nsys-rep
+**/*.qdrep
+**/*.sqlite
+
+# Temporary files
+**/*.tmp
+**/*.swp
+**/*~

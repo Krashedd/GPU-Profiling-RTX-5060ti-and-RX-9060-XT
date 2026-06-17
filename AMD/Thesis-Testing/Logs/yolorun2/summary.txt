@@ -1,0 +1,27 @@
+YOLOv8m AMD Regular Run 2
+================================================================
+Throughput: 19.28 images/s
+Batch Latency: 830.00 ms/batch
+Total Training Time: 5187.47 s
+Average Epoch Time: 518.49 s
+Average GPU Power Draw: 145.62 W
+Performance per Watt: 0.13 images/s/W
+Average GPU Utilization: 99.37 %
+Average VRAM Usage: 12575.73 MB
+Peak VRAM Usage: 13820.00 MB
+Average GPU Edge Temperature: 59.81 C
+Average GPU Hotspot Temperature: 80.07 C
+Average GPU Memory Temperature: 75.98 C
+Final Validation mAP50-95: 0.4043
+Final Validation mAP50: 0.5637
+Final Validation Precision: 0.6426
+Final Validation Recall: 0.5282
+Peak System RAM: 11969.89 MB
+Average System RAM: 11473.06 MB
+Average CPU Utilization: 5.42 %
+Average CPU Package Temperature: 67.28 C
+Average Disk Read / Write: 0.02 / 0.40 MB/s
+Peak Disk Read / Write: 84.00 / 828.41 MB/s
+Precision: FP32; AMP enabled: False
+Workers: 4
+Stability / Error Notes: Completed successfully; no Python, HIP, ROCm, Ultralytics, AMD SMI, or GPU fatal errors detected. No monitored GPU temperature reached the configured critical thresholds. All AMD SMI telemetry queries succeeded.

@@ -1,0 +1,19 @@
+DistilBERT SST-2 AMD torch_operator profile
+========================================================================
+Throughput: 1042.25 samples/s
+Batch Latency: 61.37 ms/batch
+Total Training Time: 646.19 s
+Average Epoch Time: 64.62 s
+Average GPU Power Draw: 121.43 W
+Performance per Watt: 8.5829 samples/s/W
+Average GPU Utilization: 99.19 %
+Average VRAM Usage: 3666.15 MB
+Peak VRAM Usage: 3776.00 MB
+Average GPU Edge Temperature: 52.07 C
+Final Validation Accuracy: 0.9048
+Peak System RAM: 14306.35 MB
+Average System RAM: 14005.69 MB
+Average CPU Utilization: 4.32 %
+Average Disk Read / Write: 0.00 / 0.09 MB/s
+Peak Disk Read / Write: 0.37 / 9.29 MB/s
+Stability / Error Notes: Completed successfully; no Python, HIP, ROCm, Transformers, Datasets, AMD SMI, GPU, OOM, profiler, or thermal fatal errors detected. No monitored GPU temperature reached the configured critical thresholds. All AMD SMI telemetry queries succeeded.

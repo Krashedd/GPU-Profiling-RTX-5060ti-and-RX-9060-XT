@@ -1,0 +1,27 @@
+YOLOv8m AMD Official torch_operator Profile Pass
+========================================================================
+Throughput: 9.63 images/s
+Batch Latency: 1661.83 ms/batch
+Total Training Time: 10386.44 s
+Average Epoch Time: 1035.73 s
+Average GPU Power Draw: 134.31 W
+Performance per Watt: 0.0717 images/s/W
+Average GPU Utilization: 95.78 %
+Average VRAM Usage: 12607.61 MB
+Peak VRAM Usage: 12938.00 MB
+Average GPU Edge Temperature: 44.71 C
+Average GPU Hotspot Temperature: 62.85 C
+Average GPU Memory Temperature: 54.21 C
+Final Validation mAP50-95: 0.4043
+Final Validation mAP50: 0.5637
+Final Validation Precision: 0.6426
+Final Validation Recall: 0.5282
+Peak System RAM: 35007.42 MB
+Average System RAM: 25454.07 MB
+Average CPU Utilization: 5.40 %
+Average CPU Package Temperature: 57.24 C
+Average Disk Read / Write: 0.26 / 0.27 MB/s
+Peak Disk Read / Write: 77.65 / 2435.43 MB/s
+Precision: FP32; AMP enabled: False
+Workers: 4
+Stability / Error Notes: Completed successfully; no Python, HIP, ROCm, Ultralytics, AMD SMI, profiler, or GPU fatal errors detected. No monitored GPU temperature reached the configured critical thresholds. All AMD SMI telemetry queries succeeded.

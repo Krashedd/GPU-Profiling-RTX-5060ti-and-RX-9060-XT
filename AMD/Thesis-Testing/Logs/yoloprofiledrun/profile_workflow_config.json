@@ -1,0 +1,14 @@
+{
+  "mode": "official_profiled",
+  "workflow": "three_pass_single_command",
+  "primary_profile_metrics_source": "pytorch_operator_pass",
+  "operator_profiler": "torch.profiler chunked over complete workload",
+  "kernel_profiler": "rocprofv3 kernel/memory-copy/marker traces with ROCTx training-window filtering",
+  "representative_timeline": "fixed four-batch rocprofv3 Perfetto trace for visualization only",
+  "reason_for_separate_passes": "PyTorch operator profiling and rocprofv3 tracing are separated to avoid profiler interference; the short third pass prevents Perfetto ring-buffer truncation while retaining a readable timeline.",
+  "both_quantitative_passes_use_identical_fixed_workload": true,
+  "timeline_used_for_quantitative_metrics": false,
+  "training_range_name": "YOLOV8M_TRAINING",
+  "pytorch_chunk_steps": 50,
+  "timestamp": "2026-06-16T08:14:55.324193+08:00"
+}

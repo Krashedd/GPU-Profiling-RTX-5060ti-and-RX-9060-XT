@@ -1,0 +1,19 @@
+DistilBERT SST-2 AMD timeline profile
+========================================================================
+Throughput: 98.62 samples/s
+Batch Latency: 648.97 ms/batch
+Total Training Time: 2.60 s
+Average Epoch Time: 2.58 s
+Average GPU Power Draw: 23.58 W
+Performance per Watt: 4.1817 samples/s/W
+Average GPU Utilization: 13.17 %
+Average VRAM Usage: 2178.67 MB
+Peak VRAM Usage: 3514.00 MB
+Average GPU Edge Temperature: 45.50 C
+Final Validation Accuracy: 0.6875
+Peak System RAM: 11526.79 MB
+Average System RAM: 11273.02 MB
+Average CPU Utilization: 5.97 %
+Average Disk Read / Write: 0.01 / 209.47 MB/s
+Peak Disk Read / Write: 0.08 / 2513.62 MB/s
+Stability / Error Notes: Completed successfully; no Python, HIP, ROCm, Transformers, Datasets, AMD SMI, GPU, OOM, profiler, or thermal fatal errors detected. No monitored GPU temperature reached the configured critical thresholds. All AMD SMI telemetry queries succeeded.

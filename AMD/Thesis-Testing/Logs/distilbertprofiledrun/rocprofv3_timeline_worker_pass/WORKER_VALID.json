@@ -1,0 +1,13 @@
+{
+  "status": "VALID",
+  "timestamp": "2026-06-17T04:59:40.260534+08:00",
+  "mode": "smoke",
+  "profile_kind": "timeline",
+  "epochs_completed": 1,
+  "total_samples_processed": 256,
+  "total_batches_processed": 4,
+  "workers": 4,
+  "amp_enabled": true,
+  "padding": "dynamic_per_batch",
+  "validation_accuracy": 0.6875
+}

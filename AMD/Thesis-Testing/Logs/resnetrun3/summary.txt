@@ -1,0 +1,23 @@
+ResNet-50 AMD Regular Run 3
+============================================================
+Throughput: 3436.24 samples/s
+Batch Latency: 74.24 ms/batch
+Total Training Time: 145.51 s
+Average Epoch Time: 14.55 s
+Average GPU Power Draw: 100.84 W
+Performance per Watt: 34.08 samples/s/W
+Average GPU Utilization: 96.48 %
+Average VRAM Usage: 2294.70 MB
+Peak VRAM Usage: 2399.00 MB
+Average GPU Edge Temperature: 42.56 C
+Average GPU Hotspot Temperature: 55.71 C
+Average GPU Memory Temperature: 46.23 C
+Final Validation Score: 0.5518
+Peak System RAM: 6956.66 MB
+Average System RAM: 6614.45 MB
+Average CPU Utilization: 6.29 %
+Average CPU Package Temperature: 57.63 C
+Average Disk Read / Write: 0.00 / 0.17 MB/s
+Peak Disk Read / Write: 0.34 / 16.17 MB/s
+AMP: GradScaler enabled; first-batch output dtype torch.float16
+Stability / Error Notes: Completed successfully; no Python, HIP, ROCm, or AMD SMI fatal errors detected. No monitored GPU temperature reached its AMD SMI critical limit. All AMD SMI telemetry queries succeeded.

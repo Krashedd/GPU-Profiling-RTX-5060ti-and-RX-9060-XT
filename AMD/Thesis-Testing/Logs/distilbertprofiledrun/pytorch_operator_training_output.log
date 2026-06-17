@@ -1,0 +1,67 @@
+========================================================================================
+DistilBERT SST-2 AMD torch_operator profiling official pass
+========================================================================================
+Timestamp: 2026-06-17T04:37:29.077052+08:00
+Output directory: /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/pytorch_operator_pass
+Model directory: /home/amd/Thesis-Testing/scripts/distilbert-base-uncased-sst2-init-seed55
+Dataset directory: /home/amd/Thesis-Testing/Dataset/SST2/tokenized_distilbert_dynamic_maxlen128
+Python: 3.12.3
+Platform: Linux-6.17.0-35-generic-x86_64-with-glibc2.39
+PyTorch: 2.9.1+rocm7.2.3.gitebc02d69
+HIP runtime: 7.2.53211-c2d9476115
+System ROCm: 7.2.4
+Transformers: 5.12.1
+Datasets: 5.0.0
+GPU: AMD Radeon RX 9060 XT
+GPU architecture: gfx1200
+
+torch.profiler will record one representative operator window: wait=10, warmup=10, active=100 batches. The complete training workload still executes.
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|##########| 104/104 [00:00<00:00, 18711.72it/s]
+Training configuration verification
+Batch size: 64
+Workers: 4
+Epochs: 10
+Optimizer: Adam
+Learning rate: 5e-05
+Maximum sequence length: 128
+Padding: dynamic per batch (no pad-to-multiple)
+AMP enabled: True
+Model parameter dtype: torch.float32
+
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/integrations/sdpa_attention.py:92: UserWarning: Mem Efficient attention on Current AMD GPU is still experimental. Enable it with TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL=1. (Triggered internally at /pytorch/aten/src/ATen/native/transformers/hip/sdp_utils.cpp:360.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+torch.profiler representative window processed; wait=10, warmup=10, active=100 batches.
+Epoch 1/10 | Time: 89.66s | Throughput: 751.16 samples/s | Batches: 1053 | Loss: 0.212871
+Epoch 2/10 | Time: 61.64s | Throughput: 1092.59 samples/s | Batches: 1053 | Loss: 0.109424
+Epoch 3/10 | Time: 61.76s | Throughput: 1090.57 samples/s | Batches: 1053 | Loss: 0.072593
+Epoch 4/10 | Time: 61.69s | Throughput: 1091.80 samples/s | Batches: 1053 | Loss: 0.052891
+Epoch 5/10 | Time: 61.72s | Throughput: 1091.17 samples/s | Batches: 1053 | Loss: 0.040317
+Epoch 6/10 | Time: 61.79s | Throughput: 1089.92 samples/s | Batches: 1053 | Loss: 0.035085
+Epoch 7/10 | Time: 62.00s | Throughput: 1086.19 samples/s | Batches: 1053 | Loss: 0.029927
+Epoch 8/10 | Time: 61.79s | Throughput: 1089.99 samples/s | Batches: 1053 | Loss: 0.023946
+Epoch 9/10 | Time: 61.97s | Throughput: 1086.76 samples/s | Batches: 1053 | Loss: 0.022685
+Epoch 10/10 | Time: 62.15s | Throughput: 1083.57 samples/s | Batches: 1053 | Loss: 0.021797
+Final validation:   0%|          | 0/14 [00:00<?, ?it/s]/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+                                                        ========================================================================================
+PROFILE WORKER VALID
+========================================================================================
+Throughput: 1042.25 samples/s
+Batch Latency: 61.37 ms/batch
+Total Training Time: 646.19 s
+Final Validation Accuracy: 0.9048
+Results saved to: /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/pytorch_operator_pass

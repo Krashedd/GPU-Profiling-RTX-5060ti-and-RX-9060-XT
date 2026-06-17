@@ -1,0 +1,27 @@
+YOLOv8m AMD Official rocprofv3 Profile Pass
+========================================================================
+Throughput: 19.02 images/s
+Batch Latency: 841.41 ms/batch
+Total Training Time: 5258.82 s
+Average Epoch Time: 525.59 s
+Average GPU Power Draw: 141.47 W
+Performance per Watt: 0.1344 images/s/W
+Average GPU Utilization: 99.24 %
+Average VRAM Usage: 12518.46 MB
+Peak VRAM Usage: 16146.00 MB
+Average GPU Edge Temperature: 59.39 C
+Average GPU Hotspot Temperature: 78.86 C
+Average GPU Memory Temperature: 74.27 C
+Final Validation mAP50-95: 0.4043
+Final Validation mAP50: 0.5637
+Final Validation Precision: 0.6426
+Final Validation Recall: 0.5282
+Peak System RAM: 17910.70 MB
+Average System RAM: 14652.71 MB
+Average CPU Utilization: 6.64 %
+Average CPU Package Temperature: 74.50 C
+Average Disk Read / Write: 0.00 / 1.25 MB/s
+Peak Disk Read / Write: 0.40 / 702.10 MB/s
+Precision: FP32; AMP enabled: False
+Workers: 4
+Stability / Error Notes: Completed successfully; no Python, HIP, ROCm, Ultralytics, AMD SMI, profiler, or GPU fatal errors detected. No monitored GPU temperature reached the configured critical thresholds. All AMD SMI telemetry queries succeeded.

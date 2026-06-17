@@ -1,0 +1,27 @@
+metric,value,unit,source
+Throughput,9.627938949658736,images/s,PyTorch profiled full run
+Batch Latency,1661.8302300896005,ms/batch,PyTorch profiled full run
+Total Training Time,10386.43893806,s,PyTorch profiled full run
+Average Epoch Time,1035.7315933693003,s,PyTorch profiled full run
+Average GPU Power Draw,134.30666788705324,W,PyTorch profiled full run
+Performance per Watt,0.0716862319729014,images/s/W,PyTorch profiled full run
+Average GPU Utilization,95.77744725641848,%,PyTorch profiled full run
+Average VRAM Usage,12607.614113770536,MB,PyTorch profiled full run
+Peak VRAM Usage,12938.0,MB,PyTorch profiled full run
+Average GPU Temperature,44.70774792915656,C,PyTorch profiled full run
+Top PyTorch Operator,aten::convolution_backward,,Chunk-aggregated all 10 epochs
+Top AMD Kernel,miopenSp3AsmConv_v40_6_0_gfx12_fp32_f2x3_stride1,,rocprofv3 full run
+Top Kernel Duration,1304053.557657,ms cumulative,rocprofv3 full run
+Kernel Launch Count,25019781,dispatches,rocprofv3 full run
+GPU Idle Time,143.350244331,s,Exact union of full-run kernel intervals
+GPU Idle Percentage,2.7259029553292344,%,Exact union of full-run kernel intervals
+Bottleneck Type,GPU compute-bound (utilization/idle-time heuristic),,Heuristic; interpret with operators/kernels
+Final Validation Score,0.4043065974544747,mAP50-95,PyTorch profiled full run
+Average GPU Memory Copy Time,597.7670797705944,us/copy,rocprofv3 full run
+Peak System RAM,35007.421875,MB,PyTorch profiled full run
+Average System RAM,25454.065400503696,MB,PyTorch profiled full run
+CPU Utilization,5.395318292069013,%,PyTorch profiled full run
+Average Disk Read,0.2571019299596749,MB/s,PyTorch profiled full run
+Average Disk Write,0.2738630576859189,MB/s,PyTorch profiled full run
+Peak Disk Read,77.65106130195805,MB/s,PyTorch profiled full run
+Peak Disk Write,2435.4332787692592,MB/s,PyTorch profiled full run

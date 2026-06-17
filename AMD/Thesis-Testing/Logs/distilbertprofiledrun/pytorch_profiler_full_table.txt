@@ -1,0 +1,81 @@
+Representative-window PyTorch ATen operator table
+Wait batches: 10
+Warmup batches: 10
+Active profiled batches: 100
+Full training batches executed: 10530
+
+ rank                                         operator  self_gpu_time_ms  self_gpu_percent  gpu_total_ms  calls                                    notes
+    1                                         aten::mm       1101.373138         19.206386   1101.373138   7600                    Matrix multiplication
+    2                                      aten::copy_        645.388886         11.254667    645.388886  33100                              Tensor copy
+    3                                        aten::bmm        554.622238          9.671825    554.622238   3600            Batched matrix multiplication
+    4                                      aten::addmm        437.301784          7.625923    437.301784   3800 Matrix multiplication with bias addition
+    5                          aten::_foreach_addcdiv_        370.080937          6.453687    370.080937     99
+    6                          aten::_foreach_addcmul_        283.039644          4.935810    283.039644     99
+    7                             aten::_foreach_lerp_        282.105128          4.919513    282.105128     99
+    8 aten::_amp_foreach_non_finite_check_and_unscale_        203.436627          3.547646    203.436627    100
+    9                              aten::_foreach_add_        202.769793          3.536018    202.769793    198           In-place multi-tensor addition
+   10                              aten::_foreach_div_        196.284532          3.422924    196.284532     99
+   11                              aten::_foreach_mul_        194.244951          3.387357    194.244951     99     In-place multi-tensor multiplication
+   12                              aten::_foreach_sqrt        193.581403          3.375785    193.581403     99
+   13                                       aten::add_        164.465796          2.868050    164.465796  13396                 In-place tensor addition
+   14                                        aten::mul        151.895283          2.648838    151.895283   3300
+   15                 aten::native_layer_norm_backward        132.740296          2.314803    132.740296   1300             Layer normalization backward
+   16                              aten::gelu_backward        113.908896          1.986410    113.908896    600                 GELU activation backward
+   17                                        aten::sum        110.264347          1.922854    110.264347   3900
+   18                                        aten::add         79.779302          1.391238     79.779302   1500
+   19                                       aten::gelu         57.482328          1.002410     57.482328    600                          GELU activation
+   20                          aten::native_layer_norm         53.445202          0.932009     53.445202   1300               Layer normalization kernel
+   21                                        aten::all         38.210898          0.666344     38.210898    700
+   22                    aten::native_dropout_backward         35.685998          0.622313     35.685998   1400                                  Dropout
+   23                             aten::native_dropout         33.811070          0.589617     33.811070   1400                                  Dropout
+   24                                      aten::fill_         23.787084          0.414813     23.787084   2500
+   25                     aten::_softmax_backward_data         19.444275          0.339081     46.164291    600                         Softmax backward
+   26                                      aten::where         14.122772          0.246281     17.405182   1800
+   27                                   aten::_softmax         13.555589          0.236390     13.555589    600                                  Softmax
+   28                   aten::embedding_dense_backward         12.802480          0.223257     32.183877    200
+   29                                   aten::isneginf          7.326091          0.127757      7.326091    600
+   30                                     aten::gather          2.079098          0.036257      2.079098    200
+   31                        aten::_local_scalar_dense          1.255958          0.021902      2.854267  20792
+   32                                aten::bitwise_and          0.763436          0.013313      0.763436    200
+   33                                     aten::arange          0.720976          0.012573      1.441952    864
+   34                                      aten::index          0.556011          0.009696      1.227290    100
+   35                                         aten::ge          0.374995          0.006539      0.374995    100
+   36                           aten::nll_loss_forward          0.301836          0.005264      0.301836    100
+   37                          aten::nll_loss_backward          0.240434          0.004193      0.375782    100
+   38                                  aten::clamp_min          0.224070          0.003907      0.224070    100
+   39                                 aten::reciprocal          0.195427          0.003408      0.195427    100
+   40                               aten::_log_softmax          0.191269          0.003335      0.191269    100                                  Softmax
+   41                         aten::_amp_update_scale_          0.185306          0.003231      0.185306    100
+   42                 aten::_log_softmax_backward_data          0.184951          0.003225      0.184951    100                         Softmax backward
+   43                         aten::threshold_backward          0.180670          0.003151      0.180670    100
+   44                                         aten::to          0.000000          0.000000    452.035269  29199
+   45                                   aten::_to_copy          0.000000          0.000000    452.035269  28000                              Tensor copy
+   46                                  aten::embedding          0.000000          0.000000      2.079098    200
+   47                                    aten::reshape          0.000000          0.000000    169.033379  20300
+   48                               aten::index_select          0.000000          0.000000      2.079098    200
+   49                                 aten::layer_norm          0.000000          0.000000     53.445202   1300                      Layer normalization
+   50                                    aten::dropout          0.000000          0.000000     33.811070   1400                                  Dropout
+   51                                 aten::is_nonzero          0.000000          0.000000      2.033796    100
+   52                                       aten::item          0.000000          0.000000      2.854267  20792
+   53                                   aten::new_ones          0.000000          0.000000      0.209354    100
+   54                                    aten::__and__          0.000000          0.000000      0.763436    200
+   55                                 aten::contiguous          0.000000          0.000000     23.989443    800
+   56                                      aten::clone          0.000000          0.000000    193.022822   5000
+   57                                     aten::linear          0.000000          0.000000   1036.401977   7600                             Linear layer
+   58               aten::scaled_dot_product_attention          0.000000          0.000000    572.231631    600
+   59                              aten::scalar_tensor          0.000000          0.000000      2.783828   1800
+   60         aten::_scaled_dot_product_attention_math          0.000000          0.000000    567.895233    600
+   61                                     aten::matmul          0.000000          0.000000    302.287555   1200                    Matrix multiplication
+   62                              aten::_safe_softmax          0.000000          0.000000     71.178263    600                                  Softmax
+   63                                    aten::softmax          0.000000          0.000000     13.555589    600                                  Softmax
+   64                                       aten::relu          0.000000          0.000000      0.224070    100
+   65                         aten::cross_entropy_loss          0.000000          0.000000      0.676213    100
+   66                                aten::log_softmax          0.000000          0.000000      0.191269    100                                  Softmax
+   67                                aten::nll_loss_nd          0.000000          0.000000      0.484944    100
+   68                                   aten::nll_loss          0.000000          0.000000      0.786780    200
+   69                                  aten::ones_like          0.000000          0.000000      0.151867    100
+   70                                      aten::zero_          0.000000          0.000000     20.518250    400
+   71                            aten::select_backward          0.000000          0.000000      1.378230    100
+   72                                      aten::zeros          0.000000          0.000000     20.382902    300
+   73                         aten::embedding_backward          0.000000          0.000000     32.183877    200
+   74                                       aten::full          0.000000          0.000000      0.123785    100

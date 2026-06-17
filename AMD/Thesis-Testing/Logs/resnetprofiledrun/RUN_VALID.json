@@ -1,0 +1,11 @@
+{
+  "status": "VALID",
+  "timestamp": "2026-06-15T01:57:49.517909+08:00",
+  "mode": "official_profiled",
+  "primary_metrics_source": "pytorch_operator_pass",
+  "pytorch_operator_pass_valid": true,
+  "rocprofv3_pass_valid": true,
+  "training_window_filter_applied": true,
+  "top_operator": "aten::convolution_backward",
+  "top_kernel": "naive_conv_ab_nonpacked_wrw_nchw_half_double_half"
+}

@@ -1,0 +1,101 @@
+ rank                               operator  self_gpu_time_ms  self_gpu_percent  gpu_total_ms   calls                               notes
+    1             aten::convolution_backward      3.105420e+06         60.579258  3.128659e+06  518750                Convolution backward
+    2               aten::miopen_convolution      5.542040e+05         10.811184  5.569661e+05  518750          MIOpen convolution forward
+    3       aten::miopen_batch_norm_backward      2.940294e+05          5.735806  3.267024e+05  481250 MIOpen batch normalization backward
+    4                            aten::copy_      1.936445e+05          3.777538  1.937516e+05 1532229                         Tensor copy
+    5                aten::miopen_batch_norm      1.826225e+05          3.562525  2.188983e+05  481250  MIOpen batch normalization forward
+    6                    aten::silu_backward      1.814110e+05          3.538892  1.814110e+05  475000
+    7                            aten::fill_      1.291053e+05          2.518534  1.291053e+05 8322284
+    8                            aten::silu_      1.158265e+05          2.259497  2.908900e+05  475000
+    9                              aten::cat      1.011534e+05          1.973259  1.011534e+05  214505                Tensor concatenation
+   10                              aten::add      7.161187e+04          1.396975  7.161187e+04  495745
+   11                             aten::add_      5.237576e+04          1.021725  5.237576e+04 2748032            In-place tensor addition
+   12                           aten::addmv_      1.832286e+04          0.357435  1.832286e+04    6250
+   13                              aten::mul      1.275364e+04          0.248793  1.275377e+04 1434892
+   14                Optimizer.step#SGD.step      1.219252e+04          0.237847  2.362138e+04    4010                SGD optimizer update
+   15                             aten::sub_      8.904118e+03          0.173698  8.904118e+03   18750
+   16                             aten::mul_      7.420724e+03          0.144760  7.420724e+03  841740
+   17               aten::upsample_nearest2d      7.105645e+03          0.138614  7.105645e+03   12500                          Upsampling
+   18                    aten::_foreach_add_      6.802764e+03          0.132706  6.802764e+03   18042      In-place multi-tensor addition
+   19      aten::upsample_nearest2d_backward      5.986394e+03          0.116780  1.896763e+04   12500                          Upsampling
+   20                            aten::where      5.300818e+03          0.103406  1.220415e+04   87412
+   21                              aten::sum      4.991297e+03          0.097368  5.049996e+03   99912
+   22 aten::max_pool2d_with_indices_backward      4.622636e+03          0.090176  5.096963e+03   18750
+   23                              aten::div      4.372879e+03          0.085304  4.372881e+03  287490
+   24                          aten::sigmoid      3.865676e+03          0.075410  3.865676e+03   12500
+   25                          aten::nonzero      3.147922e+03          0.061408  3.386430e+03   75000
+   26                             aten::amin      3.131746e+03          0.061093  3.131746e+03    6250
+   27          aten::max_pool2d_with_indices      2.984356e+03          0.058218  2.984356e+03   18750
+   28                    aten::_foreach_mul_      2.871049e+03          0.056007  2.871049e+03    8017
+   29                            aten::index      2.619085e+03          0.051092  4.813529e+03   81250
+   30                             aten::topk      2.476142e+03          0.048304  2.476142e+03    6250
+   31                     aten::_foreach_add      2.445879e+03          0.047713  3.188308e+03    2005               Multi-tensor addition
+   32                               aten::gt      2.263201e+03          0.044150  2.263201e+03   49912
+   33              aten::log_sigmoid_forward      2.190848e+03          0.042738  2.508330e+03    6250
+   34           aten::_softmax_backward_data      2.126466e+03          0.041482  4.900093e+03    6250
+   35                              aten::sub      1.882441e+03          0.036722  1.882442e+03  281250
+   36                 aten::_index_put_impl_      1.467660e+03          0.028631  1.056261e+04  100000
+   37                         aten::_softmax      1.428642e+03          0.027869  1.428642e+03    6250
+   38                              aten::pow      1.320771e+03          0.025765  1.389917e+03  106250
+   39                              aten::max      1.119413e+03          0.021837  2.123165e+03  256250
+   40                              aten::min      9.948433e+02          0.019407  1.977494e+03  243750
+   41                             aten::amax      7.037491e+02          0.013728  7.037491e+02   18750
+   42                    aten::_foreach_norm      6.977591e+02          0.013612  1.294623e+03    2005
+   43                        aten::remainder      6.909912e+02          0.013480  6.911262e+02  268813
+   44                    aten::_assert_async      6.517748e+02          0.012715  6.523554e+02  487500
+   45                               aten::lt      5.913893e+02          0.011537  5.968450e+02  281250
+   46                           aten::argmax      5.396211e+02          0.010527  5.396211e+02   12412
+   47                               aten::ge      4.885099e+02          0.009530  4.885114e+02  256250
+   48                         aten::scatter_      4.080680e+02          0.007960  4.080680e+02   12412                Tensor concatenation
+   49                              aten::gt_      3.951040e+02          0.007708  3.951040e+02   12500
+   50                           aten::arange      3.916015e+02          0.007639  2.177136e+03  562502
+   51                              aten::neg      3.306515e+02          0.006450  3.306515e+02  112500
+   52                          aten::minimum      2.171312e+02          0.004236  2.171312e+02   50000
+   53                          aten::maximum      2.128362e+02          0.004152  2.128362e+02   50000
+   54                             aten::div_      2.012104e+02          0.003925  2.014748e+02  100087
+   55              aten::_local_scalar_dense      1.987453e+02          0.003877  1.987513e+02   73062
+   56                     aten::masked_fill_      1.961228e+02          0.003826  1.961228e+02   62500
+   57                               aten::eq      1.903013e+02          0.003712  1.903013e+02   53591
+   58                           aten::clamp_      1.708471e+02          0.003333  2.202531e+02   50000
+   59                         aten::_unique2      9.024219e+01          0.001760  1.637022e+02    6250
+   60                             aten::atan      5.294466e+01          0.001033  5.294466e+01   25000
+   61                     aten::_log_softmax      4.556774e+01          0.000889  4.556774e+01   12500
+   62                 aten::nll_loss_forward      4.091323e+01          0.000798  5.834395e+01   12500
+   63       aten::_log_softmax_backward_data      3.113183e+01          0.000607  3.113183e+01   12500
+   64                             aten::mean      3.094169e+01          0.000604  3.094169e+01    6250
+   65                aten::nll_loss_backward      3.031576e+01          0.000591  4.654867e+01   12500
+   66                              aten::all      2.315473e+01          0.000452  2.434548e+01    4275
+   67                      aten::bitwise_not      2.159726e+01          0.000421  2.159726e+01    6250
+   68                           aten::cumsum      1.756324e+01          0.000343  1.756324e+01    6250
+   69                              aten::abs      9.641241e+00          0.000188  4.184378e+01    7182
+   70                               aten::ne      8.369000e+00          0.000163  8.369000e+00    3591
+   71               aten::linalg_vector_norm      6.973093e+00          0.000136  6.973093e+00    2005
+   72                            aten::clamp      3.749109e+00          0.000073  3.749109e+00    2005
+   73                       aten::reciprocal      3.559985e+00          0.000069  3.559985e+00    2005
+   74                            aten::empty      0.000000e+00          0.000000  8.376424e+04 6272331
+   75                             aten::item      0.000000e+00          0.000000  1.987513e+02   73062
+   76                    aten::scalar_tensor      0.000000e+00          0.000000  4.802947e+01   18771
+   77                          aten::resize_      0.000000e+00          0.000000  2.320278e+03  497296
+   78                               aten::to      0.000000e+00          0.000000  1.767870e+04 1660145
+   79                         aten::_to_copy      0.000000e+00          0.000000  1.767870e+04  168306                         Tensor copy
+   80                    aten::empty_strided      0.000000e+00          0.000000  3.928636e+04  894103
+   81                           aten::conv2d      0.000000e+00          0.000000  5.703432e+05  518750
+   82                      aten::convolution      0.000000e+00          0.000000  5.703432e+05  518750                 Convolution forward
+   83                     aten::_convolution      0.000000e+00          0.000000  5.703432e+05  518750                 Convolution forward
+   84                       aten::batch_norm      0.000000e+00          0.000000  2.188983e+05  481250         Batch normalization forward
+   85           aten::_batch_norm_impl_index      0.000000e+00          0.000000  2.188983e+05  481250         Batch normalization forward
+   86                       aten::empty_like      0.000000e+00          0.000000  4.508827e+04 1344443
+   87                            aten::clone      0.000000e+00          0.000000  2.211096e+05 1064939
+   88                       aten::contiguous      0.000000e+00          0.000000  4.580397e+04  518750
+   89                       aten::max_pool2d      0.000000e+00          0.000000  2.984356e+03   18750
+   90                            aten::zeros      0.000000e+00          0.000000  3.616115e+03   58167
+   91                            aten::zero_      0.000000e+00          0.000000  2.850763e+03  164417
+   92                         aten::meshgrid      0.000000e+00          0.000000  5.314780e-01     150
+   93                            aten::stack      0.000000e+00          0.000000  1.044592e+02   20755
+   94                             aten::full      0.000000e+00          0.000000  7.444642e+01   18750
+   95                        aten::ones_like      0.000000e+00          0.000000  6.011503e+01   19443
+   96                     aten::scatter_add_      0.000000e+00          0.000000  7.044296e+03   68750                Tensor concatenation
+   97                       aten::index_put_      0.000000e+00          0.000000  9.862253e+03   87500
+   98                          aten::divide_      0.000000e+00          0.000000  2.012061e+02  100000
+   99                          aten::softmax      0.000000e+00          0.000000  1.428642e+03    6250
+  100                           aten::matmul      0.000000e+00          0.000000  1.833702e+04    6250

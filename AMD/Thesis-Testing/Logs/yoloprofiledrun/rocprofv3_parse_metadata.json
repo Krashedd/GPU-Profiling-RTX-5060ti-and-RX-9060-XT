@@ -1,0 +1,29 @@
+{
+  "parser_mode": "streaming_chunked_csv_with_disk_backed_interval_sort",
+  "csv_chunk_rows": 250000,
+  "kernel_trace_files": [
+    "/home/amd/Thesis-Testing/Logs/yoloprofiledrun/rocprofv3_raw/yolov8m_profile_kernel_trace.csv"
+  ],
+  "marker_trace_files": [
+    "/home/amd/Thesis-Testing/Logs/yoloprofiledrun/rocprofv3_raw/yolov8m_profile_marker_api_trace.csv"
+  ],
+  "memory_copy_trace_files": [
+    "/home/amd/Thesis-Testing/Logs/yoloprofiledrun/rocprofv3_raw/yolov8m_profile_memory_copy_trace.csv"
+  ],
+  "training_marker": "YOLOV8M_TRAINING",
+  "training_start_timestamp_ns": 19854241124648,
+  "training_end_timestamp_ns": 25113057989377,
+  "training_marker_duration_s": 5258.816864729,
+  "raw_kernel_rows": 26970378,
+  "training_kernel_rows": 25019781,
+  "unique_training_kernels": 164,
+  "sum_training_kernel_duration_ms": 5115466.698816,
+  "gpu_busy_time_union_ms": 5115466.620398,
+  "gpu_idle_time_ms": 143350.244331,
+  "gpu_idle_percent": 2.7259029553292344,
+  "kernel_trace_ordering": "disk_sorted_by_start_then_end_timestamp",
+  "memory_copy_calls": 7672,
+  "memory_copy_total_ms": 4586.069036,
+  "memory_copy_average_us": 597.7670797705944,
+  "training_window_filter_applied": true
+}

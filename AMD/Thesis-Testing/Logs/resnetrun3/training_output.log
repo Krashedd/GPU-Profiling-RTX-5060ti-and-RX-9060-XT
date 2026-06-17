@@ -1,0 +1,48 @@
+============================================================================
+ResNet-50 CIFAR-10 AMD regular run 3
+============================================================================
+Timestamp: 2026-06-15T01:07:04.394325+08:00
+Output directory: /home/amd/Thesis-Testing/Logs/resnetrun3
+Dataset directory: /home/amd/Thesis-Testing/Dataset/CIFAR10
+Python: 3.12.3
+Platform: Linux-6.17.0-35-generic-x86_64-with-glibc2.39
+PyTorch: 2.9.1+rocm7.2.3.gitebc02d69
+Torchvision: 0.24.0+rocm7.2.3.gitb919bd0c
+HIP runtime: 7.2.53211-c2d9476115
+System ROCm: 7.2.4
+AMD SMI Python: 26.2.2+97f5574fe2
+GPU: AMD Radeon RX 9060 XT
+GPU architecture: gfx1200
+
+Starting monitored AMP training...
+AMP verification | GradScaler enabled: True | First-batch output dtype: torch.float16
+Epoch 1/10 | Loss: 2.2112 | Time: 18.26s | Throughput: 2738.09 samples/s | Batches: 196
+Epoch 2/10 | Loss: 1.6999 | Time: 14.45s | Throughput: 3460.00 samples/s | Batches: 196
+Epoch 3/10 | Loss: 1.5737 | Time: 14.16s | Throughput: 3531.15 samples/s | Batches: 196
+Epoch 4/10 | Loss: 1.5480 | Time: 14.15s | Throughput: 3532.72 samples/s | Batches: 196
+Epoch 5/10 | Loss: 1.4327 | Time: 14.08s | Throughput: 3552.12 samples/s | Batches: 196
+Epoch 6/10 | Loss: 1.3049 | Time: 14.08s | Throughput: 3551.53 samples/s | Batches: 196
+Epoch 7/10 | Loss: 1.4759 | Time: 14.08s | Throughput: 3550.68 samples/s | Batches: 196
+Epoch 8/10 | Loss: 1.3644 | Time: 14.08s | Throughput: 3552.23 samples/s | Batches: 196
+Epoch 9/10 | Loss: 1.3502 | Time: 14.08s | Throughput: 3550.66 samples/s | Batches: 196
+Epoch 10/10 | Loss: 1.2187 | Time: 14.09s | Throughput: 3549.54 samples/s | Batches: 196
+Total Training Time: 145.51s
+Training complete.
+
+Starting final validation...
+Final Validation Score: 0.5518 (10000 samples, 40 batches)
+
+============================================================================
+OFFICIAL RUN VALID
+============================================================================
+Throughput: 3436.24 samples/s
+Batch Latency: 74.24 ms/batch
+Total Training Time: 145.51 s
+Average GPU Power Draw: 100.84 W
+Average GPU Utilization: 96.48 %
+Average VRAM Usage: 2294.70 MB
+Peak VRAM Usage: 2399.00 MB
+Average GPU Edge Temperature: 42.56 C
+Final Validation Score: 0.5518
+Stability / Error Notes: Completed successfully; no Python, HIP, ROCm, or AMD SMI fatal errors detected. No monitored GPU temperature reached its AMD SMI critical limit. All AMD SMI telemetry queries succeeded.
+Results saved to: /home/amd/Thesis-Testing/Logs/resnetrun3

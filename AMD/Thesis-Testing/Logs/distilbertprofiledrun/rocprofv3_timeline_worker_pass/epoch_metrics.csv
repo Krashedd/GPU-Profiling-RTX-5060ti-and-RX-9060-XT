@@ -1,0 +1,2 @@
+epoch,epoch_time_s,throughput_samples_s,samples,batches,average_training_loss,valid_tokens,padded_tokens,valid_tokens_s,padded_tokens_s,average_valid_tokens_per_sample,average_padded_sequence_length,padding_efficiency_percent
+1,2.577425490002497,99.32391876816271,256,4,0.6842250823974609,3500,12736,1357.9442019084745,4941.364958716095,13.671875,49.75,27.481155778894472

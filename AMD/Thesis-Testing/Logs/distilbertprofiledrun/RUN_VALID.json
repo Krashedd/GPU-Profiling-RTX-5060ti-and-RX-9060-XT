@@ -1,0 +1,21 @@
+{
+  "status": "VALID",
+  "timestamp": "2026-06-17T04:59:41.032078+08:00",
+  "mode": "official_profiled",
+  "primary_metrics_source": "pytorch_operator_pass",
+  "pytorch_operator_pass_valid": true,
+  "pytorch_operator_windows_completed": 1,
+  "pytorch_profiled_batches": 100,
+  "pytorch_total_training_batches_executed": 10530,
+  "rocprofv3_aggregate_pass_valid": true,
+  "rocprofv3_timeline_pass_valid": true,
+  "timeline_used_for_quantitative_metrics": false,
+  "representative_timeline": "/home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_timeline_raw/distilbert_timeline_results.pftrace",
+  "training_window_filter_applied": true,
+  "training_kernel_dispatches": 9201630,
+  "unique_training_kernels": 135,
+  "gpu_idle_time_ms": 41727.345901,
+  "gpu_idle_percent": 6.5144996519757985,
+  "top_operator": "aten::mm",
+  "top_kernel": "void at::native::(anonymous namespace)::multi_tensor_apply_kernel<at::native::(anonymous namespace)::TensorListScalarListMetadata<float, 3>, at::native::(anonymous namespace)::PointwiseOpScalarListFunctor<float, 3, 3, 0>, std::divides<float> >(at::native::(anonymous namespace)::TensorListScalarListMetadata<float, 3>, at::native::(anonymous namespace)::PointwiseOpScalarListFunctor<float, 3, 3, 0>, std::divides<float>)"
+}

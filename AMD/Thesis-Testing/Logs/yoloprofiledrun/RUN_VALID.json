@@ -1,0 +1,19 @@
+{
+  "status": "VALID",
+  "timestamp": "2026-06-16T12:42:48.987767+08:00",
+  "mode": "official_profiled",
+  "primary_metrics_source": "pytorch_operator_pass",
+  "pytorch_operator_pass_valid": true,
+  "pytorch_operator_chunks_completed": 125,
+  "rocprofv3_aggregate_pass_valid": true,
+  "rocprofv3_timeline_pass_valid": true,
+  "timeline_used_for_quantitative_metrics": false,
+  "representative_timeline": "/home/amd/Thesis-Testing/Logs/yoloprofiledrun/rocprofv3_timeline_raw/yolov8m_timeline_results.pftrace",
+  "training_window_filter_applied": true,
+  "training_kernel_dispatches": 25019781,
+  "unique_training_kernels": 164,
+  "gpu_idle_time_ms": 143350.244331,
+  "gpu_idle_percent": 2.7259029553292344,
+  "top_operator": "aten::convolution_backward",
+  "top_kernel": "miopenSp3AsmConv_v40_6_0_gfx12_fp32_f2x3_stride1"
+}

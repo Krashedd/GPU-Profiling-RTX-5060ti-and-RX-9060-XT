@@ -1,0 +1,10 @@
+{
+  "status": "VALID",
+  "timestamp": "2026-06-16T11:10:31.055125+08:00",
+  "mode": "official_profiled",
+  "profile_kind": "torch_operator",
+  "workers": 4,
+  "amp_enabled": false,
+  "total_images_processed": 100000,
+  "total_batches_processed": 6250
+}

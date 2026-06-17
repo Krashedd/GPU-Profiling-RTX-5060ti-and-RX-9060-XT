@@ -1,0 +1,148 @@
+========================================================================================
+ResNet-50 AMD profiled workflow (official)
+========================================================================================
+Output directory: /home/amd/Thesis-Testing/Logs/resnetprofiledrun
+This single command performs two controlled passes: PyTorch operators, then rocprofv3 kernels.
+
+PHASE 1/2: PYTORCH OPERATOR PROFILING
+----------------------------------------------------------------------------------------
+Command:
+/home/amd/Thesis-Testing/.venv/bin/python /home/amd/Thesis-Testing/scripts/resnet50_profiled_amd.py --internal-worker torch_operator --internal-output /home/amd/Thesis-Testing/Logs/resnetprofiledrun/pytorch_operator_pass
+
+================================================================================
+ResNet-50 CIFAR-10 AMD torch_operator profiling official pass
+================================================================================
+Timestamp: 2026-06-15T01:38:29.077046+08:00
+Output directory: /home/amd/Thesis-Testing/Logs/resnetprofiledrun/pytorch_operator_pass
+Dataset directory: /home/amd/Thesis-Testing/Dataset/CIFAR10
+Python: 3.12.3
+Platform: Linux-6.17.0-35-generic-x86_64-with-glibc2.39
+PyTorch: 2.9.1+rocm7.2.3.gitebc02d69
+Torchvision: 0.24.0+rocm7.2.3.gitb919bd0c
+HIP runtime: 7.2.53211-c2d9476115
+System ROCm: 7.2.4
+GPU: AMD Radeon RX 9060 XT
+GPU architecture: gfx1200
+
+Starting monitored training...
+Precision: AMP FP16 | Optimizer: SGD | Batch size: 256 | Epochs: 10
+Precision verification | GradScaler enabled: True | First-batch output dtype: torch.float16
+Epoch 1/10 | Loss: 2.2112 | Time: 19.80s | Throughput: 2525.07 samples/s | Batches: 196
+Epoch 2/10 | Loss: 1.6999 | Time: 15.78s | Throughput: 3169.12 samples/s | Batches: 196
+Epoch 3/10 | Loss: 1.5737 | Time: 15.54s | Throughput: 3218.45 samples/s | Batches: 196
+Epoch 4/10 | Loss: 1.5480 | Time: 15.55s | Throughput: 3216.38 samples/s | Batches: 196
+Epoch 5/10 | Loss: 1.4327 | Time: 15.56s | Throughput: 3213.59 samples/s | Batches: 196
+Epoch 6/10 | Loss: 1.3049 | Time: 15.57s | Throughput: 3211.55 samples/s | Batches: 196
+Epoch 7/10 | Loss: 1.4759 | Time: 15.56s | Throughput: 3212.41 samples/s | Batches: 196
+Epoch 8/10 | Loss: 1.3644 | Time: 15.59s | Throughput: 3207.70 samples/s | Batches: 196
+Epoch 9/10 | Loss: 1.3502 | Time: 15.62s | Throughput: 3201.53 samples/s | Batches: 196
+Epoch 10/10 | Loss: 1.2187 | Time: 15.60s | Throughput: 3205.65 samples/s | Batches: 196
+[W615 01:41:19.758394396 collection.cpp:1133] Warning: ROCTracer produced duplicate flow start: 17 (function operator())
+Total Training Time: 160.16s
+Training complete.
+
+Aggregating PyTorch operator statistics...
+Top PyTorch operator: aten::convolution_backward
+
+Starting final validation...
+Final Validation Score: 0.5518 (10000 samples, 40 batches)
+
+================================================================================
+PROFILE WORKER VALID
+================================================================================
+Profile kind: torch_operator
+Throughput: 3121.93 samples/s
+Batch Latency: 81.71 ms/batch
+Total Training Time: 160.16 s
+Final Validation Score: 0.5518
+Results saved to: /home/amd/Thesis-Testing/Logs/resnetprofiledrun/pytorch_operator_pass
+
+PHASE 2/2: ROCPROFV3 KERNEL/RUNTIME TRACING
+----------------------------------------------------------------------------------------
+Command:
+/opt/rocm/bin/rocprofv3 --runtime-trace --stats --summary --summary-units msec --summary-output-file rocprofv3_summary --output-format csv pftrace --output-directory /home/amd/Thesis-Testing/Logs/resnetprofiledrun/rocprofv3_raw --output-file resnet50_profile --perfetto-buffer-size 2097152 --perfetto-buffer-fill-policy ring_buffer -- /home/amd/Thesis-Testing/.venv/bin/python /home/amd/Thesis-Testing/scripts/resnet50_profiled_amd.py --internal-worker rocprofv3 --internal-output /home/amd/Thesis-Testing/Logs/resnetprofiledrun/rocprofv3_worker_pass
+
+W20260615 01:47:04.727311 136627775818048 simple_timer.cpp:55] [rocprofv3] tool initialization ::     0.005073 sec
+W20260615 01:47:04.727344 136627775818048 simple_timer.cpp:55] [rocprofv3] '/home/amd/Thesis-Testing/.venv/bin/python /home/amd/Thesis-Testing/scripts/resnet50_profiled_amd.py --internal-worker rocprofv3 --internal-output /home/amd/Thesis-Testing/Logs/resnetprofiledrun/rocprofv3_worker_pass' ::     0.000000 sec
+W20260615 01:47:05.916650 136627775818048 tool.cpp:2422] HIP (runtime) version 7.2.0 initialized (instance=0)
+W20260615 01:47:05.926556 136627775818048 tool.cpp:2422] HSA version 8.20.4 initialized (instance=0)
+================================================================================
+ResNet-50 CIFAR-10 AMD rocprofv3 profiling official pass
+================================================================================
+Timestamp: 2026-06-15T01:47:05.942559+08:00
+Output directory: /home/amd/Thesis-Testing/Logs/resnetprofiledrun/rocprofv3_worker_pass
+Dataset directory: /home/amd/Thesis-Testing/Dataset/CIFAR10
+Python: 3.12.3
+Platform: Linux-6.17.0-35-generic-x86_64-with-glibc2.39
+PyTorch: 2.9.1+rocm7.2.3.gitebc02d69
+Torchvision: 0.24.0+rocm7.2.3.gitb919bd0c
+HIP runtime: 7.2.53211-c2d9476115
+System ROCm: 7.2.4
+GPU: AMD Radeon RX 9060 XT
+GPU architecture: gfx1200
+
+ROCTx library: /opt/rocm/lib/librocprofiler-sdk-roctx.so
+ROCTx training range enabled; parsed kernel rankings will exclude setup and validation activity.
+
+Starting monitored training...
+Precision: AMP FP16 | Optimizer: SGD | Batch size: 256 | Epochs: 10
+W20260615 01:47:06.567544 136627775818048 tool.cpp:2422] MARKER (ROCTx) version 1.1.0 initialized (instance=0)
+ROCTx training range started.
+Precision verification | GradScaler enabled: True | First-batch output dtype: torch.float16
+Epoch 1/10 | Loss: 2.2112 | Time: 18.03s | Throughput: 2773.42 samples/s | Batches: 196
+Epoch 2/10 | Loss: 1.6999 | Time: 15.80s | Throughput: 3163.86 samples/s | Batches: 196
+Epoch 3/10 | Loss: 1.5737 | Time: 15.79s | Throughput: 3166.76 samples/s | Batches: 196
+Epoch 4/10 | Loss: 1.5480 | Time: 15.79s | Throughput: 3166.40 samples/s | Batches: 196
+Epoch 5/10 | Loss: 1.4327 | Time: 15.85s | Throughput: 3154.69 samples/s | Batches: 196
+Epoch 6/10 | Loss: 1.3049 | Time: 15.92s | Throughput: 3140.02 samples/s | Batches: 196
+Epoch 7/10 | Loss: 1.4759 | Time: 15.80s | Throughput: 3163.65 samples/s | Batches: 196
+Epoch 8/10 | Loss: 1.3644 | Time: 15.80s | Throughput: 3164.20 samples/s | Batches: 196
+Epoch 9/10 | Loss: 1.3502 | Time: 15.80s | Throughput: 3165.01 samples/s | Batches: 196
+Epoch 10/10 | Loss: 1.2187 | Time: 15.80s | Throughput: 3165.27 samples/s | Batches: 196
+ROCTx training range ended.
+Total Training Time: 160.39s
+Training complete.
+
+Starting final validation...
+Final Validation Score: 0.5518 (10000 samples, 40 batches)
+
+================================================================================
+PROFILE WORKER VALID
+================================================================================
+Profile kind: rocprofv3
+Throughput: 3117.44 samples/s
+Batch Latency: 81.83 ms/batch
+Total Training Time: 160.39 s
+Final Validation Score: 0.5518
+Results saved to: /home/amd/Thesis-Testing/Logs/resnetprofiledrun/rocprofv3_worker_pass
+W20260615 01:49:48.880267 136627775818048 simple_timer.cpp:55] [rocprofv3] '/home/amd/Thesis-Testing/.venv/bin/python /home/amd/Thesis-Testing/scripts/resnet50_profiled_amd.py --internal-worker rocprofv3 --internal-output /home/amd/Thesis-Testing/Logs/resnetprofiledrun/rocprofv3_worker_pass' ::   164.152923 sec
+E20260615 01:49:50.127507 136627775818048 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/resnetprofiledrun/rocprofv3_raw/resnet50_profile_kernel_stats.csv
+E20260615 01:49:50.137531 136627775818048 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/resnetprofiledrun/rocprofv3_raw/resnet50_profile_kernel_trace.csv
+E20260615 01:50:02.246790 136627775818048 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/resnetprofiledrun/rocprofv3_raw/resnet50_profile_hip_api_stats.csv
+E20260615 01:50:02.246972 136627775818048 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/resnetprofiledrun/rocprofv3_raw/resnet50_profile_hip_api_trace.csv
+E20260615 01:50:38.568819 136627775818048 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/resnetprofiledrun/rocprofv3_raw/resnet50_profile_memory_copy_stats.csv
+E20260615 01:50:38.568923 136627775818048 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/resnetprofiledrun/rocprofv3_raw/resnet50_profile_memory_copy_trace.csv
+E20260615 01:50:38.575925 136627775818048 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/resnetprofiledrun/rocprofv3_raw/resnet50_profile_memory_allocation_stats.csv
+E20260615 01:50:38.576026 136627775818048 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/resnetprofiledrun/rocprofv3_raw/resnet50_profile_memory_allocation_trace.csv
+E20260615 01:50:38.579981 136627775818048 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/resnetprofiledrun/rocprofv3_raw/resnet50_profile_marker_api_stats.csv
+E20260615 01:50:38.580071 136627775818048 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/resnetprofiledrun/rocprofv3_raw/resnet50_profile_marker_api_trace.csv
+E20260615 01:50:38.581854 136627775818048 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/resnetprofiledrun/rocprofv3_raw/resnet50_profile_agent_info.csv
+E20260615 01:50:38.581955 136627775818048 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/resnetprofiledrun/rocprofv3_raw/resnet50_profile_domain_stats.csv
+[061.527]       perfetto.cc:47304 Configured tracing session 1, #sources:1, duration:0 ms, #buffers:1, total buffer size:2097152 KB, total sessions:1, uid:0 session name: ""
+E20260615 01:56:01.328171 136627775818048 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/resnetprofiledrun/rocprofv3_raw/resnet50_profile_results.pftrace
+E20260615 01:57:12.032269 136627775818048 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/resnetprofiledrun/rocprofv3_raw/resnet50_profile_rocprofv3_summary.txt
+[455.021]       perfetto.cc:48888 Tracing session 1 ended, total sessions:0
+W20260615 01:57:12.268918 136627775818048 simple_timer.cpp:55] [rocprofv3] output generation ::   442.805574 sec
+W20260615 01:57:12.271117 136627775818048 simple_timer.cpp:55] [rocprofv3] tool finalization ::   442.809859 sec
+
+PARSING ROCPROFV3 KERNEL DATA
+----------------------------------------------------------------------------------------
+Training kernels parsed: 7209086 dispatches across 72 unique kernel names.
+
+========================================================================================
+PROFILED WORKFLOW VALID
+========================================================================================
+Primary performance metrics: PyTorch operator profiler pass
+Top PyTorch operator: aten::convolution_backward
+Top AMD kernel: naive_conv_ab_nonpacked_wrw_nchw_half_double_half
+Results saved to: /home/amd/Thesis-Testing/Logs/resnetprofiledrun

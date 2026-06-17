@@ -1,0 +1,31 @@
+metric,value,unit,source
+Throughput,1042.2474572545275,samples/s,Full training run with representative 100-batch operator window
+Valid Token Throughput,13881.96731663639,tokens/s,Full training run with representative 100-batch operator window
+Padded Token Throughput,46339.5903069224,tokens/s,Full training run with representative 100-batch operator window
+Average Padded Sequence Length,44.4612169445723,tokens,Full training run with representative 100-batch operator window
+Padding Efficiency,29.95703506373608,%,Full training run with representative 100-batch operator window
+Batch Latency,61.36658223276253,ms/batch,Full training run with representative 100-batch operator window
+Total Training Time,646.1901109109895,s,Full training run with representative 100-batch operator window
+Average Epoch Time,64.61777400529827,s,Full training run with representative 100-batch operator window
+Average GPU Power Draw,121.43344827586206,W,Full training run with representative 100-batch operator window
+Performance per Watt,8.582869646317212,samples/s/W,Full training run with representative 100-batch operator window
+Average GPU Utilization,99.19137931034484,%,Full training run with representative 100-batch operator window
+Average VRAM Usage,3666.150344827586,MB,Full training run with representative 100-batch operator window
+Peak VRAM Usage,3776.0,MB,Full training run with representative 100-batch operator window
+Average GPU Temperature,52.068275862068965,C,Full training run with representative 100-batch operator window
+Top PyTorch Operator,aten::mm,,Representative 100-batch ATen operator window
+Top AMD Kernel,"void at::native::(anonymous namespace)::multi_tensor_apply_kernel<at::native::(anonymous namespace)::TensorListScalarListMetadata<float, 3>, at::native::(anonymous namespace)::PointwiseOpScalarListFunctor<float, 3, 3, 0>, std::divides<float> >(at::native::(anonymous namespace)::TensorListScalarListMetadata<float, 3>, at::native::(anonymous namespace)::PointwiseOpScalarListFunctor<float, 3, 3, 0>, std::divides<float>)",,rocprofv3 full run
+Top Kernel Duration,39032.171729,ms cumulative,rocprofv3 full run
+Kernel Launch Count,9201630,dispatches,rocprofv3 full run
+GPU Idle Time,41.727345901,s,Exact union of full-run kernel intervals
+GPU Idle Percentage,6.5144996519757985,%,Exact union of full-run kernel intervals
+Bottleneck Type,GPU compute-bound (utilization/idle-time heuristic),,Heuristic; interpret with operators/kernels
+Final Validation Score,0.904816513761468,accuracy,Full training run with representative 100-batch operator window
+Average GPU Memory Copy Time,4.465374143668036,us/copy,rocprofv3 full run
+Peak System RAM,14306.3515625,MB,Full training run with representative 100-batch operator window
+Average System RAM,14005.69228448276,MB,Full training run with representative 100-batch operator window
+CPU Utilization,4.318620689655172,%,Full training run with representative 100-batch operator window
+Average Disk Read,0.0001269784238623,MB/s,Full training run with representative 100-batch operator window
+Average Disk Write,0.0902337152578688,MB/s,Full training run with representative 100-batch operator window
+Peak Disk Read,0.3682374292009359,MB/s,Full training run with representative 100-batch operator window
+Peak Disk Write,9.28630810468152,MB/s,Full training run with representative 100-batch operator window

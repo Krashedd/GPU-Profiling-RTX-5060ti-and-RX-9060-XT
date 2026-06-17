@@ -1,0 +1,26 @@
+Recorded: 2026-06-18T04:34:56+08:00
+Hostname: AMD-TEST
+Kernel: 6.17.0-35-generic
+
+PRETTY_NAME="Ubuntu 24.04.4 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.4 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+
+Python: 3.12.3
+PyTorch: 2.9.1+rocm7.2.3.gitebc02d69
+HIP runtime: 7.2.53211-c2d9476115
+GPU available: True
+GPU: AMD Radeon RX 9060 XT
+
+ROCm:
+Runtime Version:         1.18

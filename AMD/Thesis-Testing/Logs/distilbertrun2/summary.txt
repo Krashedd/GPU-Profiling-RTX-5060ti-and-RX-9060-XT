@@ -1,0 +1,31 @@
+DistilBERT SST-2 AMD Regular Run 2
+========================================================================
+Throughput: 1086.72 samples/s
+Valid Token Throughput: 14474.26 tokens/s
+Padded Token Throughput: 48400.99 tokens/s
+Average Valid Tokens per Sample: 13.32
+Average Padded Sequence Length: 44.54
+Padding Efficiency: 29.90 %
+Batch Latency: 58.86 ms/batch
+Total Training Time: 619.75 s
+Average Epoch Time: 61.97 s
+Average GPU Power Draw: 114.68 W
+Performance per Watt: 9.4763 samples/s/W
+Average GPU Utilization: 99.51 %
+Average VRAM Usage: 3622.52 MB
+Peak VRAM Usage: 3658.00 MB
+Average GPU Edge Temperature: 55.63 C
+Average GPU Hotspot Temperature: 68.33 C
+Average GPU Memory Temperature: 73.58 C
+Final Validation Accuracy: 0.9060
+Final Validation Loss: 0.393550
+Final Training Loss: 0.019761
+Peak System RAM: 10154.00 MB
+Average System RAM: 9819.91 MB
+Average CPU Utilization: 4.24 %
+Average CPU Package Temperature: 57.19 C
+Average Disk Read / Write: 0.00 / 0.03 MB/s
+Peak Disk Read / Write: 0.00 / 4.81 MB/s
+Precision: AMP ON; AMP enabled: True
+Workers: 4
+Stability / Error Notes: Completed successfully; no Python, HIP, ROCm, Transformers, Datasets, AMD SMI, GPU, OOM, or thermal fatal errors detected. No monitored GPU temperature reached the configured critical thresholds. All AMD SMI telemetry queries succeeded.

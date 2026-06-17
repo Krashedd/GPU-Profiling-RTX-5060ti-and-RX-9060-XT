@@ -1,0 +1,15 @@
+{
+  "status": "VALID",
+  "timestamp": "2026-06-17T02:13:25.141316+08:00",
+  "mode": "official_regular",
+  "run": 2,
+  "epochs_completed": 10,
+  "total_samples_processed": 673490,
+  "total_batches_processed": 10530,
+  "total_valid_tokens": 8970390,
+  "total_padded_tokens": 29996406,
+  "workers": 4,
+  "amp_enabled": true,
+  "padding": "dynamic_per_batch",
+  "validation_accuracy": 0.9059633027522936
+}

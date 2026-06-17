@@ -1,0 +1,29 @@
+{
+  "parser_mode": "streaming_chunked_csv_with_disk_backed_interval_sort",
+  "csv_chunk_rows": 250000,
+  "kernel_trace_files": [
+    "/home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_raw/distilbert_profile_kernel_trace.csv"
+  ],
+  "marker_trace_files": [
+    "/home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_raw/distilbert_profile_marker_api_trace.csv"
+  ],
+  "memory_copy_trace_files": [
+    "/home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_raw/distilbert_profile_memory_copy_trace.csv"
+  ],
+  "training_marker": "DISTILBERT_SST2_TRAINING",
+  "training_start_timestamp_ns": 83302662438579,
+  "training_end_timestamp_ns": 83943192765238,
+  "training_marker_duration_s": 640.530326659,
+  "raw_kernel_rows": 9206379,
+  "training_kernel_rows": 9201630,
+  "unique_training_kernels": 135,
+  "sum_training_kernel_duration_ms": 598828.468786,
+  "gpu_busy_time_union_ms": 598802.980758,
+  "gpu_idle_time_ms": 41727.345901,
+  "gpu_idle_percent": 6.5144996519757985,
+  "kernel_trace_ordering": "disk_sorted_by_start_then_end_timestamp",
+  "memory_copy_calls": 30654,
+  "memory_copy_total_ms": 136.881579,
+  "memory_copy_average_us": 4.465374143668036,
+  "training_window_filter_applied": true
+}

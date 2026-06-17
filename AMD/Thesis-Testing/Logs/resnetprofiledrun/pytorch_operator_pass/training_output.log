@@ -1,0 +1,46 @@
+================================================================================
+ResNet-50 CIFAR-10 AMD torch_operator profiling official pass
+================================================================================
+Timestamp: 2026-06-15T01:38:29.077046+08:00
+Output directory: /home/amd/Thesis-Testing/Logs/resnetprofiledrun/pytorch_operator_pass
+Dataset directory: /home/amd/Thesis-Testing/Dataset/CIFAR10
+Python: 3.12.3
+Platform: Linux-6.17.0-35-generic-x86_64-with-glibc2.39
+PyTorch: 2.9.1+rocm7.2.3.gitebc02d69
+Torchvision: 0.24.0+rocm7.2.3.gitb919bd0c
+HIP runtime: 7.2.53211-c2d9476115
+System ROCm: 7.2.4
+GPU: AMD Radeon RX 9060 XT
+GPU architecture: gfx1200
+
+Starting monitored training...
+Precision: AMP FP16 | Optimizer: SGD | Batch size: 256 | Epochs: 10
+Precision verification | GradScaler enabled: True | First-batch output dtype: torch.float16
+Epoch 1/10 | Loss: 2.2112 | Time: 19.80s | Throughput: 2525.07 samples/s | Batches: 196
+Epoch 2/10 | Loss: 1.6999 | Time: 15.78s | Throughput: 3169.12 samples/s | Batches: 196
+Epoch 3/10 | Loss: 1.5737 | Time: 15.54s | Throughput: 3218.45 samples/s | Batches: 196
+Epoch 4/10 | Loss: 1.5480 | Time: 15.55s | Throughput: 3216.38 samples/s | Batches: 196
+Epoch 5/10 | Loss: 1.4327 | Time: 15.56s | Throughput: 3213.59 samples/s | Batches: 196
+Epoch 6/10 | Loss: 1.3049 | Time: 15.57s | Throughput: 3211.55 samples/s | Batches: 196
+Epoch 7/10 | Loss: 1.4759 | Time: 15.56s | Throughput: 3212.41 samples/s | Batches: 196
+Epoch 8/10 | Loss: 1.3644 | Time: 15.59s | Throughput: 3207.70 samples/s | Batches: 196
+Epoch 9/10 | Loss: 1.3502 | Time: 15.62s | Throughput: 3201.53 samples/s | Batches: 196
+Epoch 10/10 | Loss: 1.2187 | Time: 15.60s | Throughput: 3205.65 samples/s | Batches: 196
+Total Training Time: 160.16s
+Training complete.
+
+Aggregating PyTorch operator statistics...
+Top PyTorch operator: aten::convolution_backward
+
+Starting final validation...
+Final Validation Score: 0.5518 (10000 samples, 40 batches)
+
+================================================================================
+PROFILE WORKER VALID
+================================================================================
+Profile kind: torch_operator
+Throughput: 3121.93 samples/s
+Batch Latency: 81.71 ms/batch
+Total Training Time: 160.16 s
+Final Validation Score: 0.5518
+Results saved to: /home/amd/Thesis-Testing/Logs/resnetprofiledrun/pytorch_operator_pass

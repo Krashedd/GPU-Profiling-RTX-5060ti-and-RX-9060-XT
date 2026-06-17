@@ -1,0 +1,7 @@
+{
+  "collection_mode": "chunked_full_workload",
+  "chunks_completed": 125,
+  "representative_trace_only": true,
+  "representative_trace_file": "pytorch_trace.json",
+  "all_operator_totals_cover_full_profiled_training": true
+}

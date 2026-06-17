@@ -1,0 +1,23 @@
+ResNet-50 AMD torch_operator Profiled Pass
+================================================================
+Throughput: 3121.93 samples/s
+Batch Latency: 81.71 ms/batch
+Total Training Time: 160.16 s
+Average Epoch Time: 16.02 s
+Average GPU Power Draw: 93.38 W
+Performance per Watt: 33.43 samples/s/W
+Average GPU Utilization: 96.71 %
+Average VRAM Usage: 1953.30 MB
+Peak VRAM Usage: 1991.00 MB
+Average GPU Edge Temperature: 40.77 C
+Average GPU Hotspot Temperature: 52.72 C
+Average GPU Memory Temperature: 43.64 C
+Final Validation Score: 0.5518
+Peak System RAM: 15744.12 MB
+Average System RAM: 11764.32 MB
+Average CPU Utilization: 6.35 %
+Average CPU Package Temperature: 56.20 C
+Average Disk Read / Write: 0.00 / 0.12 MB/s
+Peak Disk Read / Write: 0.04 / 7.71 MB/s
+Precision: GradScaler enabled; first-batch output dtype torch.float16
+Stability / Error Notes: Completed successfully; no Python, HIP, ROCm, AMD SMI, or profiler fatal errors detected. No monitored GPU temperature reached its AMD SMI critical limit. All AMD SMI telemetry queries succeeded.

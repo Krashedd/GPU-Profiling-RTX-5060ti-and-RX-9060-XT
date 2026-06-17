@@ -1,0 +1,59 @@
+========================================================================================
+DistilBERT SST-2 AMD timeline profiling smoke test
+========================================================================================
+Timestamp: 2026-06-17T04:59:36.744599+08:00
+Output directory: /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_timeline_worker_pass
+Model directory: /home/amd/Thesis-Testing/scripts/distilbert-base-uncased-sst2-init-seed55
+Dataset directory: /home/amd/Thesis-Testing/Dataset/SST2/tokenized_distilbert_dynamic_maxlen128
+Python: 3.12.3
+Platform: Linux-6.17.0-35-generic-x86_64-with-glibc2.39
+PyTorch: 2.9.1+rocm7.2.3.gitebc02d69
+HIP runtime: 7.2.53211-c2d9476115
+System ROCm: 7.2.4
+Transformers: 5.12.1
+Datasets: 5.0.0
+GPU: AMD Radeon RX 9060 XT
+GPU architecture: gfx1200
+
+ROCTx library: /opt/rocm/lib/librocprofiler-sdk-roctx.so
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|##########| 104/104 [00:00<00:00, 12176.07it/s]
+Training configuration verification
+Batch size: 64
+Workers: 4
+Epochs: 1
+Optimizer: Adam
+Learning rate: 5e-05
+Maximum sequence length: 128
+Padding: dynamic per batch (no pad-to-multiple)
+AMP enabled: True
+Model parameter dtype: torch.float32
+
+ROCTx training range started: DISTILBERT_SST2_TRAINING
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/integrations/sdpa_attention.py:92: UserWarning: Mem Efficient attention on Current AMD GPU is still experimental. Enable it with TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL=1. (Triggered internally at /pytorch/aten/src/ATen/native/transformers/hip/sdp_utils.cpp:360.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+Epoch 1/1 | Time: 2.58s | Throughput: 99.32 samples/s | Batches: 4 | Loss: 0.684225
+ROCTx training range ended: DISTILBERT_SST2_TRAINING
+Final validation:   0%|          | 0/4 [00:00<?, ?it/s]/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+                                                       ========================================================================================
+PROFILE WORKER VALID
+========================================================================================
+Throughput: 98.62 samples/s
+Batch Latency: 648.97 ms/batch
+Total Training Time: 2.60 s
+Final Validation Accuracy: 0.6875
+Results saved to: /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_timeline_worker_pass

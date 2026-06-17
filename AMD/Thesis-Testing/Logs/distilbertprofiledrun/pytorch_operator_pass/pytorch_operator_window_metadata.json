@@ -1,0 +1,13 @@
+{
+  "collection_mode": "representative_window_during_full_training",
+  "wait_batches": 10,
+  "warmup_batches": 10,
+  "active_profiled_batches": 100,
+  "windows_completed": 1,
+  "total_profiled_batches": 100,
+  "total_training_batches_executed": 10530,
+  "operator_scope": "ATen operators only",
+  "chrome_trace_exported": false,
+  "timeline_source": "separate four-batch rocprofv3 Perfetto pass",
+  "profiler_object_lifecycle": "one long-lived profiler object"
+}

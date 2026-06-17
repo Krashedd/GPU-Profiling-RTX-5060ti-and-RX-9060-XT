@@ -1,0 +1,27 @@
+YOLOv8m AMD Smoke rocprofv3 Profile Pass
+========================================================================
+Throughput: 7.53 images/s
+Batch Latency: 2123.60 ms/batch
+Total Training Time: 8.49 s
+Average Epoch Time: 8.49 s
+Average GPU Power Draw: 58.61 W
+Performance per Watt: 0.1286 images/s/W
+Average GPU Utilization: 41.18 %
+Average VRAM Usage: 9159.97 MB
+Peak VRAM Usage: 12568.00 MB
+Average GPU Edge Temperature: 39.68 C
+Average GPU Hotspot Temperature: 47.11 C
+Average GPU Memory Temperature: 49.37 C
+Final Validation mAP50-95: 0.5958
+Final Validation mAP50: 0.7778
+Final Validation Precision: 0.6682
+Final Validation Recall: 0.7250
+Peak System RAM: 11999.00 MB
+Average System RAM: 11611.72 MB
+Average CPU Utilization: 6.80 %
+Average CPU Package Temperature: 77.63 C
+Average Disk Read / Write: 0.00 / 1.35 MB/s
+Peak Disk Read / Write: 0.04 / 5.77 MB/s
+Precision: FP32; AMP enabled: False
+Workers: 4
+Stability / Error Notes: Completed successfully; no Python, HIP, ROCm, Ultralytics, AMD SMI, profiler, or GPU fatal errors detected. No monitored GPU temperature reached the configured critical thresholds. All AMD SMI telemetry queries succeeded.

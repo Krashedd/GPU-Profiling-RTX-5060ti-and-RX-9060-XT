@@ -1,0 +1,279 @@
+============================================================================================
+DistilBERT AMD profiled workflow (official)
+============================================================================================
+Output directory: /home/amd/Thesis-Testing/Logs/distilbertprofiledrun
+This command performs three controlled passes: representative-window PyTorch operator profiling during a full training run, full rocprofv3 aggregate tracing, then a short representative Perfetto timeline.
+
+PHASE 1/3: PYTORCH OPERATOR WINDOW DURING FULL TRAINING
+--------------------------------------------------------------------------------------------
+Command:
+/home/amd/Thesis-Testing/.venv/bin/python /home/amd/Thesis-Testing/scripts/distilbert_profiled_amd.py --internal-worker torch_operator --internal-output /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/pytorch_operator_pass
+
+========================================================================================
+DistilBERT SST-2 AMD torch_operator profiling official pass
+========================================================================================
+Timestamp: 2026-06-17T04:37:29.077052+08:00
+Output directory: /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/pytorch_operator_pass
+Model directory: /home/amd/Thesis-Testing/scripts/distilbert-base-uncased-sst2-init-seed55
+Dataset directory: /home/amd/Thesis-Testing/Dataset/SST2/tokenized_distilbert_dynamic_maxlen128
+Python: 3.12.3
+Platform: Linux-6.17.0-35-generic-x86_64-with-glibc2.39
+PyTorch: 2.9.1+rocm7.2.3.gitebc02d69
+HIP runtime: 7.2.53211-c2d9476115
+System ROCm: 7.2.4
+Transformers: 5.12.1
+Datasets: 5.0.0
+GPU: AMD Radeon RX 9060 XT
+GPU architecture: gfx1200
+
+torch.profiler will record one representative operator window: wait=10, warmup=10, active=100 batches. The complete training workload still executes.
+
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 104/104 [00:00<00:00, 18711.72it/s]
+Training configuration verification
+Batch size: 64
+Workers: 4
+Epochs: 10
+Optimizer: Adam
+Learning rate: 5e-05
+Maximum sequence length: 128
+Padding: dynamic per batch (no pad-to-multiple)
+AMP enabled: True
+Model parameter dtype: torch.float32
+
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/integrations/sdpa_attention.py:92: UserWarning: Mem Efficient attention on Current AMD GPU is still experimental. Enable it with TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL=1. (Triggered internally at /pytorch/aten/src/ATen/native/transformers/hip/sdp_utils.cpp:360.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+[W617 04:37:39.350211037 collection.cpp:1133] Warning: ROCTracer produced duplicate flow start: 13459 (function operator())
+torch.profiler representative window processed; wait=10, warmup=10, active=100 batches.
+Epoch 1/10 | Time: 89.66s | Throughput: 751.16 samples/s | Batches: 1053 | Loss: 0.212871
+Epoch 2/10 | Time: 61.64s | Throughput: 1092.59 samples/s | Batches: 1053 | Loss: 0.109424
+Epoch 3/10 | Time: 61.76s | Throughput: 1090.57 samples/s | Batches: 1053 | Loss: 0.072593
+Epoch 4/10 | Time: 61.69s | Throughput: 1091.80 samples/s | Batches: 1053 | Loss: 0.052891
+Epoch 5/10 | Time: 61.72s | Throughput: 1091.17 samples/s | Batches: 1053 | Loss: 0.040317
+Epoch 6/10 | Time: 61.79s | Throughput: 1089.92 samples/s | Batches: 1053 | Loss: 0.035085
+Epoch 7/10 | Time: 62.00s | Throughput: 1086.19 samples/s | Batches: 1053 | Loss: 0.029927
+Epoch 8/10 | Time: 61.79s | Throughput: 1089.99 samples/s | Batches: 1053 | Loss: 0.023946
+Epoch 9/10 | Time: 61.97s | Throughput: 1086.76 samples/s | Batches: 1053 | Loss: 0.022685
+Epoch 10/10 | Time: 62.15s | Throughput: 1083.57 samples/s | Batches: 1053 | Loss: 0.021797
+
+Final validation:   0%|          | 0/14 [00:00<?, ?it/s]/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+
+                                                        
+========================================================================================
+PROFILE WORKER VALID
+========================================================================================
+Throughput: 1042.25 samples/s
+Batch Latency: 61.37 ms/batch
+Total Training Time: 646.19 s
+Final Validation Accuracy: 0.9048
+Results saved to: /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/pytorch_operator_pass
+
+PHASE 2/3: ROCPROFV3 AGGREGATE TRACING (FULL WORKLOAD)
+--------------------------------------------------------------------------------------------
+Command:
+/opt/rocm/bin/rocprofv3 --disable-signal-handlers --kernel-trace --memory-copy-trace --marker-trace --stats --summary --summary-units msec --summary-output-file rocprofv3_summary --output-format csv --output-directory /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_raw --output-file distilbert_profile -- /home/amd/Thesis-Testing/.venv/bin/python /home/amd/Thesis-Testing/scripts/distilbert_profiled_amd.py --internal-worker rocprofv3 --internal-output /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_worker_pass
+
+W20260617 04:48:19.433331 136851357387072 simple_timer.cpp:55] [rocprofv3] tool initialization ::     0.001245 sec
+W20260617 04:48:19.433366 136851357387072 simple_timer.cpp:55] [rocprofv3] '/home/amd/Thesis-Testing/.venv/bin/python /home/amd/Thesis-Testing/scripts/distilbert_profiled_amd.py --internal-worker rocprofv3 --internal-output /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_worker_pass' ::     0.000000 sec
+W20260617 04:48:21.428838 136851357387072 tool.cpp:2422] HSA version 8.20.4 initialized (instance=0)
+========================================================================================
+DistilBERT SST-2 AMD rocprofv3 profiling official pass
+========================================================================================
+Timestamp: 2026-06-17T04:48:21.492588+08:00
+Output directory: /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_worker_pass
+Model directory: /home/amd/Thesis-Testing/scripts/distilbert-base-uncased-sst2-init-seed55
+Dataset directory: /home/amd/Thesis-Testing/Dataset/SST2/tokenized_distilbert_dynamic_maxlen128
+Python: 3.12.3
+Platform: Linux-6.17.0-35-generic-x86_64-with-glibc2.39
+PyTorch: 2.9.1+rocm7.2.3.gitebc02d69
+HIP runtime: 7.2.53211-c2d9476115
+System ROCm: 7.2.4
+Transformers: 5.12.1
+Datasets: 5.0.0
+GPU: AMD Radeon RX 9060 XT
+GPU architecture: gfx1200
+
+ROCTx library: /opt/rocm/lib/librocprofiler-sdk-roctx.so
+
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 104/104 [00:00<00:00, 17106.18it/s]
+Training configuration verification
+Batch size: 64
+Workers: 4
+Epochs: 10
+Optimizer: Adam
+Learning rate: 5e-05
+Maximum sequence length: 128
+Padding: dynamic per batch (no pad-to-multiple)
+AMP enabled: True
+Model parameter dtype: torch.float32
+
+W20260617 04:48:21.938959 136851357387072 tool.cpp:2422] MARKER (ROCTx) version 1.1.0 initialized (instance=0)
+ROCTx training range started: DISTILBERT_SST2_TRAINING
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/integrations/sdpa_attention.py:92: UserWarning: Mem Efficient attention on Current AMD GPU is still experimental. Enable it with TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL=1. (Triggered internally at /pytorch/aten/src/ATen/native/transformers/hip/sdp_utils.cpp:360.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+Epoch 1/10 | Time: 67.49s | Throughput: 997.95 samples/s | Batches: 1053 | Loss: 0.212871
+Epoch 2/10 | Time: 63.83s | Throughput: 1055.06 samples/s | Batches: 1053 | Loss: 0.109424
+Epoch 3/10 | Time: 63.73s | Throughput: 1056.81 samples/s | Batches: 1053 | Loss: 0.072593
+Epoch 4/10 | Time: 63.57s | Throughput: 1059.45 samples/s | Batches: 1053 | Loss: 0.052891
+Epoch 5/10 | Time: 63.58s | Throughput: 1059.21 samples/s | Batches: 1053 | Loss: 0.040317
+Epoch 6/10 | Time: 63.57s | Throughput: 1059.38 samples/s | Batches: 1053 | Loss: 0.035085
+Epoch 7/10 | Time: 63.86s | Throughput: 1054.64 samples/s | Batches: 1053 | Loss: 0.029927
+Epoch 8/10 | Time: 63.56s | Throughput: 1059.58 samples/s | Batches: 1053 | Loss: 0.023946
+Epoch 9/10 | Time: 63.74s | Throughput: 1056.60 samples/s | Batches: 1053 | Loss: 0.022685
+Epoch 10/10 | Time: 63.56s | Throughput: 1059.59 samples/s | Batches: 1053 | Loss: 0.021797
+ROCTx training range ended: DISTILBERT_SST2_TRAINING
+
+Final validation:   0%|          | 0/14 [00:00<?, ?it/s]/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+
+                                                        
+========================================================================================
+PROFILE WORKER VALID
+========================================================================================
+Throughput: 1051.46 samples/s
+Batch Latency: 60.83 ms/batch
+Total Training Time: 640.53 s
+Final Validation Accuracy: 0.9048
+Results saved to: /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_worker_pass
+W20260617 04:59:03.804650 136851357387072 simple_timer.cpp:55] [rocprofv3] '/home/amd/Thesis-Testing/.venv/bin/python /home/amd/Thesis-Testing/scripts/distilbert_profiled_amd.py --internal-worker rocprofv3 --internal-output /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_worker_pass' ::   644.371285 sec
+E20260617 04:59:04.825123 136851357387072 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_raw/distilbert_profile_kernel_stats.csv
+E20260617 04:59:04.825532 136851357387072 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_raw/distilbert_profile_kernel_trace.csv
+E20260617 04:59:15.511095 136851357387072 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_raw/distilbert_profile_memory_copy_stats.csv
+E20260617 04:59:15.511226 136851357387072 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_raw/distilbert_profile_memory_copy_trace.csv
+E20260617 04:59:15.537523 136851357387072 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_raw/distilbert_profile_marker_api_stats.csv
+E20260617 04:59:15.537649 136851357387072 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_raw/distilbert_profile_marker_api_trace.csv
+E20260617 04:59:15.538600 136851357387072 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_raw/distilbert_profile_agent_info.csv
+E20260617 04:59:15.538708 136851357387072 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_raw/distilbert_profile_domain_stats.csv
+E20260617 04:59:15.538809 136851357387072 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_raw/distilbert_profile_rocprofv3_summary.txt
+W20260617 04:59:15.572468 136851357387072 simple_timer.cpp:55] [rocprofv3] output generation ::    11.642548 sec
+W20260617 04:59:15.579128 136851357387072 simple_timer.cpp:55] [rocprofv3] tool finalization ::    11.649760 sec
+
+PARSING FULL ROCPROFV3 DATA IN STREAMING CHUNKS
+--------------------------------------------------------------------------------------------
+Training kernels parsed: 9201630 dispatches across 135 unique kernel names.
+Exact kernel-union idle time: 41.727 s (6.514%).
+
+PHASE 3/3: REPRESENTATIVE ROCPROFV3 PERFETTO TIMELINE
+--------------------------------------------------------------------------------------------
+Command:
+/opt/rocm/bin/rocprofv3 --disable-signal-handlers --kernel-trace --memory-copy-trace --marker-trace --output-format csv pftrace --output-directory /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_timeline_raw --output-file distilbert_timeline --perfetto-buffer-size 2097152 --perfetto-buffer-fill-policy ring_buffer -- /home/amd/Thesis-Testing/.venv/bin/python /home/amd/Thesis-Testing/scripts/distilbert_profiled_amd.py --internal-worker timeline --internal-output /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_timeline_worker_pass --internal-smoke
+
+W20260617 04:59:34.759772 124223674636608 simple_timer.cpp:55] [rocprofv3] tool initialization ::     0.001416 sec
+W20260617 04:59:34.759807 124223674636608 simple_timer.cpp:55] [rocprofv3] '/home/amd/Thesis-Testing/.venv/bin/python /home/amd/Thesis-Testing/scripts/distilbert_profiled_amd.py --internal-worker timeline --internal-output /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_timeline_worker_pass --internal-smoke' ::     0.000000 sec
+W20260617 04:59:36.678195 124223674636608 tool.cpp:2422] HSA version 8.20.4 initialized (instance=0)
+========================================================================================
+DistilBERT SST-2 AMD timeline profiling smoke test
+========================================================================================
+Timestamp: 2026-06-17T04:59:36.744599+08:00
+Output directory: /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_timeline_worker_pass
+Model directory: /home/amd/Thesis-Testing/scripts/distilbert-base-uncased-sst2-init-seed55
+Dataset directory: /home/amd/Thesis-Testing/Dataset/SST2/tokenized_distilbert_dynamic_maxlen128
+Python: 3.12.3
+Platform: Linux-6.17.0-35-generic-x86_64-with-glibc2.39
+PyTorch: 2.9.1+rocm7.2.3.gitebc02d69
+HIP runtime: 7.2.53211-c2d9476115
+System ROCm: 7.2.4
+Transformers: 5.12.1
+Datasets: 5.0.0
+GPU: AMD Radeon RX 9060 XT
+GPU architecture: gfx1200
+
+ROCTx library: /opt/rocm/lib/librocprofiler-sdk-roctx.so
+
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 104/104 [00:00<00:00, 12176.07it/s]
+Training configuration verification
+Batch size: 64
+Workers: 4
+Epochs: 1
+Optimizer: Adam
+Learning rate: 5e-05
+Maximum sequence length: 128
+Padding: dynamic per batch (no pad-to-multiple)
+AMP enabled: True
+Model parameter dtype: torch.float32
+
+W20260617 04:59:37.214035 124223674636608 tool.cpp:2422] MARKER (ROCTx) version 1.1.0 initialized (instance=0)
+ROCTx training range started: DISTILBERT_SST2_TRAINING
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/integrations/sdpa_attention.py:92: UserWarning: Mem Efficient attention on Current AMD GPU is still experimental. Enable it with TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL=1. (Triggered internally at /pytorch/aten/src/ATen/native/transformers/hip/sdp_utils.cpp:360.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+Epoch 1/1 | Time: 2.58s | Throughput: 99.32 samples/s | Batches: 4 | Loss: 0.684225
+ROCTx training range ended: DISTILBERT_SST2_TRAINING
+
+Final validation:   0%|          | 0/4 [00:00<?, ?it/s]/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/amd/Thesis-Testing/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+
+                                                       
+========================================================================================
+PROFILE WORKER VALID
+========================================================================================
+Throughput: 98.62 samples/s
+Batch Latency: 648.97 ms/batch
+Total Training Time: 2.60 s
+Final Validation Accuracy: 0.6875
+Results saved to: /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_timeline_worker_pass
+W20260617 04:59:40.596094 124223674636608 simple_timer.cpp:55] [rocprofv3] '/home/amd/Thesis-Testing/.venv/bin/python /home/amd/Thesis-Testing/scripts/distilbert_profiled_amd.py --internal-worker timeline --internal-output /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_timeline_worker_pass --internal-smoke' ::     5.836287 sec
+E20260617 04:59:40.638480 124223674636608 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_timeline_raw/distilbert_timeline_kernel_trace.csv
+E20260617 04:59:40.651894 124223674636608 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_timeline_raw/distilbert_timeline_memory_copy_trace.csv
+E20260617 04:59:40.655291 124223674636608 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_timeline_raw/distilbert_timeline_marker_api_trace.csv
+E20260617 04:59:40.656205 124223674636608 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_timeline_raw/distilbert_timeline_agent_info.csv
+[981.381]       perfetto.cc:47304 Configured tracing session 1, #sources:1, duration:0 ms, #buffers:1, total buffer size:2097152 KB, total sessions:1, uid:0 session name: ""
+E20260617 04:59:40.709863 124223674636608 output_stream.cpp:111] Opened result file: /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_timeline_raw/distilbert_timeline_results.pftrace
+[981.435]       perfetto.cc:48888 Tracing session 1 ended, total sessions:0
+W20260617 04:59:40.713200 124223674636608 simple_timer.cpp:55] [rocprofv3] output generation ::     0.082255 sec
+W20260617 04:59:40.717732 124223674636608 simple_timer.cpp:55] [rocprofv3] tool finalization ::     0.086900 sec
+Representative timeline: /home/amd/Thesis-Testing/Logs/distilbertprofiledrun/rocprofv3_timeline_raw/distilbert_timeline_results.pftrace
+
+============================================================================================
+PROFILED WORKFLOW VALID
+============================================================================================
+Primary profiled-pass metrics: full training run with a representative operator window
+PyTorch operator windows completed: 1
+Profiled operator batches: 100
+Top PyTorch operator: aten::mm
+Top AMD kernel: void at::native::(anonymous namespace)::multi_tensor_apply_kernel<at::native::(anonymous namespace)::TensorListScalarListMetadata<float, 3>, at::native::(anonymous namespace)::PointwiseOpScalarListFunctor<float, 3, 3, 0>, std::divides<float> >(at::native::(anonymous namespace)::TensorListScalarListMetadata<float, 3>, at::native::(anonymous namespace)::PointwiseOpScalarListFunctor<float, 3, 3, 0>, std::divides<float>)
+Results saved to: /home/amd/Thesis-Testing/Logs/distilbertprofiledrun

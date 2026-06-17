@@ -1,0 +1,19 @@
+DistilBERT SST-2 AMD rocprofv3 profile
+========================================================================
+Throughput: 1051.46 samples/s
+Batch Latency: 60.83 ms/batch
+Total Training Time: 640.53 s
+Average Epoch Time: 64.05 s
+Average GPU Power Draw: 120.28 W
+Performance per Watt: 8.7417 samples/s/W
+Average GPU Utilization: 99.02 %
+Average VRAM Usage: 3700.14 MB
+Peak VRAM Usage: 3764.00 MB
+Average GPU Edge Temperature: 55.49 C
+Final Validation Accuracy: 0.9048
+Peak System RAM: 13928.77 MB
+Average System RAM: 12126.57 MB
+Average CPU Utilization: 7.03 %
+Average Disk Read / Write: 0.00 / 2.74 MB/s
+Peak Disk Read / Write: 0.56 / 459.39 MB/s
+Stability / Error Notes: Completed successfully; no Python, HIP, ROCm, Transformers, Datasets, AMD SMI, GPU, OOM, profiler, or thermal fatal errors detected. No monitored GPU temperature reached the configured critical thresholds. All AMD SMI telemetry queries succeeded.

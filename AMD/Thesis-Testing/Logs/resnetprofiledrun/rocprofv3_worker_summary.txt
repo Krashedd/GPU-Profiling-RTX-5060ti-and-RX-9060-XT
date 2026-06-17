@@ -1,0 +1,23 @@
+ResNet-50 AMD rocprofv3 Profiled Pass
+================================================================
+Throughput: 3117.44 samples/s
+Batch Latency: 81.83 ms/batch
+Total Training Time: 160.39 s
+Average Epoch Time: 16.04 s
+Average GPU Power Draw: 95.17 W
+Performance per Watt: 32.76 samples/s/W
+Average GPU Utilization: 96.90 %
+Average VRAM Usage: 1969.81 MB
+Peak VRAM Usage: 1991.00 MB
+Average GPU Edge Temperature: 41.60 C
+Average GPU Hotspot Temperature: 53.66 C
+Average GPU Memory Temperature: 45.37 C
+Final Validation Score: 0.5518
+Peak System RAM: 12976.75 MB
+Average System RAM: 10631.02 MB
+Average CPU Utilization: 6.83 %
+Average CPU Package Temperature: 63.27 C
+Average Disk Read / Write: 0.00 / 64.44 MB/s
+Peak Disk Read / Write: 0.02 / 5849.41 MB/s
+Precision: GradScaler enabled; first-batch output dtype torch.float16
+Stability / Error Notes: Completed successfully; no Python, HIP, ROCm, AMD SMI, or profiler fatal errors detected. No monitored GPU temperature reached its AMD SMI critical limit. All AMD SMI telemetry queries succeeded.

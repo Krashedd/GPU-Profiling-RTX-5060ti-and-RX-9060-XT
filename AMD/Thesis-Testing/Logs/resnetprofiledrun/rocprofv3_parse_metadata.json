@@ -1,0 +1,16 @@
+{
+  "kernel_trace_files": [
+    "/home/amd/Thesis-Testing/Logs/resnetprofiledrun/rocprofv3_raw/resnet50_profile_kernel_trace.csv"
+  ],
+  "marker_trace_files": [
+    "/home/amd/Thesis-Testing/Logs/resnetprofiledrun/rocprofv3_raw/resnet50_profile_marker_api_trace.csv"
+  ],
+  "training_marker": "RESNET50_TRAINING",
+  "training_start_timestamp_ns": 6849511633216,
+  "training_end_timestamp_ns": 7009900072213,
+  "training_marker_duration_s": 160.388438997,
+  "raw_kernel_rows": 7216635,
+  "training_kernel_rows": 7209086,
+  "unique_training_kernels": 72,
+  "training_window_filter_applied": true
+}

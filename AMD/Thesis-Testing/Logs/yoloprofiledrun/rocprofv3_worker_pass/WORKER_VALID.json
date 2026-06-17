@@ -1,0 +1,10 @@
+{
+  "status": "VALID",
+  "timestamp": "2026-06-16T12:41:00.952168+08:00",
+  "mode": "official_profiled",
+  "profile_kind": "rocprofv3",
+  "workers": 4,
+  "amp_enabled": false,
+  "total_images_processed": 100000,
+  "total_batches_processed": 6250
+}

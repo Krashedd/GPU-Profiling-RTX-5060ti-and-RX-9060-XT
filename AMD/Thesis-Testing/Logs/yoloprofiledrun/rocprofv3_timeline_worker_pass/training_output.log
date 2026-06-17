@@ -1,0 +1,50 @@
+========================================================================================
+YOLOv8m COCO MiniTrain 10K AMD rocprofv3 profiling smoke test
+========================================================================================
+Timestamp: 2026-06-16T12:42:33.755445+08:00
+Output directory: /home/amd/Thesis-Testing/Logs/yoloprofiledrun/rocprofv3_timeline_worker_pass
+Dataset root: /home/amd/Thesis-Testing/Dataset/COCO2017_10k/coco_minitrain_10k/coco_minitrain_10k
+Dataset YAML: /home/amd/Thesis-Testing/Logs/yoloprofiledrun/rocprofv3_timeline_worker_pass/smoke_dataset.yaml
+Weights: /home/amd/Thesis-Testing/scripts/yolov8m.pt
+Python: 3.12.3
+Platform: Linux-6.17.0-35-generic-x86_64-with-glibc2.39
+PyTorch: 2.9.1+rocm7.2.3.gitebc02d69
+HIP runtime: 7.2.53211-c2d9476115
+System ROCm: 7.2.4
+Ultralytics: 8.4.61
+GPU: AMD Radeon RX 9060 XT
+GPU architecture: gfx1200
+
+ROCTx library: /opt/rocm/lib/librocprofiler-sdk-roctx.so
+
+Starting monitored profiled training...
+[K[34m[1mtrain: [0mScanning /home/amd/Thesis-Testing/Dataset/COCO2017_10k/coco_minitrain_10k/coco_minitrain_10k/labels/train2017... 64 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 64/64 3.3Kit/s 0.0s
+[K[34m[1mval: [0mScanning /home/amd/Thesis-Testing/Dataset/COCO2017_10k/coco_minitrain_10k/coco_minitrain_10k/labels/val2017... 32 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 32/32 2.6Kit/s 0.0s
+
+Training configuration verification
+Precision: FP32 (AMP disabled: True)
+Optimizer: SGD
+Batch size: 16
+Workers: 4
+Epochs: 1
+Model parameter dtype: torch.float32
+ROCTx training range started: YOLOV8M_TRAINING
+Monitored profiled training started.
+[K        1/1      1.32G     0.7969     0.9088       1.04         16        640: 0% ──────────── 0/4  5.9s[K        1/1      11.6G     0.8709      1.038      1.123         16        640: 25% ━━━───────── 1/4 2.9s/it 6.8s<8.6s[K        1/1      11.6G     0.9274      1.167      1.131         16        640: 50% ━━━━━━────── 2/4 1.7s/it 7.6s<3.3s[K        1/1      11.6G     0.9637      1.047      1.172         16        640: 75% ━━━━━━━━━─── 3/4 1.3s/it 8.5s<1.3s[K        1/1      11.6G     0.9637      1.047      1.172         16        640: 100% ━━━━━━━━━━━━ 4/4 2.1s/it 8.5s
+Epoch 1/1 | Time: 8.49s | Throughput: 7.53 images/s | Batches: 4 | box_loss: 0.9637 | cls_loss: 1.0470 | dfl_loss: 1.1721
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 1/1 1.9it/s 0.5s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 1/1 2.1it/s 0.5s
+
+Starting final validation outside the profiling window...
+[K[34m[1mval: [0mScanning /home/amd/Thesis-Testing/Dataset/COCO2017_10k/coco_minitrain_10k/coco_minitrain_10k/labels/val2017.cache... 32 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 32/32 33.6Mit/s 0.0s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 1/2 2.0it/s 0.2s<0.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 2/2 5.7it/s 0.4s
+
+========================================================================================
+PROFILE WORKER VALID
+========================================================================================
+Profile kind: rocprofv3
+Throughput: 7.53 images/s
+Batch Latency: 2123.60 ms/batch
+Total Training Time: 8.49 s
+Final Validation mAP50-95: 0.5958
+Results saved to: /home/amd/Thesis-Testing/Logs/yoloprofiledrun/rocprofv3_timeline_worker_pass

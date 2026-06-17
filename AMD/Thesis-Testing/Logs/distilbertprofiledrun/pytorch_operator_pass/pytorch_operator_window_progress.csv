@@ -1,0 +1,2 @@
+window,wait_batches,warmup_batches,profiled_batches,training_batches_seen_at_window_end,operators_in_window,unique_operators
+1,10,10,100,120,74,74
