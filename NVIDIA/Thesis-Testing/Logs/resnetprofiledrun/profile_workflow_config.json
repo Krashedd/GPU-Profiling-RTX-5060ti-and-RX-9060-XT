@@ -1,0 +1,19 @@
+{
+  "mode": "official_profiled",
+  "workflow": "two_pass_single_command",
+  "primary_profile_metrics_source": "pytorch_operator_pass",
+  "operator_profiler": "torch.autograd.profiler.profile with CUDA-event timing (use_device=cuda, use_kineto=False)",
+  "operator_profiler_compatibility_note": "The Kineto-backed torch.profiler path produced CPU-only events on PyTorch 2.9.1+cu130 with this RTX 5060 Ti despite a matching, loadable CUPTI runtime. The verified legacy CUDA-event backend is used for NVIDIA operator timing. Official rankings are restricted to aten:: operators; unfiltered CUDA-timed scopes are retained separately. Version 4 uses one profiler context per batch, keeps each DataLoader next() outside CUDA profiling, aggregates event totals immediately, and releases the batch profiler before continuing.",
+  "official_operator_ranking_filter": "ATen operators only (operator name starts with aten::)",
+  "kernel_profiler": "NVIDIA Nsight Systems CUDA+NVTX trace with exact NVTX training-window filtering",
+  "reason_for_two_passes": "PyTorch operator profiling and Nsight Systems tracing are executed separately to avoid profiler interference.",
+  "both_passes_use_identical_fixed_workload": true,
+  "operator_memory_safety": "Incremental per-batch aggregation; no full-run profiler event object is retained in memory",
+  "log_size_cap_bytes": 67108864,
+  "expected_nvidia_driver": "580.167.08",
+  "training_range_name": "RESNET50_TRAINING",
+  "regular_script_sha256": "674bfa5f8319c3cc2412b4ea3a7cb13a8192e2dcd9faa3e6a3aafffdcad69b44",
+  "profile_script_sha256": "a548595fdec8af3d5865579e0f9383312e6e35a0aff98bc8dbf2cb4440bb5247",
+  "profile_script_revision": "2026-06-20 nvidia-profiled-v4 incremental-batch-operator-profiling",
+  "timestamp": "2026-06-21T02:07:39.009960+08:00"
+}

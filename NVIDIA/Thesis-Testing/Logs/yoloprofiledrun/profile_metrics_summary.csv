@@ -1,0 +1,26 @@
+metric,value,unit,source
+Profiled Throughput,27.820892055233173,images/s,PyTorch operator pass
+Batch Latency,575.1073678095942,ms/batch,PyTorch operator pass
+Total Training Time,3594.4210488099634,s,PyTorch operator pass
+Raw Training Wall Time,11542.688958375002,s,PyTorch operator pass diagnostic
+Operator Aggregation Overhead,7948.267909565038,s,Excluded from primary timing
+Average Epoch Time,359.0629115332995,s,PyTorch operator pass
+Average GPU Power Draw,34.60920491478399,W,PyTorch operator pass
+Performance per Watt,0.8038581678988224,images/s/W,PyTorch operator pass
+Average GPU Utilization,23.60943321442727,%,PyTorch operator pass
+Average VRAM Usage,12360.839234046767,MB,PyTorch operator pass
+Peak VRAM Usage,12763.4375,MB,PyTorch operator pass
+Average GPU Temperature,42.68743559254855,C,PyTorch operator pass
+Final Validation mAP50-95,0.4087808705259488,mAP50-95,PyTorch operator pass
+Final Validation mAP50,0.568167468532793,mAP50,PyTorch operator pass
+Nsight Throughput,33.765845177486874,images/s,Nsight full quantitative pass
+Nsight Training Time,2961.572543923001,s,Nsight full quantitative pass
+Total Kernel Launches,25484378.0,count,Nsight NVTX window
+Unique Kernel Names,198.0,count,Nsight NVTX window
+Summed Kernel Duration,2768.769622711,s,Nsight NVTX window
+GPU Kernel Idle Time,194.954743269,s,Exact interval union
+GPU Kernel Idle Percentage,6.5828258999542495,%,Exact interval union
+CUDA Activity Idle Time,95.869241883,s,Kernels plus memory copies
+CUDA Activity Idle Percentage,3.237112972448214,%,Kernels plus memory copies
+Memory Copy Calls,943200.0,count,Nsight NVTX window
+Average Memory Copy Duration,105.05248238549619,us,Nsight NVTX window

@@ -1,0 +1,14 @@
+{
+  "status": "VALID",
+  "timestamp": "2026-06-22T16:44:47.844294+08:00",
+  "mode": "timeline",
+  "profile_kind": "nsight_systems",
+  "epochs_completed": 1,
+  "total_samples_processed": 256,
+  "total_batches_processed": 4,
+  "workers": 4,
+  "amp_enabled": true,
+  "padding": "dynamic_per_batch",
+  "validation_accuracy": 0.69140625,
+  "driver_version": "580.167.08"
+}

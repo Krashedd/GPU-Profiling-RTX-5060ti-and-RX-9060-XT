@@ -1,0 +1,27 @@
+YOLOv8m NVIDIA Regular Run 3
+================================================================
+Throughput: 34.00 images/s
+Batch Latency: 470.61 ms/batch
+Total Training Time: 2941.31 s
+Average Epoch Time: 293.88 s
+Average GPU Power Draw: 127.19 W
+Performance per Watt: 0.27 images/s/W
+Average GPU Utilization: 98.39 %
+Average VRAM Usage: 12341.90 MB
+Peak VRAM Usage: 12751.44 MB
+Average GPU Temperature: 55.98 C
+Peak GPU Temperature: 62.00 C
+Final Validation mAP50-95: 0.4088
+Final Validation mAP50: 0.5682
+Final Validation Precision: 0.6470
+Final Validation Recall: 0.5318
+Peak System RAM: 10753.52 MB
+Average System RAM: 10431.88 MB
+Average CPU Utilization: 3.82 %
+Average CPU Package Temperature: 57.76 C
+Average Disk Read / Write: 0.00 / 0.53 MB/s
+Peak Disk Read / Write: 0.00 / 910.14 MB/s
+Precision: FP32; AMP enabled: False
+Workers: 4
+Driver: 580.167.08
+Stability / Error Notes: Completed successfully; no Python, CUDA, cuDNN, Ultralytics, NVML, or GPU fatal errors detected. NVML reported no thermal throttling. All required NVML telemetry queries succeeded.

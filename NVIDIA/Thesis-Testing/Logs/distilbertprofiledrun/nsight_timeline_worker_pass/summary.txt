@@ -1,0 +1,19 @@
+DistilBERT SST-2 NVIDIA nsight_systems profile
+========================================================================
+Throughput: 504.86 samples/s
+Batch Latency: 126.77 ms/batch
+Total Training Time: 0.51 s
+Average Epoch Time: 0.50 s
+Average GPU Power Draw: 23.03 W
+Performance per Watt: 21.9200 samples/s/W
+Average GPU Utilization: 1.00 %
+Average VRAM Usage: 1922.06 MB
+Peak VRAM Usage: 2622.06 MB
+Average GPU Temperature: 38.00 C
+Final Validation Accuracy: 0.6914
+Peak System RAM: 7411.51 MB
+Average System RAM: 7184.23 MB
+Average CPU Utilization: 1.70 %
+Average Disk Read / Write: 0.00 / 0.00 MB/s
+Peak Disk Read / Write: 0.00 / 0.00 MB/s
+Stability / Error Notes: Completed successfully; no Python, CUDA, cuDNN, Transformers, Datasets, NVML, GPU, OOM, profiler, or thermal fatal errors detected. No monitored GPU temperature reached the configured critical threshold. All required NVML telemetry queries succeeded.

@@ -1,0 +1,24 @@
+ResNet-50 NVIDIA Regular Run 3
+================================================================
+Throughput: 5043.85 samples/s
+Batch Latency: 50.58 ms/batch
+Total Training Time: 99.13 s
+Average Epoch Time: 9.91 s
+Average GPU Power Draw: 111.35 W
+Performance per Watt: 45.30 samples/s/W
+Average GPU Utilization: 96.79 %
+Average VRAM Usage: 3969.56 MB
+Peak VRAM Usage: 3996.88 MB
+Average GPU Temperature: 50.50 C
+Final Validation Top-1 Accuracy: 0.5853
+Peak System RAM: 5510.47 MB
+Average System RAM: 5446.60 MB
+Average CPU Utilization: 4.18 %
+Average CPU Package Temperature: 52.48 C
+Average Disk Read / Write: 0.00 / 0.01 MB/s
+Peak Disk Read / Write: 0.00 / 0.49 MB/s
+AMP: GradScaler enabled; first-batch output dtype torch.float16
+Initial Model SHA-256: 190ce1c6465c24885a5e44ae7d26fd2498e91069e62bd8a35f6d5a42a12957cd
+Training Order SHA-256: ee315bdb9bae0b6005a817bf982c175111523b686dedc2fce159e1a4c113839b
+Script SHA-256: 674bfa5f8319c3cc2412b4ea3a7cb13a8192e2dcd9faa3e6a3aafffdcad69b44
+Stability / Error Notes: Completed successfully; no Python, CUDA, NVIDIA driver, NVML, OOM, or thermal fatal errors detected. No NVML thermal throttling condition was observed. All required NVML telemetry queries succeeded.

@@ -1,0 +1,30 @@
+{
+  "status": "COMPLETE",
+  "completed_at": "2026-06-22T04:32:40.424373+08:00",
+  "runs": [
+    {
+      "run": 1,
+      "return_code": 0,
+      "elapsed_s": 3063.8205962889915,
+      "valid": true,
+      "error": "",
+      "results_directory": "/home/nvidia/Thesis-Testing/Logs/yolorun1"
+    },
+    {
+      "run": 2,
+      "return_code": 0,
+      "elapsed_s": 3063.3734033809887,
+      "valid": true,
+      "error": "",
+      "results_directory": "/home/nvidia/Thesis-Testing/Logs/yolorun2"
+    },
+    {
+      "run": 3,
+      "return_code": 0,
+      "elapsed_s": 3063.469290298992,
+      "valid": true,
+      "error": "",
+      "results_directory": "/home/nvidia/Thesis-Testing/Logs/yolorun3"
+    }
+  ]
+}

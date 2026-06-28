@@ -1,0 +1,95 @@
+ rank                                                             operator  self_gpu_time_ms  self_gpu_percent  gpu_total_ms  calls                       notes
+    1                                           aten::convolution_backward         75360.036         66.233725     75393.897 103880        Convolution backward
+    2                                              aten::cudnn_convolution          8047.059          7.072538      8047.059 103880           cuDNN convolution
+    3                                                  aten::_foreach_add_          3584.137          3.150088      3588.863   3911                            
+    4                                      aten::cudnn_batch_norm_backward          3459.038          3.040139      3504.099 103880                            
+    5                                               aten::cudnn_batch_norm          3321.898          2.919607      4099.018 103880                            
+    6                                                   aten::_foreach_add          2806.734          2.466831      4478.968   1956                            
+    7                                                          aten::copy_          2260.485          1.986734      2260.485 233401                 Tensor copy
+    8                                                  aten::empty_strided          1553.466          1.365337      1553.466 383623                            
+    9                                                  aten::_foreach_mul_          1368.016          1.202345      1376.782   1955                            
+   10                                                           aten::add_          1072.109          0.942274      1072.109 166600    In-place tensor addition
+   11                     aten::_amp_foreach_non_finite_check_and_unscale_           944.443          0.830068       944.443   1960                            
+   12                                                       aten::_to_copy           845.451          0.743065      3357.033 233240                            
+   13                                             aten::threshold_backward           789.271          0.693688       789.271  96040                            
+   14                                                          aten::empty           647.906          0.569443       647.906 232322                            
+   15                                                         aten::conv2d           582.132          0.511634     19983.238 207760                            
+   16                                                     aten::clamp_min_           533.975          0.469309       533.975  96040                            
+   17 autograd::engine::evaluate_function: torch::autograd::AccumulateGrad           457.656          0.402233      1227.965 315560                            
+   18                                                             aten::to           454.632          0.399575      3811.693 249948                            
+   19                                                         aten::detach           411.588          0.361744       424.554 315721                            
+   20                                                    aten::result_type           392.076          0.344594       392.076 274401                            
+   21                                              Optimizer.step#SGD.step           384.065          0.337554      9831.230   1956        SGD optimizer update
+   22                                      torch::autograd::AccumulateGrad           346.218          0.304290       770.309 315560                            
+   23                                                    aten::convolution           326.941          0.287348      8670.271 103880         Convolution forward
+   24                               aten::max_pool2d_with_indices_backward           304.247          0.267402       324.340   1960                            
+   25                                                   aten::_convolution           296.271          0.260392      8343.330 103880        Convolution dispatch
+   26                                                          aten::relu_           271.638          0.238742       805.613  96040                            
+   27                                         aten::_batch_norm_impl_index           189.117          0.166214      4288.135 103880                            
+   28            autograd::engine::evaluate_function: ConvolutionBackward0           179.066          0.157381     76253.482 103880                            
+   29                 autograd::engine::evaluate_function: ToCopyBackward0           148.691          0.130684      1464.413 109760                            
+   30                                                      ToCopyBackward0           139.140          0.122290      1315.722 109760                            
+   31                                                     aten::empty_like           137.700          0.121024       214.142 105840                            
+   32                                                        ReluBackward0           129.017          0.113393       918.288  96040                            
+   33                                              CudnnBatchNormBackward0           128.829          0.113227      3632.928 103880                            
+   34         autograd::engine::evaluate_function: CudnnBatchNormBackward0           128.545          0.112978      3761.473 103880                            
+   35                   autograd::engine::evaluate_function: ReluBackward0           126.532          0.111209      1044.820  96040                            
+   36                                                     aten::batch_norm           122.556          0.107714      4410.691 103880 Batch normalization forward
+   37                                                 ConvolutionBackward0           119.038          0.104622     75512.935 103880                            
+   38                                                             aten::mm           108.746          0.095577       108.746   3920                            
+   39                                        aten::max_pool2d_with_indices           100.857          0.088643       100.857   1960                            
+   40                                                          aten::addmm            83.308          0.073219        83.308   1960                            
+   41                                    Optimizer.zero_grad#SGD.zero_grad            78.234          0.068760        78.234   1640                            
+   42                                                            aten::mul            74.376          0.065369        74.376   3920                            
+   43                                                           aten::view            73.374          0.064488        73.374  49154                            
+   44                                                          aten::fill_            54.438          0.047845        54.438   7842                            
+   45                                               aten::nll_loss_forward            46.197          0.040602        46.894   1960                            
+   46                                                            aten::div            43.300          0.038056        68.218   3919                            
+   47                                                              aten::t            42.680          0.037511        97.383   9800                            
+   48                                                            aten::sum            42.527          0.037377        42.527   1960                            
+   49                    autograd::engine::evaluate_function: AddBackward0            40.956          0.035996        45.283  31360                            
+   50                                                      aten::transpose            39.399          0.034628        54.703   9800                            
+   51                  autograd::engine::evaluate_function: AddmmBackward0            34.052          0.029928       273.899   1960                            
+   52                                              aten::nll_loss_backward            33.782          0.029691        56.718   1960                            
+   53                                                   aten::_log_softmax            31.227          0.027445        31.227   1960                            
+   54                                                         aten::linear            31.123          0.027354       328.179   3920                            
+   55                                                       AddmmBackward0            30.978          0.027226       193.290   1960                            
+   56                    autograd::engine::evaluate_function: MulBackward0            27.232          0.023934        85.230   1960                            
+   57                                                           aten::mean            26.143          0.022977        26.143   1960                            
+   58                                                    aten::log_softmax            25.423          0.022344        98.909   3919                            
+   59                                            aten::_local_scalar_dense            23.377          0.020546        23.377   1960                            
+   60                                                       aten::nll_loss            20.365          0.017899       163.069   3920                            
+   61                                     aten::_log_softmax_backward_data            20.053          0.017625        20.053   1960                            
+   62                                                         MulBackward0            16.441          0.014450        57.998   1960                            
+   63                                                        MeanBackward1            16.364          0.014382        75.713   1960                            
+   64                                                     aten::as_strided            16.342          0.014363        16.342  10201                            
+   65                                             aten::cross_entropy_loss            15.273          0.013423       188.769   1960                            
+   66                                                         aten::expand            15.011          0.013193        16.049   1960                            
+   67                                                  LogSoftmaxBackward0            14.246          0.012521        34.299   1960                            
+   68                                                      aten::ones_like            14.235          0.012511        46.417   1960                            
+   69                                                               detach            12.966          0.011396        12.966   5003                            
+   70                autograd::engine::evaluate_function: NllLossBackward0            12.899          0.011337        82.357   1960                            
+   71                                                     NllLossBackward0            12.740          0.011197        69.458   1960                            
+   72             autograd::engine::evaluate_function: LogSoftmaxBackward0            12.304          0.010814        46.603   1960                            
+   73                                                     aten::reciprocal            11.842          0.010408        11.842   1960                            
+   74                   autograd::engine::evaluate_function: MeanBackward1            11.584          0.010181        87.297   1960                            
+   75                                                          aten::zero_            10.895          0.009576        43.029   3920                            
+   76                                                        ViewBackward0            10.236          0.008996        22.235   1960                            
+   77                      autograd::engine::evaluate_function: TBackward0             9.752          0.008571        37.551   1960                            
+   78                   autograd::engine::evaluate_function: ViewBackward0             9.428          0.008286        31.663   1960                            
+   79                                                           TBackward0             9.115          0.008011        27.799   1960                            
+   80                                                        aten::reshape             7.462          0.006558        11.999   1960                            
+   81                                                    aten::nll_loss_nd             7.107          0.006246       114.646   1960                            
+   82                                             aten::_amp_update_scale_             4.792          0.004212         4.792   1960                            
+   83                                                         AddBackward0             4.327          0.003803         4.327   2042                            
+   84                                                     aten::max_pool2d             4.305          0.003784       105.162   1960                            
+   85                                                           aten::full             3.837          0.003372         8.630   1962                            
+   86                                            aten::adaptive_avg_pool2d             3.214          0.002825        29.357   1960                            
+   87                                                        aten::flatten             2.776          0.002440         4.551   1960                            
+   88                                                           aten::item             2.511          0.002207        25.888   1960                            
+   89                                        MaxPool2DWithIndicesBackward0             1.883          0.001655       326.223   1960                            
+   90   autograd::engine::evaluate_function: MaxPool2DWithIndicesBackward0             1.841          0.001618       328.064   1960                            
+   91                                                        aten::resize_             0.697          0.000613         0.697    601                            
+   92                                                          aten::clone             0.658          0.000578         2.089    161                            
+   93                                             cudaPointerGetAttributes             0.000          0.000000         0.305    162                            
+   94                                                       cudaEventQuery             0.000          0.000000         0.091     52                            

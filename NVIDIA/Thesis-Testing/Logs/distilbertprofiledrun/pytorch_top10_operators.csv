@@ -1,0 +1,11 @@
+rank,operator,self_gpu_time_ms,self_gpu_percent,gpu_total_ms,calls,notes
+1,aten::mm,1084.424,24.802225838434595,1084.424,7600,Matrix multiplication
+2,aten::addmm,560.017,12.808337059455182,560.017,3800,Matrix multiplication with bias addition
+3,aten::_foreach_addcdiv_,283.809,6.491091042784265,283.853,100,
+4,aten::copy_,227.587,5.205218781483824,227.587,23403,Tensor copy
+5,aten::_foreach_addcmul_,218.197,4.99045693498937,218.241,100,
+6,aten::_foreach_lerp_,206.933,4.732834204540646,206.933,100,
+7,aten::_foreach_add_,179.317,4.101219385287099,196.639,200,In-place multi-tensor addition
+8,aten::_foreach_div_,154.084,3.5241069600906623,154.09,100,
+9,aten::_foreach_mul_,152.262,3.4824353856164456,152.471,100,In-place multi-tensor multiplication
+10,aten::_foreach_sqrt,151.924,3.4747048739960915,151.935,100,

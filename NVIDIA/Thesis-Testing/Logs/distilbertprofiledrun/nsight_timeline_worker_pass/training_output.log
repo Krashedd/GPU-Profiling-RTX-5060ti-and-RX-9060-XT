@@ -1,0 +1,56 @@
+========================================================================================
+DistilBERT SST-2 NVIDIA nsight_systems profiling (timeline)
+========================================================================================
+Timestamp: 2026-06-22T16:44:46.725535+08:00
+Output directory: /home/nvidia/Thesis-Testing/Logs/distilbertprofiledrun/nsight_timeline_worker_pass
+Model directory: /home/nvidia/Thesis-Testing/scripts/distilbert-base-uncased-sst2-init-seed55
+Dataset directory: /home/nvidia/Thesis-Testing/Dataset/SST2/tokenized_distilbert_dynamic_maxlen128
+Python: 3.12.3
+Platform: Linux-6.17.0-35-generic-x86_64-with-glibc2.39
+PyTorch: 2.9.1+cu130
+CUDA runtime: 13.0
+NVIDIA driver: 580.167.08
+Transformers: 5.12.1
+Datasets: 5.0.0
+GPU: NVIDIA GeForce RTX 5060 Ti
+GPU compute capability: 12.0
+
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|##########| 104/104 [00:00<00:00, 20486.93it/s]
+Training configuration verification
+Batch size: 64
+Workers: 4
+Epochs: 1
+Optimizer: Adam
+Learning rate: 5e-05
+Maximum sequence length: 128
+Padding: dynamic per batch (no pad-to-multiple)
+AMP enabled: True
+Model parameter dtype: torch.float32
+
+NVTX training range started: DISTILBERT_SST2_TRAINING
+/home/nvidia/Thesis-Testing/.venv-nvidia/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/nvidia/Thesis-Testing/.venv-nvidia/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/nvidia/Thesis-Testing/.venv-nvidia/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/nvidia/Thesis-Testing/.venv-nvidia/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+Epoch 1/1 | Time: 0.50s | Throughput: 511.36 samples/s | Batches: 4 | Loss: 0.686760
+NVTX training range ended: DISTILBERT_SST2_TRAINING
+Final validation:   0%|          | 0/4 [00:00<?, ?it/s]/home/nvidia/Thesis-Testing/.venv-nvidia/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/nvidia/Thesis-Testing/.venv-nvidia/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/nvidia/Thesis-Testing/.venv-nvidia/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/nvidia/Thesis-Testing/.venv-nvidia/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+                                                       ========================================================================================
+PROFILE WORKER VALID
+========================================================================================
+Throughput: 504.86 samples/s
+Batch Latency: 126.77 ms/batch
+Total Training Time: 0.51 s
+Final Validation Accuracy: 0.6914
+Results saved to: /home/nvidia/Thesis-Testing/Logs/distilbertprofiledrun/nsight_timeline_worker_pass

@@ -1,0 +1,26 @@
+ResNet-50 NVIDIA torch_operator Official Pass
+================================================================
+Throughput: 541.15 samples/s
+Batch Latency: 471.41 ms/batch
+Total Training Time: 923.96 s
+Full Pass Wall Time: 923.96 s
+Operator Capture Segments: 161.91 s
+Incremental Operator Aggregation (included in pass): 739.22 s
+Average Epoch Time: 92.40 s
+Average GPU Power Draw: 29.83 W
+Performance per Watt: 18.14 samples/s/W
+Average GPU Utilization: 10.82 %
+Average VRAM Usage: 3292.49 MB
+Peak VRAM Usage: 3293.75 MB
+Average GPU Temperature: 34.45 C
+Final Validation Top-1 Accuracy: 0.5853
+Peak System RAM: 6478.41 MB
+Average System RAM: 6267.08 MB
+Average CPU Utilization: 3.37 %
+Average CPU Package Temperature: 49.30 C
+Average Disk Read / Write: 0.00 / 0.02 MB/s
+Peak Disk Read / Write: 0.67 / 5.15 MB/s
+AMP: GradScaler enabled; first-batch output dtype torch.float16
+Initial Model SHA-256: 190ce1c6465c24885a5e44ae7d26fd2498e91069e62bd8a35f6d5a42a12957cd
+Training Order SHA-256: ee315bdb9bae0b6005a817bf982c175111523b686dedc2fce159e1a4c113839b
+Stability / Error Notes: Completed successfully; no Python, CUDA, NVIDIA driver, NVML, or profiler fatal errors detected. All required NVML telemetry queries succeeded. No thermal throttling was observed.

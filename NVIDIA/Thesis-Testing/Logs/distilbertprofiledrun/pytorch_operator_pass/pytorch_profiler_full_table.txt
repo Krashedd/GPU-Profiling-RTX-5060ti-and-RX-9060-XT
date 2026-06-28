@@ -1,0 +1,92 @@
+ rank                                               operator  self_gpu_time_ms  self_gpu_percent  gpu_total_ms  calls                                    notes
+    1                                               aten::mm          1084.424         24.802226      1084.424   7600                    Matrix multiplication
+    2                                            aten::addmm           560.017         12.808337       560.017   3800 Matrix multiplication with bias addition
+    3                                aten::_foreach_addcdiv_           283.809          6.491091       283.853    100                                         
+    4                                            aten::copy_           227.587          5.205219       227.587  23403                              Tensor copy
+    5                                aten::_foreach_addcmul_           218.197          4.990457       218.241    100                                         
+    6                                   aten::_foreach_lerp_           206.933          4.732834       206.933    100                                         
+    7                                    aten::_foreach_add_           179.317          4.101219       196.639    200           In-place multi-tensor addition
+    8                                    aten::_foreach_div_           154.084          3.524107       154.090    100                                         
+    9                                    aten::_foreach_mul_           152.262          3.482435       152.471    100     In-place multi-tensor multiplication
+   10                                    aten::_foreach_sqrt           151.924          3.474705       151.935    100                                         
+   11                    aten::_efficient_attention_backward           147.632          3.376541       147.651    600                                         
+   12       aten::_amp_foreach_non_finite_check_and_unscale_           141.085          3.226802       141.085    100                                         
+   13                       aten::native_layer_norm_backward            94.226          2.155075        94.400   1300             Layer normalization backward
+   14                                             aten::add_            84.733          1.937957        84.733  12851                 In-place tensor addition
+   15                                    aten::gelu_backward            70.370          1.609456        70.370    600                 GELU activation backward
+   16                                         aten::_to_copy            60.619          1.386438       286.051  22599                              Tensor copy
+   17                                              aten::add            49.928          1.141920        49.928   1500                                         
+   18                                              aten::sum            46.430          1.061916        46.430   3900                                         
+   19                                        aten::transpose            42.259          0.966520        43.534  31000                                         
+   20                                             aten::item            40.988          0.937450        43.312  21000                                         
+   21                                aten::native_layer_norm            40.099          0.917118        40.192   1300               Layer normalization kernel
+   22                     aten::_efficient_attention_forward            37.315          0.853444        38.423    600                                         
+   23                                           aten::linear            35.185          0.804728      1342.364   7600                             Linear layer
+   24                                               aten::to            28.704          0.656499       314.755  22743                                         
+   25                                            aten::fill_            26.617          0.608766        26.617   2404                                         
+   26                                             aten::gelu            25.703          0.587862        25.703    600                          GELU activation
+   27                                                aten::t            23.191          0.530409        48.798  19000                                         
+   28                                          aten::reshape            19.655          0.449536        20.654  14300                                         
+   29                                           aten::detach            14.351          0.328227        14.479  10499                                         
+   30                         aten::embedding_dense_backward            12.471          0.285228        33.980    200                                         
+   31                                   aten::native_dropout            10.951          0.250464        12.741    800                                  Dropout
+   32                          aten::native_dropout_backward             8.855          0.202526        10.431    800                                  Dropout
+   33                                            aten::where             6.480          0.148206        14.547   1200                                         
+   34 aten::_scaled_dot_product_efficient_attention_backward             6.474          0.148069       161.027    600                                         
+   35                                           aten::arange             6.309          0.144295        13.329    864                                         
+   36                                        aten::unsqueeze             5.357          0.122522         6.763   1200                                         
+   37                     aten::scaled_dot_product_attention             5.095          0.116529       150.435   1200                                         
+   38                                            aten::empty             4.509          0.103127         4.509   1335                                         
+   39          aten::_scaled_dot_product_efficient_attention             4.271          0.097683        47.072    600                                         
+   40                                            aten::index             4.065          0.092972        11.280    100                                         
+   41                                       aten::empty_like             4.013          0.091783         4.859   2764                                         
+   42                                       aten::as_strided             3.585          0.081994         3.585   2482                                         
+   43                                    aten::scalar_tensor             3.135          0.071702         5.764   1406                                         
+   44                                  aten::constant_pad_nd             2.931          0.067036         8.361    504                                         
+   45                                       aten::layer_norm             2.777          0.063514        84.484   2600                      Layer normalization
+   46                                           aten::gather             2.454          0.056126         2.463    200                                         
+   47                                           aten::expand             2.374          0.054297         2.936   1100                                         
+   48                              aten::_local_scalar_dense             2.324          0.053153         2.324    273                                         
+   49                                    aten::empty_strided             2.001          0.045766         2.001    629                                         
+   50                                      aten::bitwise_and             1.981          0.045308         1.981    200                                         
+   51                                            aten::slice             1.711          0.039133         1.927   1108                                         
+   52                                            aten::clone             1.285          0.029390         4.011    200                                         
+   53                                               aten::ge             1.210          0.027674         1.210    100                                         
+   54                                          aten::dropout             1.186          0.027125        13.927    800                                  Dropout
+   55                                             aten::view             1.086          0.024838         1.086    467                                         
+   56                                          aten::resize_             1.022          0.023375         1.022    552                                         
+   57                                            aten::zeros             1.014          0.023192        22.925    300                                         
+   58                                     aten::index_select             0.949          0.021705         3.646    200                                         
+   59                                              aten::mul             0.908          0.020767         0.908    299                                         
+   60                                           aten::narrow             0.807          0.018457         1.664    504                                         
+   61                                       aten::contiguous             0.745          0.017039         4.756    200                                         
+   62                                              aten::pad             0.703          0.016079         9.064    504                                         
+   63                                         aten::new_ones             0.694          0.015873         2.101    100                                         
+   64                                            aten::zero_             0.646          0.014775        22.263    400                                         
+   65                                        aten::embedding             0.636          0.014546         4.493    200                                         
+   66                                          aten::__and__             0.631          0.014432         2.612    200                                         
+   67                                 aten::nll_loss_forward             0.589          0.013471         0.687    100                                         
+   68                                aten::nll_loss_backward             0.423          0.009675         0.804    100                                         
+   69                                              aten::all             0.415          0.009492         0.416    100                                         
+   70                               aten::_amp_update_scale_             0.398          0.009103         0.398    100                                         
+   71                                  aten::select_backward             0.373          0.008531         2.636    100                                         
+   72                                       aten::reciprocal             0.361          0.008257         0.361    100                                         
+   73                                        aten::new_empty             0.348          0.007959         0.675    100                                         
+   74                                         aten::nll_loss             0.314          0.007182         2.557    200                                         
+   75                                      aten::result_type             0.308          0.007044         0.308    105                                         
+   76                                      aten::log_softmax             0.301          0.006884         1.035    200                                  Softmax
+   77                               aten::threshold_backward             0.286          0.006541         0.286    100                                         
+   78                                        aten::ones_like             0.280          0.006404         0.602    100                                         
+   79                                     aten::_log_softmax             0.264          0.006038         0.264    100                                  Softmax
+   80                       aten::_log_softmax_backward_data             0.263          0.006015         0.263    100                         Softmax backward
+   81                                          aten::detach_             0.263          0.006015         0.454    100                                         
+   82                                             aten::full             0.238          0.005443         0.456    100                                         
+   83                                           aten::select             0.228          0.005215         0.239    200                                         
+   84                                       aten::is_nonzero             0.221          0.005055         1.452    100                                         
+   85                                        aten::clamp_min             0.221          0.005055         0.221    100                                         
+   86                               aten::cross_entropy_loss             0.214          0.004894         2.645    100                                         
+   87                               aten::embedding_backward             0.211          0.004826        34.191    200                                         
+   88                                   aten::_reshape_alias             0.205          0.004689         0.205    153                                         
+   89                                             aten::relu             0.137          0.003133         0.358    100                                         
+   90                                      aten::nll_loss_nd             0.100          0.002287         1.866    100                                         
+   91                                       aten::lift_fresh             0.035          0.000800         0.035     33                                         

@@ -1,0 +1,31 @@
+{
+  "status": "COMPLETE",
+  "completed_at": "2026-06-19T03:14:58.382673+08:00",
+  "script_sha256": "674bfa5f8319c3cc2412b4ea3a7cb13a8192e2dcd9faa3e6a3aafffdcad69b44",
+  "runs": [
+    {
+      "run": 1,
+      "return_code": 0,
+      "elapsed_s": 102.72301897000034,
+      "valid": true,
+      "error": "",
+      "results_directory": "/home/nvidia/Thesis-Testing/Logs/resnetrun1"
+    },
+    {
+      "run": 2,
+      "return_code": 0,
+      "elapsed_s": 101.68938796399925,
+      "valid": true,
+      "error": "",
+      "results_directory": "/home/nvidia/Thesis-Testing/Logs/resnetrun2"
+    },
+    {
+      "run": 3,
+      "return_code": 0,
+      "elapsed_s": 102.03215533799994,
+      "valid": true,
+      "error": "",
+      "results_directory": "/home/nvidia/Thesis-Testing/Logs/resnetrun3"
+    }
+  ]
+}

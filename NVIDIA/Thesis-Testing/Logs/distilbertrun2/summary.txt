@@ -1,0 +1,30 @@
+DistilBERT SST-2 NVIDIA Regular Run 2
+========================================================================
+Throughput: 1658.23 samples/s
+Valid Token Throughput: 22086.43 tokens/s
+Padded Token Throughput: 73855.61 tokens/s
+Average Valid Tokens per Sample: 13.32
+Average Padded Sequence Length: 44.54
+Padding Efficiency: 29.90 %
+Batch Latency: 38.57 ms/batch
+Total Training Time: 406.15 s
+Average Epoch Time: 40.61 s
+Average GPU Power Draw: 122.76 W
+Performance per Watt: 13.5079 samples/s/W
+Average GPU Utilization: 97.64 %
+Average VRAM Usage: 2864.79 MB
+Peak VRAM Usage: 2890.06 MB
+Average GPU Temperature: 55.67 C
+Peak GPU Temperature: 58.00 C
+Final Validation Accuracy: 0.8784
+Final Validation Loss: 0.445323
+Final Training Loss: 0.020593
+Peak System RAM: 6310.75 MB
+Average System RAM: 6297.61 MB
+Average CPU Utilization: 3.56 %
+Average CPU Package Temperature: 52.51 C
+Average Disk Read / Write: 0.00 / 0.05 MB/s
+Peak Disk Read / Write: 0.00 / 15.20 MB/s
+Precision: AMP ON; AMP enabled: True
+Workers: 4
+Stability / Error Notes: Completed successfully; no Python, CUDA, cuDNN, Transformers, Datasets, NVML, GPU, OOM, or thermal fatal errors detected. No monitored GPU temperature reached the configured critical thresholds. All required NVML telemetry queries succeeded.

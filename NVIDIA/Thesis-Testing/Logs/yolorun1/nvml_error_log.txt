@@ -1,0 +1,6 @@
+NVIDIA/NVML telemetry status
+================================================
+Recoverable NVML API errors: 0
+Thermal throttling observed: False
+Driver version: 580.167.08
+All required NVML telemetry queries succeeded.

@@ -1,0 +1,2 @@
+window,wait_batches,warmup_batches,profiled_batches,training_batches_seen_at_window_end,unique_operators,operator_aggregation_overhead_s
+1,10,10,100,120,91,43.13704848499037

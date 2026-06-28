@@ -1,0 +1,13 @@
+{
+  "status": "VALID",
+  "mode": "official_profiled",
+  "profile_kind": "nsight_systems",
+  "total_images_processed": 100000,
+  "total_batches_processed": 6250,
+  "validation_images": 5000,
+  "final_validation_map50_95": 0.4087808705259488,
+  "driver_version": "580.167.08",
+  "profile_script_sha256": "8f1bc566d82d628dcf49ddcfc26f2910692faba9a5dfe1b82d7d08e541c9b61b",
+  "regular_script_sha256": "d5f8a05e441a067465a8174edc4e3825d2948fd741250b570f7e28e9db53839b",
+  "completed_at": "2026-06-22T11:22:35.999731+08:00"
+}

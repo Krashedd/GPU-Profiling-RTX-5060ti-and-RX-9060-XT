@@ -1,0 +1,17 @@
+{
+  "mode": "official_profiled",
+  "workflow": "three_pass_single_command",
+  "primary_profile_metrics_source": "pytorch_operator_pass",
+  "operator_profiler": "legacy torch.autograd CUDA-event timing, one context per batch, immediate aggregation",
+  "kernel_profiler": "Nsight Systems CUDA+NVTX full quantitative trace, parsed in streaming SQLite chunks",
+  "representative_timeline": "separate fixed four-batch Nsight Systems trace",
+  "passes_are_separate": true,
+  "timeline_used_for_quantitative_metrics": false,
+  "expected_nvidia_driver": "580.167.08",
+  "training_range_name": "YOLOV8M_TRAINING",
+  "regular_script_sha256": "d5f8a05e441a067465a8174edc4e3825d2948fd741250b570f7e28e9db53839b",
+  "profile_script_sha256": "8f1bc566d82d628dcf49ddcfc26f2910692faba9a5dfe1b82d7d08e541c9b61b",
+  "profile_script_revision": "2026-06-22 nvidia-yolov8m-profiled-v1 incremental-safe-three-pass",
+  "log_size_cap_bytes": 67108864,
+  "timestamp": "2026-06-22T07:16:36.503630+08:00"
+}

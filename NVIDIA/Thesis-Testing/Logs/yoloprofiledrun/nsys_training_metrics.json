@@ -1,0 +1,23 @@
+{
+  "training_window_duration_s": 2961.566145481,
+  "total_kernel_launches": 25484378,
+  "unique_kernel_names": 198,
+  "summed_kernel_duration_s": 2768.769622711,
+  "kernel_union_busy_time_s": 2766.611402212,
+  "gpu_kernel_idle_time_s": 194.954743269,
+  "gpu_kernel_idle_percent": 6.5828258999542495,
+  "cuda_activity_union_busy_time_s": 2865.696903598,
+  "cuda_activity_idle_time_s": 95.869241883,
+  "cuda_activity_idle_percent": 3.237112972448214,
+  "memory_copy_calls": 943200,
+  "memory_copy_total_duration_ms": 99085.501386,
+  "average_memory_copy_duration_us": 105.05248238549619,
+  "top_kernel": "void cutlass::Kernel2<cutlass_80_simt_sgemm_128x32_8x5_nt_align1>(T1::Params)",
+  "top_kernel_calls": 468750,
+  "top_kernel_cumulative_duration_ms": 244367.304296,
+  "top_kernel_percentage_of_summed_kernel_time": 8.82584460229419,
+  "nvtx_marker_table": "NVTX_EVENTS",
+  "kernel_table": "CUPTI_ACTIVITY_KIND_KERNEL",
+  "memcpy_tables": "CUPTI_ACTIVITY_KIND_MEMCPY",
+  "training_window_filter_applied": true
+}

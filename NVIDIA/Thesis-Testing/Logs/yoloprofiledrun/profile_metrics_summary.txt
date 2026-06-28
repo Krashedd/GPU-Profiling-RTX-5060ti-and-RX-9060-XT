@@ -1,0 +1,26 @@
+                       metric        value       unit                           source
+          Profiled Throughput 2.782089e+01   images/s            PyTorch operator pass
+                Batch Latency 5.751074e+02   ms/batch            PyTorch operator pass
+          Total Training Time 3.594421e+03          s            PyTorch operator pass
+       Raw Training Wall Time 1.154269e+04          s PyTorch operator pass diagnostic
+Operator Aggregation Overhead 7.948268e+03          s     Excluded from primary timing
+           Average Epoch Time 3.590629e+02          s            PyTorch operator pass
+       Average GPU Power Draw 3.460920e+01          W            PyTorch operator pass
+         Performance per Watt 8.038582e-01 images/s/W            PyTorch operator pass
+      Average GPU Utilization 2.360943e+01          %            PyTorch operator pass
+           Average VRAM Usage 1.236084e+04         MB            PyTorch operator pass
+              Peak VRAM Usage 1.276344e+04         MB            PyTorch operator pass
+      Average GPU Temperature 4.268744e+01          C            PyTorch operator pass
+    Final Validation mAP50-95 4.087809e-01   mAP50-95            PyTorch operator pass
+       Final Validation mAP50 5.681675e-01      mAP50            PyTorch operator pass
+            Nsight Throughput 3.376585e+01   images/s    Nsight full quantitative pass
+         Nsight Training Time 2.961573e+03          s    Nsight full quantitative pass
+        Total Kernel Launches 2.548438e+07      count               Nsight NVTX window
+          Unique Kernel Names 1.980000e+02      count               Nsight NVTX window
+       Summed Kernel Duration 2.768770e+03          s               Nsight NVTX window
+         GPU Kernel Idle Time 1.949547e+02          s             Exact interval union
+   GPU Kernel Idle Percentage 6.582826e+00          %             Exact interval union
+      CUDA Activity Idle Time 9.586924e+01          s       Kernels plus memory copies
+CUDA Activity Idle Percentage 3.237113e+00          %       Kernels plus memory copies
+            Memory Copy Calls 9.432000e+05      count               Nsight NVTX window
+ Average Memory Copy Duration 1.050525e+02         us               Nsight NVTX window

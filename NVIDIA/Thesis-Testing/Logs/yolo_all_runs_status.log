@@ -1,0 +1,11 @@
+[2026-06-22T01:59:09.759608+08:00] Smoke and one-epoch prerequisite markers verified.
+[2026-06-22T01:59:09.759642+08:00] Starting sequential official YOLOv8m runs 1, 2, and 3.
+[2026-06-22T01:59:09.759674+08:00] Starting official run 1.
+[2026-06-22T02:50:13.580496+08:00] Official run 1 completed successfully in 51.06 minutes.
+[2026-06-22T02:50:13.580533+08:00] Waiting 10 seconds before the next run.
+[2026-06-22T02:50:23.580703+08:00] Starting official run 2.
+[2026-06-22T03:41:26.954418+08:00] Official run 2 completed successfully in 51.06 minutes.
+[2026-06-22T03:41:26.954495+08:00] Waiting 10 seconds before the next run.
+[2026-06-22T03:41:36.954724+08:00] Starting official run 3.
+[2026-06-22T04:32:40.424336+08:00] Official run 3 completed successfully in 51.06 minutes.
+[2026-06-22T04:32:40.426542+08:00] All three official runs completed successfully. Results are in yolorun1, yolorun2, and yolorun3.

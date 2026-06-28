@@ -1,0 +1,6 @@
+rank,kernel_name,calls,total_duration_ms,average_duration_us,percentage_of_summed_kernel_time,minimum_duration_ns,maximum_duration_ns,stddev_duration_ns,total_duration_ns
+1,"void cudnn::cnn::reduce_wgrad_nchw_helper<float, __half>(void *, const void *, T1, int, int)",45120,32325.243052,716.4282591312057,34.29148747654401,1728,2810343,802281.2184654088,32325243052
+2,void cutlass::Kernel2<cutlass_75_tensorop_s1688gemm_f16_64x64_tn_align1>(T1::Params),5880,14829.203643,2521.9734086734693,15.731218175004347,772248,2707815,125355.4316853376,14829203643
+3,void cutlass::Kernel2<cutlass_80_tensorop_s16816gemm_f16_128x256_32x3_tn_align2>(T1::Params),11760,8676.613064,737.8072333333333,9.204384565472445,176990,1453811,241146.55205589495,8676613064
+4,void cutlass::Kernel2<cutlass_80_wmma_tensorop_s161616gemm_f16_32x32_32x1_tn_align2>(T1::Params),11760,7455.785234,633.9953430272109,7.909297559440755,172350,834551,33194.82883719635,7455785234
+5,"void cudnn::engines_precompiled::nchwToNhwcKernel<__half, __half, float, (bool)0, (bool)1, (cudnnKernelDataType_t)0>(cudnn::engines_precompiled::nchw2nhwc_params_t<T3>, const T1 *, T2 *)",266470,3400.623337,12.761749303861597,3.607472722961131,1120,39007,9520.674754360314,3400623337

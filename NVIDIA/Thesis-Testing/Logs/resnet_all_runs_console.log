@@ -1,0 +1,168 @@
+nohup: ignoring input
+[2026-06-19T03:09:31.936755+08:00] Smoke and one-epoch prerequisite markers verified.
+[2026-06-19T03:09:31.936788+08:00] Starting sequential official ResNet-50 runs 1, 2, and 3.
+[2026-06-19T03:09:31.936848+08:00] Starting official run 1.
+================================================================================
+ResNet-50 CIFAR-10 NVIDIA regular run 1
+================================================================================
+Timestamp: 2026-06-19T03:09:33.539469+08:00
+Output directory: /home/nvidia/Thesis-Testing/Logs/resnetrun1
+Dataset directory: /home/nvidia/Thesis-Testing/Dataset/CIFAR10
+Python: 3.12.3
+Platform: Linux-6.17.0-35-generic-x86_64-with-glibc2.39
+PyTorch: 2.9.1+cu130
+Torchvision: 0.24.1+cu130
+CUDA runtime: 13.0
+NVML Python: 13.610.43
+GPU: NVIDIA GeForce RTX 5060 Ti
+Compute capability: 12.0
+Script SHA-256: 674bfa5f8319c3cc2412b4ea3a7cb13a8192e2dcd9faa3e6a3aafffdcad69b44
+Training-order SHA-256: ee315bdb9bae0b6005a817bf982c175111523b686dedc2fce159e1a4c113839b
+
+NVIDIA driver (NVML): 580.159.03
+Initial-model SHA-256: 190ce1c6465c24885a5e44ae7d26fd2498e91069e62bd8a35f6d5a42a12957cd
+
+Starting monitored AMP training...
+AMP verification | GradScaler enabled: True | First-batch output dtype: torch.float16
+Epoch 1/10 | Loss: 2.2754 | Time: 10.62s | Throughput: 4706.46 samples/s | Batches: 196
+Epoch 2/10 | Loss: 1.7261 | Time: 9.96s | Throughput: 5022.16 samples/s | Batches: 196
+Epoch 3/10 | Loss: 1.5869 | Time: 9.84s | Throughput: 5080.71 samples/s | Batches: 196
+Epoch 4/10 | Loss: 1.5141 | Time: 9.86s | Throughput: 5072.99 samples/s | Batches: 196
+Epoch 5/10 | Loss: 1.3757 | Time: 9.83s | Throughput: 5088.63 samples/s | Batches: 196
+Epoch 6/10 | Loss: 1.2579 | Time: 9.86s | Throughput: 5073.42 samples/s | Batches: 196
+Epoch 7/10 | Loss: 1.2173 | Time: 9.84s | Throughput: 5080.66 samples/s | Batches: 196
+Epoch 8/10 | Loss: 1.1882 | Time: 9.86s | Throughput: 5072.81 samples/s | Batches: 196
+Epoch 9/10 | Loss: 1.0307 | Time: 9.84s | Throughput: 5082.07 samples/s | Batches: 196
+Epoch 10/10 | Loss: 0.9069 | Time: 9.85s | Throughput: 5073.83 samples/s | Batches: 196
+Total Training Time: 99.35s
+Training complete.
+
+Starting final validation outside the timed training region...
+Final Validation Score: 0.5853 (10000 samples, 40 batches)
+
+================================================================================
+OFFICIAL RUN VALID
+================================================================================
+Throughput: 5032.65 samples/s
+Batch Latency: 50.69 ms/batch
+Total Training Time: 99.35 s
+Average GPU Power Draw: 107.32 W
+Average GPU Utilization: 96.59 %
+Average VRAM Usage: 3965.24 MB
+Peak VRAM Usage: 3996.88 MB
+Average GPU Temperature: 43.58 C
+Final Validation Top-1 Accuracy: 0.5853
+Stability / Error Notes: Completed successfully; no Python, CUDA, NVIDIA driver, NVML, OOM, or thermal fatal errors detected. No NVML thermal throttling condition was observed. All required NVML telemetry queries succeeded.
+Results saved to: /home/nvidia/Thesis-Testing/Logs/resnetrun1
+[2026-06-19T03:11:14.660080+08:00] Official run 1 completed successfully in 1.71 minutes.
+[2026-06-19T03:11:14.660118+08:00] Waiting 10 seconds before the next run.
+[2026-06-19T03:11:24.660324+08:00] Starting official run 2.
+================================================================================
+ResNet-50 CIFAR-10 NVIDIA regular run 2
+================================================================================
+Timestamp: 2026-06-19T03:11:26.129154+08:00
+Output directory: /home/nvidia/Thesis-Testing/Logs/resnetrun2
+Dataset directory: /home/nvidia/Thesis-Testing/Dataset/CIFAR10
+Python: 3.12.3
+Platform: Linux-6.17.0-35-generic-x86_64-with-glibc2.39
+PyTorch: 2.9.1+cu130
+Torchvision: 0.24.1+cu130
+CUDA runtime: 13.0
+NVML Python: 13.610.43
+GPU: NVIDIA GeForce RTX 5060 Ti
+Compute capability: 12.0
+Script SHA-256: 674bfa5f8319c3cc2412b4ea3a7cb13a8192e2dcd9faa3e6a3aafffdcad69b44
+Training-order SHA-256: ee315bdb9bae0b6005a817bf982c175111523b686dedc2fce159e1a4c113839b
+
+NVIDIA driver (NVML): 580.159.03
+Initial-model SHA-256: 190ce1c6465c24885a5e44ae7d26fd2498e91069e62bd8a35f6d5a42a12957cd
+
+Starting monitored AMP training...
+AMP verification | GradScaler enabled: True | First-batch output dtype: torch.float16
+Epoch 1/10 | Loss: 2.2754 | Time: 10.25s | Throughput: 4876.69 samples/s | Batches: 196
+Epoch 2/10 | Loss: 1.7261 | Time: 9.82s | Throughput: 5089.07 samples/s | Batches: 196
+Epoch 3/10 | Loss: 1.5869 | Time: 9.85s | Throughput: 5076.72 samples/s | Batches: 196
+Epoch 4/10 | Loss: 1.5141 | Time: 9.82s | Throughput: 5089.55 samples/s | Batches: 196
+Epoch 5/10 | Loss: 1.3757 | Time: 9.85s | Throughput: 5076.08 samples/s | Batches: 196
+Epoch 6/10 | Loss: 1.2579 | Time: 9.82s | Throughput: 5090.19 samples/s | Batches: 196
+Epoch 7/10 | Loss: 1.2173 | Time: 9.85s | Throughput: 5076.23 samples/s | Batches: 196
+Epoch 8/10 | Loss: 1.1882 | Time: 9.83s | Throughput: 5087.78 samples/s | Batches: 196
+Epoch 9/10 | Loss: 1.0307 | Time: 9.85s | Throughput: 5074.37 samples/s | Batches: 196
+Epoch 10/10 | Loss: 0.9069 | Time: 9.83s | Throughput: 5088.92 samples/s | Batches: 196
+Total Training Time: 98.78s
+Training complete.
+
+Starting final validation outside the timed training region...
+Final Validation Score: 0.5853 (10000 samples, 40 batches)
+
+================================================================================
+OFFICIAL RUN VALID
+================================================================================
+Throughput: 5061.64 samples/s
+Batch Latency: 50.40 ms/batch
+Total Training Time: 98.78 s
+Average GPU Power Draw: 110.50 W
+Average GPU Utilization: 96.96 %
+Average VRAM Usage: 3969.45 MB
+Peak VRAM Usage: 3996.88 MB
+Average GPU Temperature: 48.69 C
+Final Validation Top-1 Accuracy: 0.5853
+Stability / Error Notes: Completed successfully; no Python, CUDA, NVIDIA driver, NVML, OOM, or thermal fatal errors detected. No NVML thermal throttling condition was observed. All required NVML telemetry queries succeeded.
+Results saved to: /home/nvidia/Thesis-Testing/Logs/resnetrun2
+[2026-06-19T03:13:06.350051+08:00] Official run 2 completed successfully in 1.69 minutes.
+[2026-06-19T03:13:06.350095+08:00] Waiting 10 seconds before the next run.
+[2026-06-19T03:13:16.350171+08:00] Starting official run 3.
+================================================================================
+ResNet-50 CIFAR-10 NVIDIA regular run 3
+================================================================================
+Timestamp: 2026-06-19T03:13:17.851874+08:00
+Output directory: /home/nvidia/Thesis-Testing/Logs/resnetrun3
+Dataset directory: /home/nvidia/Thesis-Testing/Dataset/CIFAR10
+Python: 3.12.3
+Platform: Linux-6.17.0-35-generic-x86_64-with-glibc2.39
+PyTorch: 2.9.1+cu130
+Torchvision: 0.24.1+cu130
+CUDA runtime: 13.0
+NVML Python: 13.610.43
+GPU: NVIDIA GeForce RTX 5060 Ti
+Compute capability: 12.0
+Script SHA-256: 674bfa5f8319c3cc2412b4ea3a7cb13a8192e2dcd9faa3e6a3aafffdcad69b44
+Training-order SHA-256: ee315bdb9bae0b6005a817bf982c175111523b686dedc2fce159e1a4c113839b
+
+NVIDIA driver (NVML): 580.159.03
+Initial-model SHA-256: 190ce1c6465c24885a5e44ae7d26fd2498e91069e62bd8a35f6d5a42a12957cd
+
+Starting monitored AMP training...
+AMP verification | GradScaler enabled: True | First-batch output dtype: torch.float16
+Epoch 1/10 | Loss: 2.2754 | Time: 10.25s | Throughput: 4877.25 samples/s | Batches: 196
+Epoch 2/10 | Loss: 1.7261 | Time: 9.85s | Throughput: 5074.86 samples/s | Batches: 196
+Epoch 3/10 | Loss: 1.5869 | Time: 9.84s | Throughput: 5082.38 samples/s | Batches: 196
+Epoch 4/10 | Loss: 1.5141 | Time: 9.85s | Throughput: 5075.64 samples/s | Batches: 196
+Epoch 5/10 | Loss: 1.3757 | Time: 9.83s | Throughput: 5085.71 samples/s | Batches: 196
+Epoch 6/10 | Loss: 1.2579 | Time: 9.85s | Throughput: 5074.55 samples/s | Batches: 196
+Epoch 7/10 | Loss: 1.2173 | Time: 9.83s | Throughput: 5087.31 samples/s | Batches: 196
+Epoch 8/10 | Loss: 1.1882 | Time: 9.92s | Throughput: 5038.28 samples/s | Batches: 196
+Epoch 9/10 | Loss: 1.0307 | Time: 10.05s | Throughput: 4973.61 samples/s | Batches: 196
+Epoch 10/10 | Loss: 0.9069 | Time: 9.84s | Throughput: 5078.75 samples/s | Batches: 196
+Total Training Time: 99.13s
+Training complete.
+
+Starting final validation outside the timed training region...
+Final Validation Score: 0.5853 (10000 samples, 40 batches)
+
+================================================================================
+OFFICIAL RUN VALID
+================================================================================
+Throughput: 5043.85 samples/s
+Batch Latency: 50.58 ms/batch
+Total Training Time: 99.13 s
+Average GPU Power Draw: 111.35 W
+Average GPU Utilization: 96.79 %
+Average VRAM Usage: 3969.56 MB
+Peak VRAM Usage: 3996.88 MB
+Average GPU Temperature: 50.50 C
+Final Validation Top-1 Accuracy: 0.5853
+Stability / Error Notes: Completed successfully; no Python, CUDA, NVIDIA driver, NVML, OOM, or thermal fatal errors detected. No NVML thermal throttling condition was observed. All required NVML telemetry queries succeeded.
+Results saved to: /home/nvidia/Thesis-Testing/Logs/resnetrun3
+[2026-06-19T03:14:58.382635+08:00] Official run 3 completed successfully in 1.70 minutes.
+[2026-06-19T03:14:58.392521+08:00] All three official ResNet-50 runs completed successfully.

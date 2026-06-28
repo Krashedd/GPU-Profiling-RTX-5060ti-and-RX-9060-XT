@@ -1,0 +1,30 @@
+                        metric        value        unit                                                                            source
+           Profiled Throughput 1.476836e+03   samples/s                                              PyTorch representative operator pass
+                 Batch Latency 4.330825e+01    ms/batch                                              PyTorch representative operator pass
+           Total Training Time 4.560358e+02           s                                              PyTorch representative operator pass
+ Operator Aggregation Overhead 4.313705e+01           s PyTorch diagnostic; included in full pass timing only when inside training window
+            Average Epoch Time 4.560314e+01           s                                              PyTorch representative operator pass
+        Average GPU Power Draw 1.204477e+02           W                                              PyTorch representative operator pass
+          Performance per Watt 1.226122e+01 samples/s/W                                              PyTorch representative operator pass
+       Average GPU Utilization 9.696082e+01           %                                              PyTorch representative operator pass
+            Average VRAM Usage 2.839827e+03          MB                                              PyTorch representative operator pass
+               Peak VRAM Usage 2.854062e+03          MB                                              PyTorch representative operator pass
+       Average GPU Temperature 5.273668e+01           C                                              PyTorch representative operator pass
+     Final Validation Accuracy 9.002294e-01    accuracy                                              PyTorch representative operator pass
+             Nsight Throughput 1.656702e+03   samples/s                                                     Nsight full quantitative pass
+          Nsight Training Time 4.065246e+02           s                                                     Nsight full quantitative pass
+      Nsight Average GPU Power 1.312116e+02           W                                                     Nsight full quantitative pass
+Nsight Average GPU Utilization 9.730448e+01           %                                                     Nsight full quantitative pass
+           Nsight Average VRAM 2.828670e+03          MB                                                     Nsight full quantitative pass
+              Nsight Peak VRAM 2.866125e+03          MB                                                     Nsight full quantitative pass
+Nsight Average GPU Temperature 5.615276e+01           C                                                     Nsight full quantitative pass
+         Total Kernel Launches 6.229126e+06       count                                                                Nsight NVTX window
+           Unique Kernel Names 8.600000e+01       count                                                                Nsight NVTX window
+        Summed Kernel Duration 3.906979e+02           s                                                                Nsight NVTX window
+          GPU Kernel Idle Time 1.582677e+01           s                                                              Exact interval union
+    GPU Kernel Idle Percentage 3.893189e+00           %                                                              Exact interval union
+       CUDA Activity Idle Time 1.570976e+01           s                                                        Kernels plus memory copies
+ CUDA Activity Idle Percentage 3.864405e+00           %                                                        Kernels plus memory copies
+             Memory Copy Calls 8.425000e+04       count                                                                Nsight NVTX window
+    Memory Copy Total Duration 1.170161e+02          ms                                                                Nsight NVTX window
+  Average Memory Copy Duration 1.388915e+00     us/copy                                                                Nsight NVTX window

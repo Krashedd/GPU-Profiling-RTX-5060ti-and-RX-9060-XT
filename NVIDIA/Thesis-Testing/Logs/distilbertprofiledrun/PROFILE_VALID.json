@@ -1,0 +1,21 @@
+{
+  "status": "VALID",
+  "mode": "official",
+  "workflow": "three_pass_single_command",
+  "pytorch_operator_pass_valid": true,
+  "pytorch_profiled_batches": 100,
+  "pytorch_total_training_batches_executed": 10530,
+  "nsight_quantitative_pass_valid": true,
+  "nsight_timeline_pass_valid": true,
+  "timeline_used_for_quantitative_metrics": false,
+  "top_pytorch_operator": "aten::mm",
+  "top_nvidia_kernel": "void cutlass::Kernel2<cutlass_80_tensorop_f16_s16816gemm_relu_f16_64x64_32x6_nn_align8>(T1::Params)",
+  "total_kernel_launches": 6229126,
+  "gpu_kernel_idle_time_s": 15.826774411,
+  "gpu_kernel_idle_percent": 3.8931894170361816,
+  "driver_version": "580.167.08",
+  "profile_script_sha256": "734960ec155d02c5668174d5ea5d3afb02547e4d64c56b491613b750e8197534",
+  "regular_script_sha256": "49d01445e546201687f9b9774e8e97b228e9aafa866616b7f3d4efee55da8ce4",
+  "timeline_report": "/home/nvidia/Thesis-Testing/Logs/distilbertprofiledrun/nsight_timeline_raw/distilbert_timeline.nsys-rep",
+  "completed_at": "2026-06-22T16:44:49.482131+08:00"
+}

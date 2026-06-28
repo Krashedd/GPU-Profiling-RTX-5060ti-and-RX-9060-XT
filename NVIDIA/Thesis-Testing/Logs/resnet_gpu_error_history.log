@@ -1,0 +1,16 @@
+
+========================================================================================
+Timestamp: 2026-06-19T05:07:19.475807+08:00
+Workload: ResNet-50 CIFAR-10 NVIDIA profiled smoke test
+Traceback (most recent call last):
+  File "/home/nvidia/Thesis-Testing/scripts/resnet50_profiled_nvidia.py", line 1450, in run_parent
+    raise RuntimeError(
+RuntimeError: PyTorch operator worker exited with code 1.
+
+========================================================================================
+Timestamp: 2026-06-19T05:13:19.882092+08:00
+Workload: ResNet-50 CIFAR-10 NVIDIA profiled smoke test
+Traceback (most recent call last):
+  File "/home/nvidia/Thesis-Testing/scripts/resnet50_profiled_nvidia.py", line 1450, in run_parent
+    raise RuntimeError(
+RuntimeError: PyTorch operator worker exited with code 1.

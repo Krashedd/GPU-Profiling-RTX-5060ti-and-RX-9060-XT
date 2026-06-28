@@ -1,0 +1,49 @@
+========================================================================================
+YOLOv8m COCO MiniTrain 10K NVIDIA nsight_systems profiling four-batch timeline pass
+========================================================================================
+Timestamp: 2026-06-22T11:30:31.252651+08:00
+Output directory: /home/nvidia/Thesis-Testing/Logs/yoloprofiledrun/nsight_timeline_worker_pass
+Dataset root: /home/nvidia/Thesis-Testing/Dataset/COCO2017_10k/coco_minitrain_10k/coco_minitrain_10k
+Dataset YAML: /home/nvidia/Thesis-Testing/Logs/yoloprofiledrun/nsight_timeline_worker_pass/smoke_dataset.yaml
+Weights: /home/nvidia/Thesis-Testing/scripts/yolov8m.pt
+Python: 3.12.3
+Platform: Linux-6.17.0-35-generic-x86_64-with-glibc2.39
+PyTorch: 2.9.1+cu130
+CUDA runtime: 13.0
+Ultralytics: 8.4.61
+NVIDIA driver: 580.167.08
+GPU: NVIDIA GeForce RTX 5060 Ti
+Compute capability: 12.0
+Profile script revision: 2026-06-22 nvidia-yolov8m-profiled-v1 incremental-safe-three-pass
+
+Starting monitored profiled training...
+[K[34m[1mtrain: [0mScanning /home/nvidia/Thesis-Testing/Dataset/COCO2017_10k/coco_minitrain_10k/coco_minitrain_10k/labels/train2017... 64 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 64/64 1.8Kit/s 0.0s
+[K[34m[1mval: [0mScanning /home/nvidia/Thesis-Testing/Dataset/COCO2017_10k/coco_minitrain_10k/coco_minitrain_10k/labels/val2017... 32 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 32/32 3.2Kit/s 0.0s
+
+Training configuration verification
+Precision: FP32 (AMP disabled: True)
+Optimizer: SGD
+Batch size: 16
+Workers: 4
+Epochs: 1
+Model parameter dtype: torch.float32
+NVTX training range started: YOLOV8M_TRAINING
+Monitored profiled training started.
+[K        1/1      11.6G     0.7969     0.9087       1.04         16        640: 0% ──────────── 0/4  1.3s[K        1/1      11.6G     0.8709      1.038      1.123         16        640: 25% ━━━───────── 1/4 1.6s/it 1.8s<4.8s[K        1/1      11.6G     0.9275      1.167      1.131         16        640: 50% ━━━━━━────── 2/4 1.1it/s 2.3s<1.9s[K        1/1      11.6G     0.9637      1.047      1.172         16        640: 75% ━━━━━━━━━─── 3/4 1.4it/s 2.8s<0.7s[K        1/1      11.6G     0.9637      1.047      1.172         16        640: 100% ━━━━━━━━━━━━ 4/4 1.5it/s 2.8s
+Epoch 1/1 | Adjusted Time: 2.76s | Raw Wall: 2.76s | Throughput: 23.19 images/s | Batches: 4 | box_loss: 0.9637 | cls_loss: 1.0470 | dfl_loss: 1.1721
+NVTX training range ended: YOLOV8M_TRAINING
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 1/1 2.7it/s 0.4s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 1/1 3.1it/s 0.3s
+Starting final validation outside the profiling window...
+[K[34m[1mval: [0mScanning /home/nvidia/Thesis-Testing/Dataset/COCO2017_10k/coco_minitrain_10k/coco_minitrain_10k/labels/val2017.cache... 32 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 32/32 26.8Mit/s 0.0s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 1/2 1.8it/s 0.2s<0.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 2/2 6.1it/s 0.3s
+====================================================================================
+PROFILE WORKER VALID
+====================================================================================
+Profile kind: nsight_systems
+Throughput: 23.19 images/s
+Batch Latency: 689.89 ms/batch
+Adjusted Training Time: 2.76 s
+Raw Training Wall Time: 2.76 s
+Final Validation mAP50-95: 0.5943
+Results saved to: /home/nvidia/Thesis-Testing/Logs/yoloprofiledrun/nsight_timeline_worker_pass

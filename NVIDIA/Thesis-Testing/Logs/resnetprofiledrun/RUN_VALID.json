@@ -1,0 +1,18 @@
+{
+  "status": "VALID",
+  "timestamp": "2026-06-21T02:25:30.774489+08:00",
+  "mode": "official_profiled",
+  "primary_metrics_source": "pytorch_operator_pass",
+  "pytorch_operator_pass_valid": true,
+  "nsight_systems_pass_valid": true,
+  "training_window_filter_applied": true,
+  "initial_model_fingerprints_match": true,
+  "training_order_fingerprints_match": true,
+  "top_operator": "aten::convolution_backward",
+  "top_kernel": "void cudnn::cnn::reduce_wgrad_nchw_helper<float, __half>(void *, const void *, T1, int, int)",
+  "total_kernel_launches": 1618949,
+  "gpu_kernel_idle_s": 5.009160948,
+  "gpu_kernel_idle_percent": 5.045730033847084,
+  "regular_script_sha256": "674bfa5f8319c3cc2412b4ea3a7cb13a8192e2dcd9faa3e6a3aafffdcad69b44",
+  "profile_script_sha256": "a548595fdec8af3d5865579e0f9383312e6e35a0aff98bc8dbf2cb4440bb5247"
+}

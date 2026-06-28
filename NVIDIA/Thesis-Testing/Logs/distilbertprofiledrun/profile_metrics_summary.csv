@@ -1,0 +1,30 @@
+metric,value,unit,source
+Profiled Throughput,1476.8356874013657,samples/s,PyTorch representative operator pass
+Batch Latency,43.30824670484496,ms/batch,PyTorch representative operator pass
+Total Training Time,456.0358378020173,s,PyTorch representative operator pass
+Operator Aggregation Overhead,43.13704848499037,s,PyTorch diagnostic; included in full pass timing only when inside training window
+Average Epoch Time,45.60314171400387,s,PyTorch representative operator pass
+Average GPU Power Draw,120.44765203761754,W,PyTorch representative operator pass
+Performance per Watt,12.261224377708322,samples/s/W,PyTorch representative operator pass
+Average GPU Utilization,96.96081504702194,%,PyTorch representative operator pass
+Average VRAM Usage,2839.8273902821315,MB,PyTorch representative operator pass
+Peak VRAM Usage,2854.0625,MB,PyTorch representative operator pass
+Average GPU Temperature,52.73667711598746,C,PyTorch representative operator pass
+Final Validation Accuracy,0.9002293577981652,accuracy,PyTorch representative operator pass
+Nsight Throughput,1656.701591025646,samples/s,Nsight full quantitative pass
+Nsight Training Time,406.52462920799735,s,Nsight full quantitative pass
+Nsight Average GPU Power,131.21160479666318,W,Nsight full quantitative pass
+Nsight Average GPU Utilization,97.30448383733057,%,Nsight full quantitative pass
+Nsight Average VRAM,2828.6699361313867,MB,Nsight full quantitative pass
+Nsight Peak VRAM,2866.125,MB,Nsight full quantitative pass
+Nsight Average GPU Temperature,56.15276329509906,C,Nsight full quantitative pass
+Total Kernel Launches,6229126.0,count,Nsight NVTX window
+Unique Kernel Names,86.0,count,Nsight NVTX window
+Summed Kernel Duration,390.697869413,s,Nsight NVTX window
+GPU Kernel Idle Time,15.826774411,s,Exact interval union
+GPU Kernel Idle Percentage,3.8931894170361816,%,Exact interval union
+CUDA Activity Idle Time,15.709758301,s,Kernels plus memory copies
+CUDA Activity Idle Percentage,3.8644049111574534,%,Kernels plus memory copies
+Memory Copy Calls,84250.0,count,Nsight NVTX window
+Memory Copy Total Duration,117.01611,ms,Nsight NVTX window
+Average Memory Copy Duration,1.3889152522255193,us/copy,Nsight NVTX window

@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-06-22T14:00:08.679383+08:00",
+  "model_source": "distilbert-base-uncased",
+  "dataset_source": "nyu-mll/glue",
+  "dataset_config": "sst2",
+  "seed_used_to_initialize_classification_head": 55,
+  "max_length": 128,
+  "padding": "dynamic_per_batch",
+  "train_samples": 67349,
+  "validation_samples": 872,
+  "model_dir": "/home/nvidia/Thesis-Testing/scripts/distilbert-base-uncased-sst2-init-seed55",
+  "raw_dataset_dir": "/home/nvidia/Thesis-Testing/Dataset/SST2/hf_sst2_raw",
+  "tokenized_dataset_dir": "/home/nvidia/Thesis-Testing/Dataset/SST2/tokenized_distilbert_dynamic_maxlen128",
+  "transformers_version": "5.12.1",
+  "datasets_version": "5.0.0",
+  "torch_version": "2.9.1+cu130",
+  "cuda_runtime": "13.0",
+  "nvidia_driver": "580.167.08",
+  "script_revision": "2026-06-22 nvidia-regular-v1 dynamic-padding-token-metrics"
+}

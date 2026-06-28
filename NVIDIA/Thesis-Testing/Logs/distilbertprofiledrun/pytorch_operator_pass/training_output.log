@@ -1,0 +1,65 @@
+========================================================================================
+DistilBERT SST-2 NVIDIA torch_operator profiling (official_profiled)
+========================================================================================
+Timestamp: 2026-06-22T16:28:33.761537+08:00
+Output directory: /home/nvidia/Thesis-Testing/Logs/distilbertprofiledrun/pytorch_operator_pass
+Model directory: /home/nvidia/Thesis-Testing/scripts/distilbert-base-uncased-sst2-init-seed55
+Dataset directory: /home/nvidia/Thesis-Testing/Dataset/SST2/tokenized_distilbert_dynamic_maxlen128
+Python: 3.12.3
+Platform: Linux-6.17.0-35-generic-x86_64-with-glibc2.39
+PyTorch: 2.9.1+cu130
+CUDA runtime: 13.0
+NVIDIA driver: 580.167.08
+Transformers: 5.12.1
+Datasets: 5.0.0
+GPU: NVIDIA GeForce RTX 5060 Ti
+GPU compute capability: 12.0
+
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|##########| 104/104 [00:00<00:00, 16151.65it/s]
+Training configuration verification
+Batch size: 64
+Workers: 4
+Epochs: 10
+Optimizer: Adam
+Learning rate: 5e-05
+Maximum sequence length: 128
+Padding: dynamic per batch (no pad-to-multiple)
+AMP enabled: True
+Model parameter dtype: torch.float32
+
+/home/nvidia/Thesis-Testing/.venv-nvidia/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/nvidia/Thesis-Testing/.venv-nvidia/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/nvidia/Thesis-Testing/.venv-nvidia/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/nvidia/Thesis-Testing/.venv-nvidia/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+Legacy CUDA-event representative window started at training batch 21.
+Legacy CUDA-event representative window completed; active=100 batches.
+Epoch 1/10 | Time: 91.26s | Throughput: 737.97 samples/s | Batches: 1053 | Loss: 0.214158
+Epoch 2/10 | Time: 40.49s | Throughput: 1663.52 samples/s | Batches: 1053 | Loss: 0.109117
+Epoch 3/10 | Time: 40.55s | Throughput: 1660.77 samples/s | Batches: 1053 | Loss: 0.073095
+Epoch 4/10 | Time: 40.50s | Throughput: 1662.84 samples/s | Batches: 1053 | Loss: 0.053248
+Epoch 5/10 | Time: 40.50s | Throughput: 1662.93 samples/s | Batches: 1053 | Loss: 0.040898
+Epoch 6/10 | Time: 40.51s | Throughput: 1662.64 samples/s | Batches: 1053 | Loss: 0.034741
+Epoch 7/10 | Time: 40.64s | Throughput: 1657.07 samples/s | Batches: 1053 | Loss: 0.030069
+Epoch 8/10 | Time: 40.53s | Throughput: 1661.74 samples/s | Batches: 1053 | Loss: 0.023671
+Epoch 9/10 | Time: 40.60s | Throughput: 1658.70 samples/s | Batches: 1053 | Loss: 0.022841
+Epoch 10/10 | Time: 40.44s | Throughput: 1665.24 samples/s | Batches: 1053 | Loss: 0.018387
+Final validation:   0%|          | 0/14 [00:00<?, ?it/s]/home/nvidia/Thesis-Testing/.venv-nvidia/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/nvidia/Thesis-Testing/.venv-nvidia/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/nvidia/Thesis-Testing/.venv-nvidia/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+/home/nvidia/Thesis-Testing/.venv-nvidia/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+                                                        ========================================================================================
+PROFILE WORKER VALID
+========================================================================================
+Throughput: 1476.84 samples/s
+Batch Latency: 43.31 ms/batch
+Total Training Time: 456.04 s
+Final Validation Accuracy: 0.9002
+Results saved to: /home/nvidia/Thesis-Testing/Logs/distilbertprofiledrun/pytorch_operator_pass

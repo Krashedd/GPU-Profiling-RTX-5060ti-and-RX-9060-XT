@@ -1,0 +1,5 @@
+NVIDIA/NVML telemetry status
+================================================
+Recoverable NVML API errors: 0
+Thermal throttling observed: False
+All required NVML telemetry queries succeeded.

@@ -1,0 +1,13 @@
+{
+  "collection_mode": "representative_window_during_full_training",
+  "backend": "torch.autograd.profiler legacy CUDA events (Kineto disabled)",
+  "wait_batches": 10,
+  "warmup_batches": 10,
+  "active_profiled_batches": 100,
+  "windows_completed": 1,
+  "total_profiled_batches": 100,
+  "total_training_batches_executed": 10530,
+  "operator_scope": "ATen operators only",
+  "operator_aggregation_overhead_s": 43.13704848499037,
+  "timeline_source": "separate four-batch Nsight Systems report"
+}

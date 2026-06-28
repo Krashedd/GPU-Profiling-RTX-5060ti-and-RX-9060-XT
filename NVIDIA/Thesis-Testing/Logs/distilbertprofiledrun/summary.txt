@@ -1,0 +1,19 @@
+DistilBERT SST-2 NVIDIA torch_operator profile
+========================================================================
+Throughput: 1476.84 samples/s
+Batch Latency: 43.31 ms/batch
+Total Training Time: 456.04 s
+Average Epoch Time: 45.60 s
+Average GPU Power Draw: 120.45 W
+Performance per Watt: 12.2612 samples/s/W
+Average GPU Utilization: 96.96 %
+Average VRAM Usage: 2839.83 MB
+Peak VRAM Usage: 2854.06 MB
+Average GPU Temperature: 52.74 C
+Final Validation Accuracy: 0.9002
+Peak System RAM: 13684.96 MB
+Average System RAM: 11512.68 MB
+Average CPU Utilization: 3.54 %
+Average Disk Read / Write: 0.00 / 0.08 MB/s
+Peak Disk Read / Write: 0.00 / 17.21 MB/s
+Stability / Error Notes: Completed successfully; no Python, CUDA, cuDNN, Transformers, Datasets, NVML, GPU, OOM, profiler, or thermal fatal errors detected. No monitored GPU temperature reached the configured critical threshold. All required NVML telemetry queries succeeded. The operator pass used one legacy CUDA-event representative window after 10 wait and 10 warm-up batches.

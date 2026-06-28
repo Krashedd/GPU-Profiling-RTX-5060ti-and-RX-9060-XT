@@ -1,0 +1,3 @@
+timestamp_iso,time_s,gpu_util_percent,gpu_memory_util_percent,vram_used_mb,vram_total_mb,power_w,gpu_temperature_c,graphics_clock_mhz,memory_clock_mhz,performance_state,clock_event_reasons_bitmask,clock_event_reasons_hex,thermal_throttle_active,cpu_util_percent,cpu_package_temperature_c,system_ram_used_mb,system_ram_percent,disk_read_mb_s,disk_write_mb_s,nvml_api_error_count_cumulative
+2026-06-22T16:44:47.394507+08:00,0.2009044470032677,1.0,0.0,1222.0625,16311.0,23.032,38.0,2632.0,13801.0,P1,0,0x0,0,0.0,48.0,6956.9453125,10.9,0.0,0.0,0
+2026-06-22T16:44:47.612359+08:00,0.42222634502104484,1.0,0.0,2622.0625,16311.0,23.032,38.0,2632.0,13801.0,P1,0,0x0,0,3.4,48.0,7411.5078125,11.6,0.0,0.0,0

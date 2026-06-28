@@ -1,0 +1,45 @@
+================================================================================
+ResNet-50 CIFAR-10 NVIDIA nsight_systems profiling official pass
+================================================================================
+Timestamp: 2026-06-21T02:23:08.468838+08:00
+Output directory: /home/nvidia/Thesis-Testing/Logs/resnetprofiledrun/nsight_systems_worker_pass
+Dataset directory: /home/nvidia/Thesis-Testing/Dataset/CIFAR10
+Python: 3.12.3
+Platform: Linux-6.17.0-35-generic-x86_64-with-glibc2.39
+PyTorch: 2.9.1+cu130
+Torchvision: 0.24.1+cu130
+CUDA runtime: 13.0
+GPU: NVIDIA GeForce RTX 5060 Ti
+Compute capability: 12.0
+Profile script revision: 2026-06-20 nvidia-profiled-v4 incremental-batch-operator-profiling
+
+Starting monitored AMP training...
+Precision: AMP FP16 | Optimizer: SGD | Batch size: 256 | Epochs: 10
+NVTX training range started: RESNET50_TRAINING
+AMP verification | GradScaler enabled: True | First-batch output dtype: torch.float16
+Epoch 1/10 | Loss: 2.2754 | Time: 10.38s | Throughput: 4819.25 samples/s | Batches: 196
+Epoch 2/10 | Loss: 1.7261 | Time: 9.89s | Throughput: 5057.07 samples/s | Batches: 196
+Epoch 3/10 | Loss: 1.5869 | Time: 9.86s | Throughput: 5068.51 samples/s | Batches: 196
+Epoch 4/10 | Loss: 1.5141 | Time: 9.87s | Throughput: 5066.27 samples/s | Batches: 196
+Epoch 5/10 | Loss: 1.3757 | Time: 9.87s | Throughput: 5063.57 samples/s | Batches: 196
+Epoch 6/10 | Loss: 1.2579 | Time: 9.87s | Throughput: 5064.39 samples/s | Batches: 196
+Epoch 7/10 | Loss: 1.2173 | Time: 9.88s | Throughput: 5063.04 samples/s | Batches: 196
+Epoch 8/10 | Loss: 1.1882 | Time: 9.89s | Throughput: 5055.39 samples/s | Batches: 196
+Epoch 9/10 | Loss: 1.0307 | Time: 9.88s | Throughput: 5060.97 samples/s | Batches: 196
+Epoch 10/10 | Loss: 0.9069 | Time: 9.88s | Throughput: 5058.91 samples/s | Batches: 196
+NVTX training range ended: RESNET50_TRAINING
+Total Training Time: 99.27s
+Training complete.
+
+Starting final validation outside the timed training region...
+Final Validation Score: 0.5853 (10000 samples, 40 batches)
+
+================================================================================
+PROFILE WORKER VALID
+================================================================================
+Profile kind: nsight_systems
+Throughput: 5036.64 samples/s
+Batch Latency: 50.65 ms/batch
+Total Training Time: 99.27 s
+Final Validation Score: 0.5853
+Results saved to: /home/nvidia/Thesis-Testing/Logs/resnetprofiledrun/nsight_systems_worker_pass

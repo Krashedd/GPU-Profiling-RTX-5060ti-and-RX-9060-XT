@@ -1,0 +1,89 @@
+{
+  "status": "VALID",
+  "timestamp_started": "2026-06-22T14:19:59.079153+08:00",
+  "script": "/home/nvidia/Thesis-Testing/scripts/distilbert_regular_nvidia.py",
+  "runs": [
+    {
+      "run": 1,
+      "started": "2026-06-22T14:19:59.079339+08:00",
+      "finished": "2026-06-22T14:26:48.068035+08:00",
+      "return_code": 0,
+      "valid": true,
+      "run_directory": "/home/nvidia/Thesis-Testing/Logs/distilbertrun1",
+      "marker": {
+        "status": "VALID",
+        "timestamp": "2026-06-22T14:26:47.604264+08:00",
+        "mode": "official_regular",
+        "run": 1,
+        "epochs_completed": 10,
+        "total_samples_processed": 673490,
+        "total_batches_processed": 10530,
+        "total_valid_tokens": 8970390,
+        "total_padded_tokens": 29996406,
+        "workers": 4,
+        "amp_enabled": true,
+        "padding": "dynamic_per_batch",
+        "validation_accuracy": 0.8784403669724771,
+        "driver_version": "580.167.08",
+        "cuda_runtime": "13.0",
+        "script_revision": "2026-06-22 nvidia-regular-v1 dynamic-padding-token-metrics",
+        "thermal_throttle_seen": false
+      }
+    },
+    {
+      "run": 2,
+      "started": "2026-06-22T14:26:58.068384+08:00",
+      "finished": "2026-06-22T14:33:47.110800+08:00",
+      "return_code": 0,
+      "valid": true,
+      "run_directory": "/home/nvidia/Thesis-Testing/Logs/distilbertrun2",
+      "marker": {
+        "status": "VALID",
+        "timestamp": "2026-06-22T14:33:46.641200+08:00",
+        "mode": "official_regular",
+        "run": 2,
+        "epochs_completed": 10,
+        "total_samples_processed": 673490,
+        "total_batches_processed": 10530,
+        "total_valid_tokens": 8970390,
+        "total_padded_tokens": 29996406,
+        "workers": 4,
+        "amp_enabled": true,
+        "padding": "dynamic_per_batch",
+        "validation_accuracy": 0.8784403669724771,
+        "driver_version": "580.167.08",
+        "cuda_runtime": "13.0",
+        "script_revision": "2026-06-22 nvidia-regular-v1 dynamic-padding-token-metrics",
+        "thermal_throttle_seen": false
+      }
+    },
+    {
+      "run": 3,
+      "started": "2026-06-22T14:33:57.111142+08:00",
+      "finished": "2026-06-22T14:40:45.870433+08:00",
+      "return_code": 0,
+      "valid": true,
+      "run_directory": "/home/nvidia/Thesis-Testing/Logs/distilbertrun3",
+      "marker": {
+        "status": "VALID",
+        "timestamp": "2026-06-22T14:40:45.406901+08:00",
+        "mode": "official_regular",
+        "run": 3,
+        "epochs_completed": 10,
+        "total_samples_processed": 673490,
+        "total_batches_processed": 10530,
+        "total_valid_tokens": 8970390,
+        "total_padded_tokens": 29996406,
+        "workers": 4,
+        "amp_enabled": true,
+        "padding": "dynamic_per_batch",
+        "validation_accuracy": 0.8784403669724771,
+        "driver_version": "580.167.08",
+        "cuda_runtime": "13.0",
+        "script_revision": "2026-06-22 nvidia-regular-v1 dynamic-padding-token-metrics",
+        "thermal_throttle_seen": false
+      }
+    }
+  ],
+  "timestamp_finished": "2026-06-22T14:40:45.870609+08:00"
+}

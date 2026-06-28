@@ -1,0 +1,2 @@
+epoch,epoch_time_s,raw_epoch_wall_time_s,operator_aggregation_time_s,throughput_images_s,samples,batches,box_loss,cls_loss,dfl_loss
+1,2.759573076997185,2.759573076997185,0.0,23.19199318672918,64,4,0.9637285470962524,1.0469775199890137,1.1720926761627197

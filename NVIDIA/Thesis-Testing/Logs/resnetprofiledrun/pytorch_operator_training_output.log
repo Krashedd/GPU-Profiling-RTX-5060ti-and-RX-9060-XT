@@ -1,0 +1,48 @@
+================================================================================
+ResNet-50 CIFAR-10 NVIDIA torch_operator profiling official pass
+================================================================================
+Timestamp: 2026-06-21T02:07:40.118015+08:00
+Output directory: /home/nvidia/Thesis-Testing/Logs/resnetprofiledrun/pytorch_operator_pass
+Dataset directory: /home/nvidia/Thesis-Testing/Dataset/CIFAR10
+Python: 3.12.3
+Platform: Linux-6.17.0-35-generic-x86_64-with-glibc2.39
+PyTorch: 2.9.1+cu130
+Torchvision: 0.24.1+cu130
+CUDA runtime: 13.0
+GPU: NVIDIA GeForce RTX 5060 Ti
+Compute capability: 12.0
+Profile script revision: 2026-06-20 nvidia-profiled-v4 incremental-batch-operator-profiling
+
+Starting monitored AMP training...
+Precision: AMP FP16 | Optimizer: SGD | Batch size: 256 | Epochs: 10
+Operator capture: one CUDA-event profiler context per batch; DataLoader fetching is outside the profiler context.
+AMP verification | GradScaler enabled: True | First-batch output dtype: torch.float16
+Epoch 1/10 | Loss: 2.2754 | Time: 90.01s | Throughput: 555.49 samples/s | Batches: 196
+Epoch 2/10 | Loss: 1.7261 | Time: 91.48s | Throughput: 546.56 samples/s | Batches: 196
+Epoch 3/10 | Loss: 1.5869 | Time: 93.07s | Throughput: 537.24 samples/s | Batches: 196
+Epoch 4/10 | Loss: 1.5141 | Time: 91.94s | Throughput: 543.85 samples/s | Batches: 196
+Epoch 5/10 | Loss: 1.3757 | Time: 92.93s | Throughput: 538.03 samples/s | Batches: 196
+Epoch 6/10 | Loss: 1.2579 | Time: 92.95s | Throughput: 537.93 samples/s | Batches: 196
+Epoch 7/10 | Loss: 1.2173 | Time: 92.87s | Throughput: 538.38 samples/s | Batches: 196
+Epoch 8/10 | Loss: 1.1882 | Time: 92.68s | Throughput: 539.51 samples/s | Batches: 196
+Epoch 9/10 | Loss: 1.0307 | Time: 92.67s | Throughput: 539.54 samples/s | Batches: 196
+Epoch 10/10 | Loss: 0.9069 | Time: 93.36s | Throughput: 535.54 samples/s | Batches: 196
+Total Training Time: 923.96s
+Training complete.
+
+Writing incrementally aggregated PyTorch operator statistics...
+Top PyTorch operator: aten::convolution_backward
+Incremental operator aggregation included in profiled pass wall time: 739.219s
+
+Starting final validation outside the timed training region...
+Final Validation Score: 0.5853 (10000 samples, 40 batches)
+
+================================================================================
+PROFILE WORKER VALID
+================================================================================
+Profile kind: torch_operator
+Throughput: 541.15 samples/s
+Batch Latency: 471.41 ms/batch
+Total Training Time: 923.96 s
+Final Validation Score: 0.5853
+Results saved to: /home/nvidia/Thesis-Testing/Logs/resnetprofiledrun/pytorch_operator_pass

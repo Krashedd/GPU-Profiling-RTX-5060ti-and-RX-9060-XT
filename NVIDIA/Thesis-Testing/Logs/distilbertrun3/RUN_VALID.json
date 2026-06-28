@@ -1,0 +1,19 @@
+{
+  "status": "VALID",
+  "timestamp": "2026-06-22T14:40:45.406901+08:00",
+  "mode": "official_regular",
+  "run": 3,
+  "epochs_completed": 10,
+  "total_samples_processed": 673490,
+  "total_batches_processed": 10530,
+  "total_valid_tokens": 8970390,
+  "total_padded_tokens": 29996406,
+  "workers": 4,
+  "amp_enabled": true,
+  "padding": "dynamic_per_batch",
+  "validation_accuracy": 0.8784403669724771,
+  "driver_version": "580.167.08",
+  "cuda_runtime": "13.0",
+  "script_revision": "2026-06-22 nvidia-regular-v1 dynamic-padding-token-metrics",
+  "thermal_throttle_seen": false
+}
