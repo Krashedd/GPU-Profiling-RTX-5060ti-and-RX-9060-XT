@@ -26,3 +26,7 @@
 **/*.zip
 **/*.tar
 **/*.tar.gz
+
+# Generated reproduction reports
+/analysis-output/
+/supplementary/Codex Folder/QA/

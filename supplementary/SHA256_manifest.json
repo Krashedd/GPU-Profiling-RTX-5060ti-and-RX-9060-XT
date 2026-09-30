@@ -1,0 +1,17 @@
+{
+  "Final Thesis/Regular Run Scripts/distilbert_regular_amd.py": "c6bbcc793eb1ca45cdb1349b43228881d83799d43372639ac35aa4027e62a280",
+  "Final Thesis/Regular Run Scripts/distilbert_regular_nvidia.py": "49d01445e546201687f9b9774e8e97b228e9aafa866616b7f3d4efee55da8ce4",
+  "Final Thesis/Regular Run Scripts/resnet50_regular_amd.py": "171886b10b2f22920bccaa502b4f6eab2daeb698b1f22752a563ce0b79b600a1",
+  "Final Thesis/Regular Run Scripts/resnet50_regular_nvidia.py": "674bfa5f8319c3cc2412b4ea3a7cb13a8192e2dcd9faa3e6a3aafffdcad69b44",
+  "Final Thesis/Regular Run Scripts/yolov8m_regular_amd.py": "870e4f9d6e280e049f5c73e3cb48d389a773e72d8a0d9aa8f46ec51d0a55ad1d",
+  "Final Thesis/Regular Run Scripts/yolov8m_regular_nvidia.py": "d5f8a05e441a067465a8174edc4e3825d2948fd741250b570f7e28e9db53839b",
+  "Final Thesis/Profiling Scripts/distilbert_profiled_amd.py": "b0757314fb6696d21004b01b0a581c44610863234dbe7015ee2133ab8405d5b8",
+  "Final Thesis/Profiling Scripts/distilbert_profiled_nvidia.py": "734960ec155d02c5668174d5ea5d3afb02547e4d64c56b491613b750e8197534",
+  "Final Thesis/Profiling Scripts/resnet50_profiled_amd.py": "c62ab221cc70fa81a55ac6e24c3140c085a8c78ba3dbf679fbfa0ad8b53b1cc2",
+  "Final Thesis/Profiling Scripts/resnet50_profiled_nvidia.py": "a548595fdec8af3d5865579e0f9383312e6e35a0aff98bc8dbf2cb4440bb5247",
+  "Final Thesis/Profiling Scripts/yolov8m_profiled_amd.py": "e5406de9cab5d627e26f7723b5a7b66d64500c0e6a99c4f54b28a151573901c4",
+  "Final Thesis/Profiling Scripts/yolov8m_profiled_nvidia.py": "8f1bc566d82d628dcf49ddcfc26f2910692faba9a5dfe1b82d7d08e541c9b61b",
+  "Final Thesis/Analysis Scripts/analyze_evidence.py": "9a0539358567cabf55a8db99bcb655a9b12168b658855b6bbe3e5e4be42e1e66",
+  "Final Thesis/Analysis Scripts/check_resnet_window_match.py": "c12d4fd52b8db33d00b957e92007cf3f2728f5e08163c4f8f94a29ed09efdbf6",
+  "Codex Folder/Working Scripts/test_analysis.py": "ae7fb8eaa7aa13e3161f4b0554fa7186535ef642baaffe007f003c3c56d22a56"
+}

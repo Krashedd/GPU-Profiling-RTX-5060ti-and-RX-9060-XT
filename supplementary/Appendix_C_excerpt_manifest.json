@@ -1,0 +1,146 @@
+[
+  {
+    "file": "Final Thesis/Regular Run Scripts/resnet50_regular_amd.py",
+    "start": 29,
+    "end": 36,
+    "context": "module configuration",
+    "source_sha256": "171886b10b2f22920bccaa502b4f6eab2daeb698b1f22752a563ce0b79b600a1",
+    "excerpt": "SEED = 55\nBATCH_SIZE = 256\nEPOCHS = 10\nLR = 0.01\nMOMENTUM = 0.9\nWEIGHT_DECAY = 1e-4\nNUM_WORKERS = 4\nSAMPLE_INTERVAL_S = 0.2"
+  },
+  {
+    "file": "Final Thesis/Regular Run Scripts/resnet50_regular_nvidia.py",
+    "start": 31,
+    "end": 38,
+    "context": "module configuration",
+    "source_sha256": "674bfa5f8319c3cc2412b4ea3a7cb13a8192e2dcd9faa3e6a3aafffdcad69b44",
+    "excerpt": "SEED = 55\nBATCH_SIZE = 256\nEPOCHS = 10\nLR = 0.01\nMOMENTUM = 0.9\nWEIGHT_DECAY = 1e-4\nNUM_WORKERS = 4\nSAMPLE_INTERVAL_S = 0.2"
+  },
+  {
+    "file": "Final Thesis/Regular Run Scripts/resnet50_regular_amd.py",
+    "start": 649,
+    "end": 653,
+    "context": "training worker: start",
+    "source_sha256": "171886b10b2f22920bccaa502b4f6eab2daeb698b1f22752a563ce0b79b600a1",
+    "excerpt": "        torch.cuda.synchronize(device)\n\n        print(\"Starting monitored AMP training...\")\n        monitor.start()\n        total_start = time.perf_counter()"
+  },
+  {
+    "file": "Final Thesis/Regular Run Scripts/resnet50_regular_amd.py",
+    "start": 695,
+    "end": 698,
+    "context": "training worker: epoch end",
+    "source_sha256": "171886b10b2f22920bccaa502b4f6eab2daeb698b1f22752a563ce0b79b600a1",
+    "excerpt": "            torch.cuda.synchronize(device)\n            epoch_time = time.perf_counter() - epoch_start\n            epoch_throughput = epoch_samples / epoch_time\n            average_loss = running_loss / epoch_samples"
+  },
+  {
+    "file": "Final Thesis/Regular Run Scripts/resnet50_regular_amd.py",
+    "start": 720,
+    "end": 722,
+    "context": "training worker: run end",
+    "source_sha256": "171886b10b2f22920bccaa502b4f6eab2daeb698b1f22752a563ce0b79b600a1",
+    "excerpt": "        torch.cuda.synchronize(device)\n        total_training_time = time.perf_counter() - total_start\n        monitor.stop()"
+  },
+  {
+    "file": "Final Thesis/Regular Run Scripts/resnet50_regular_amd.py",
+    "start": 220,
+    "end": 234,
+    "context": "TelemetryMonitor._run: AMD queries",
+    "source_sha256": "171886b10b2f22920bccaa502b4f6eab2daeb698b1f22752a563ce0b79b600a1",
+    "excerpt": "            activity = self._safe_api(\n                \"gpu_activity\",\n                lambda: amdsmi.amdsmi_get_gpu_activity(self.gpu),\n                {},\n            )\n            vram = self._safe_api(\n                \"gpu_vram_usage\",\n                lambda: amdsmi.amdsmi_get_gpu_vram_usage(self.gpu),\n                {},\n            )\n            power = self._safe_api(\n                \"power_info\",\n                lambda: amdsmi.amdsmi_get_power_info(self.gpu),\n                {},\n            )"
+  },
+  {
+    "file": "Final Thesis/Regular Run Scripts/resnet50_regular_nvidia.py",
+    "start": 348,
+    "end": 362,
+    "context": "TelemetryMonitor._run: NVIDIA queries",
+    "source_sha256": "674bfa5f8319c3cc2412b4ea3a7cb13a8192e2dcd9faa3e6a3aafffdcad69b44",
+    "excerpt": "            utilization = self._safe_api(\n                \"utilization\",\n                lambda: pynvml.nvmlDeviceGetUtilizationRates(self.gpu),\n                None,\n            )\n            memory = self._safe_api(\n                \"memory_info\",\n                lambda: pynvml.nvmlDeviceGetMemoryInfo(self.gpu),\n                None,\n            )\n            power_mw = self._safe_api(\n                \"power_usage\",\n                lambda: pynvml.nvmlDeviceGetPowerUsage(self.gpu),\n                float(\"nan\"),\n            )"
+  },
+  {
+    "file": "Final Thesis/Regular Run Scripts/resnet50_regular_amd.py",
+    "start": 201,
+    "end": 215,
+    "context": "TelemetryMonitor._run: system disk counters",
+    "source_sha256": "171886b10b2f22920bccaa502b4f6eab2daeb698b1f22752a563ce0b79b600a1",
+    "excerpt": "        previous_disk = psutil.disk_io_counters()\n        previous_time = time.perf_counter()\n\n        while not self.stop_event.wait(self.interval_s):\n            now_perf = time.perf_counter()\n            elapsed = max(now_perf - previous_time, 1e-9)\n            disk = psutil.disk_io_counters()\n\n            if previous_disk is not None and disk is not None:\n                read_mb_s = (\n                    disk.read_bytes - previous_disk.read_bytes\n                ) / elapsed / (1024**2)\n                write_mb_s = (\n                    disk.write_bytes - previous_disk.write_bytes\n                ) / elapsed / (1024**2)"
+  },
+  {
+    "file": "Final Thesis/Profiling Scripts/yolov8m_profiled_amd.py",
+    "start": 692,
+    "end": 712,
+    "context": "training worker: profiler configuration",
+    "source_sha256": "e5406de9cab5d627e26f7723b5a7b66d64500c0e6a99c4f54b28a151573901c4",
+    "excerpt": "        if profile_kind == \"torch_operator\":\n            chunk_steps = (\n                PYTORCH_PROFILE_CHUNK_STEPS_SMOKE\n                if smoke\n                else PYTORCH_PROFILE_CHUNK_STEPS_OFFICIAL\n            )\n            operator_accumulator = ChunkedOperatorAccumulator(output_dir)\n            profiler_object = profile(\n                activities=[ProfilerActivity.CPU, ProfilerActivity.CUDA],\n                record_shapes=False,\n                profile_memory=False,\n                with_stack=False,\n                schedule=torch.profiler.schedule(\n                    wait=0,\n                    warmup=0,\n                    active=chunk_steps,\n                    repeat=(1 if smoke else 125),\n                ),\n                on_trace_ready=operator_accumulator,\n                acc_events=False,\n            )"
+  },
+  {
+    "file": "Final Thesis/Profiling Scripts/yolov8m_profiled_amd.py",
+    "start": 362,
+    "end": 383,
+    "context": "ChunkedOperatorAccumulator.__call__",
+    "source_sha256": "e5406de9cab5d627e26f7723b5a7b66d64500c0e6a99c4f54b28a151573901c4",
+    "excerpt": "    def __call__(self, profiler_object):\n        chunk_rows = 0\n        for event in profiler_object.key_averages():\n            name = str(event.key)\n            if not is_pytorch_operator(name):\n                continue\n            self_us, total_us = event_device_times(event)\n            if self_us <= 0 and total_us <= 0:\n                continue\n            row = self.totals.setdefault(\n                name,\n                {\n                    \"self_gpu_time_ms\": 0.0,\n                    \"gpu_total_ms\": 0.0,\n                    \"calls\": 0,\n                    \"notes\": operator_note(name),\n                },\n            )\n            row[\"self_gpu_time_ms\"] += self_us / 1000.0\n            row[\"gpu_total_ms\"] += total_us / 1000.0\n            row[\"calls\"] += int(event.count)\n            chunk_rows += 1"
+  },
+  {
+    "file": "Final Thesis/Profiling Scripts/resnet50_profiled_amd.py",
+    "start": 461,
+    "end": 463,
+    "context": "training worker: ROCTx start",
+    "source_sha256": "c62ab221cc70fa81a55ac6e24c3140c085a8c78ba3dbf679fbfa0ad8b53b1cc2",
+    "excerpt": "            if roctx is not None:\n                roctx.push(TRAINING_RANGE_NAME)\n                print(\"ROCTx training range started.\")"
+  },
+  {
+    "file": "Final Thesis/Profiling Scripts/resnet50_profiled_amd.py",
+    "start": 537,
+    "end": 543,
+    "context": "training worker: ROCTx end",
+    "source_sha256": "c62ab221cc70fa81a55ac6e24c3140c085a8c78ba3dbf679fbfa0ad8b53b1cc2",
+    "excerpt": "            torch.cuda.synchronize(device)\n            total_training_time = time.perf_counter() - total_start\n            monitor.stop()\n\n            if roctx is not None:\n                roctx.pop()\n                print(\"ROCTx training range ended.\")"
+  },
+  {
+    "file": "Final Thesis/Profiling Scripts/resnet50_profiled_nvidia.py",
+    "start": 556,
+    "end": 558,
+    "context": "training worker: NVTX start",
+    "source_sha256": "a548595fdec8af3d5865579e0f9383312e6e35a0aff98bc8dbf2cb4440bb5247",
+    "excerpt": "            torch.cuda.nvtx.range_push(TRAINING_RANGE_NAME)\n            nvtx_active = True\n            print(f\"NVTX training range started: {TRAINING_RANGE_NAME}\")"
+  },
+  {
+    "file": "Final Thesis/Profiling Scripts/resnet50_profiled_nvidia.py",
+    "start": 716,
+    "end": 719,
+    "context": "training worker: NVTX end",
+    "source_sha256": "a548595fdec8af3d5865579e0f9383312e6e35a0aff98bc8dbf2cb4440bb5247",
+    "excerpt": "        if nvtx_active:\n            torch.cuda.nvtx.range_pop()\n            nvtx_active = False\n            print(f\"NVTX training range ended: {TRAINING_RANGE_NAME}\")"
+  },
+  {
+    "file": "Final Thesis/Profiling Scripts/resnet50_profiled_nvidia.py",
+    "start": 1754,
+    "end": 1771,
+    "context": "orchestrator: Nsight Systems command",
+    "source_sha256": "a548595fdec8af3d5865579e0f9383312e6e35a0aff98bc8dbf2cb4440bb5247",
+    "excerpt": "        nsys_command = [\n            str(NSYS),\n            \"profile\",\n            \"--trace=cuda,nvtx\",\n            \"--sample=none\",\n            \"--cpuctxsw=none\",\n            \"--force-overwrite=true\",\n            \"--output\",\n            str(report_prefix),\n            sys.executable,\n            str(PROFILE_SCRIPT),\n            \"--internal-worker\",\n            \"nsight_systems\",\n            \"--internal-output\",\n            str(nsys_worker_dir),\n            *worker_mode_args,\n        ]\n        return_code = stream_subprocess(nsys_command, env=os.environ.copy())"
+  },
+  {
+    "file": "Final Thesis/Analysis Scripts/analyze_evidence.py",
+    "start": 132,
+    "end": 145,
+    "context": "summarize_kernels",
+    "source_sha256": "9a0539358567cabf55a8db99bcb655a9b12168b658855b6bbe3e5e4be42e1e66",
+    "excerpt": "def summarize_kernels(rows, batches):\n    groups = {}\n    calls = sum(int(r[\"calls\"]) for r in rows)\n    duration = sum(float(r[\"total_duration_ms\"]) for r in rows)\n    for r in rows:\n        g = groups.setdefault(kernel_group(r[\"kernel_name\"]),\n                              {\"calls\": 0, \"duration_ms\": 0.0})\n        g[\"calls\"] += int(r[\"calls\"])\n        g[\"duration_ms\"] += float(r[\"total_duration_ms\"])\n    for g in groups.values():\n        g[\"launch_share_pct\"] = 100 * g[\"calls\"] / calls\n        g[\"summed_time_share_pct\"] = 100 * g[\"duration_ms\"] / duration\n    return {\"launches\": calls, \"launches_per_batch\": calls / batches,\n            \"summed_kernel_s\": duration / 1000, \"groups\": groups}"
+  },
+  {
+    "file": "Codex Folder/Working Scripts/test_analysis.py",
+    "start": 44,
+    "end": 53,
+    "context": "AnalysisTests.test_counts_not_time_share",
+    "source_sha256": "ae7fb8eaa7aa13e3161f4b0554fa7186535ef642baaffe007f003c3c56d22a56",
+    "excerpt": "    def test_counts_not_time_share(self):\n        rows = [{\"kernel_name\": \"Im2d2Col_v2\", \"calls\": \"9\", \"total_duration_ms\": \"1\"},\n                {\"kernel_name\": \"naive_conv_example\", \"calls\": \"1\", \"total_duration_ms\": \"9\"}]\n        result = summarize_kernels(rows, 2)\n        self.assertEqual(result[\"launches_per_batch\"], 5)\n        self.assertEqual(result[\"groups\"][\"im2col\"][\"launch_share_pct\"], 90)\n        self.assertEqual(result[\"groups\"][\"im2col\"][\"summed_time_share_pct\"], 10)\n        self.assertEqual(kernel_group(\"float16tofloat32_copy_kernel_cuda\"), \"FP16-to-FP32 conversion\")\n\n"
+  },
+  {
+    "file": "Final Thesis/Profiling Scripts/resnet50_profiled_amd.py",
+    "start": 1036,
+    "end": 1047,
+    "context": "validate_worker: expected processed totals",
+    "source_sha256": "c62ab221cc70fa81a55ac6e24c3140c085a8c78ba3dbf679fbfa0ad8b53b1cc2",
+    "excerpt": "    expected_samples = 1280 if smoke else 500000\n    expected_batches = 5 if smoke else 1960\n    if int(summary[\"total_samples_processed\"]) != expected_samples:\n        raise RuntimeError(\n            f\"{kind} worker processed {summary['total_samples_processed']} \"\n            f\"samples; expected {expected_samples}.\"\n        )\n    if int(summary[\"total_batches_processed\"]) != expected_batches:\n        raise RuntimeError(\n            f\"{kind} worker processed {summary['total_batches_processed']} \"\n            f\"batches; expected {expected_batches}.\"\n        )"
+  }
+]
